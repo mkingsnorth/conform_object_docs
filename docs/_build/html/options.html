@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Options &mdash; Conform Object  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="How does it work?" href="how_does_it_work.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Conform Object
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#presets">Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-object">Source Object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#method">Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-effect">Gradient Effect</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#end-point">End Point</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#blend-normals">Blend Normals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#end-point-blend-normals">End Point (Blend Normals)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blend-whole-object">Blend Whole Object</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-simple-subdivisions">Add Simple Subdivisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#align-object-to-face">Align Object to Face</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collapse-modifiers">Collapse Modifiers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#grid-object">Grid Object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hide-grid">Hide Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grid-subdivisions">Grid Subdivisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grid-x-y">Grid X/Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grid-scale-x-y">Grid Scale X/Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grid-rotation">Grid Rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interpolation-falloff">Interpolation Falloff</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Conform Object</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Options</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/options.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="options">
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline"></a></h1>
+<figure class="align-default" id="id1">
+<img alt="Options Panel in the bottom left of the viewport" src="_images/options_panel.jpg" />
+<figcaption>
+<p><span class="caption-text">Options Panel in the bottom left of the viewport</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="presets">
+<h2>Presets<a class="headerlink" href="#presets" title="Permalink to this headline"></a></h2>
+<p>You can add or remove preset configurations from the tool here by pressing the <strong>+</strong> or <strong>-</strong> keys, or reset the tool to its default parameters.</p>
+</section>
+<section id="source-object">
+<h2>Source Object<a class="headerlink" href="#source-object" title="Permalink to this headline"></a></h2>
+<p>The following controls the parameters of how the source object is applied:</p>
+<section id="method">
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline"></a></h3>
+<p>Choose between <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a> or <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>.</p>
+</section>
+<section id="gradient-effect">
+<h3>Gradient Effect<a class="headerlink" href="#gradient-effect" title="Permalink to this headline"></a></h3>
+<p>This creates a vertex group which automatically weights the vertices at the bottom so the effect is less exagerated at the top:</p>
+<figure class="align-default" id="id2">
+<img alt="Conform Object at work" src="_images/conform_obj_2.gif" />
+<figcaption>
+<p><span class="caption-text">The add-on allows you to control the influence of the deformation.  In this case, we do not want the threads of the screws to be affected, so we reduce the “End Point” parameter so that the effect finishes towards the bottom of the object.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="end-point">
+<h4>End Point<a class="headerlink" href="#end-point" title="Permalink to this headline"></a></h4>
+<p>This controls when the gradient effect of the vertices ends, 1.0 being at the top of the object.  Lower values will stop the deformation towards the bottom of the object, and higher values will extend the weight beyond the top of the object.</p>
+<figure class="align-default" id="id3">
+<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting.jpg" />
+<figcaption>
+<p><span class="caption-text">The default vertex group weighting, where the effect is gradually reduced towards the top (End Point=1.0)</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting_0.1.jpg" />
+<figcaption>
+<p><span class="caption-text">A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (End Point=0.1)</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id5">
+<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting_2.0.jpg" />
+<figcaption>
+<p><span class="caption-text">A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (End Point=2.0)</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="blend-normals">
+<h3>Blend Normals<a class="headerlink" href="#blend-normals" title="Permalink to this headline"></a></h3>
+<p>This will blend the normals of the source object with the target object, creating a smoother transition between the two object surfaces:</p>
+<figure class="align-default" id="id6">
+<img alt="Some simple 'horns' applied using the add-on.  They are all separate objects." src="_images/gradient_effect_2.jpg" />
+<figcaption>
+<p><span class="caption-text">Some simple ‘horns’ applied using the add-on.  They are all separate objects.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="Here the normals of the 'horns' are blended with the normals of the head." src="_images/gradient_effect_1.jpg" />
+<figcaption>
+<p><span class="caption-text">Here the normals of the same ‘horn’ objects are blended with the normals of the head.  They remain separate objects.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This effect is achieved by using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html" target="_blank">Data Transfer Modifier</a> on the Source Object.</p>
+<section id="end-point-blend-normals">
+<h4>End Point (Blend Normals)<a class="headerlink" href="#end-point-blend-normals" title="Permalink to this headline"></a></h4>
+<p>As with the <a class="reference internal" href="#end-point"><span class="std std-ref">End Point</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
+</section>
+<section id="blend-whole-object">
+<h4>Blend Whole Object<a class="headerlink" href="#blend-whole-object" title="Permalink to this headline"></a></h4>
+<p>This will blend all of the object’s normals regardless of the gradient effect.</p>
+</section>
+</section>
+<section id="add-simple-subdivisions">
+<h3>Add Simple Subdivisions<a class="headerlink" href="#add-simple-subdivisions" title="Permalink to this headline"></a></h3>
+<p>This adds a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html" target="_blank">Subdivision Surface modifier</a> to the source object, set to ‘simple’, in case you wish to quickly subdivide the mesh when conforming the object.</p>
+<ul class="simple">
+<li><p><strong>Subdivisions</strong>: The number of subdivisions to use in the modifier.</p></li>
+</ul>
+</section>
+<section id="align-object-to-face">
+<h3>Align Object to Face<a class="headerlink" href="#align-object-to-face" title="Permalink to this headline"></a></h3>
+<p>This will automatically align the source object to the face of the target object it is being applied to if it is not already.</p>
+</section>
+<section id="collapse-modifiers">
+<h3>Collapse Modifiers<a class="headerlink" href="#collapse-modifiers" title="Permalink to this headline"></a></h3>
+<p>This will collapse the existing modifiers on the source object if they are interfering with the conform effect.</p>
+</section>
+</section>
+<section id="grid-object">
+<h2>Grid Object<a class="headerlink" href="#grid-object" title="Permalink to this headline"></a></h2>
+<p>This controls the nature of the deformation grid used in <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>.  It is a regular blender object, parented to the source object, but is configurable by the add-on:</p>
+<section id="hide-grid">
+<h3>Hide Grid<a class="headerlink" href="#hide-grid" title="Permalink to this headline"></a></h3>
+<p>By default, the deformation grid is hidden but it can be displayed if you wish to configure it:</p>
+<figure class="align-default" id="id8">
+<img alt="The deformation grid is revealed!" src="_images/hide_grid.gif" />
+<figcaption>
+<p><span class="caption-text">The deformation grid is revealed!</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="grid-subdivisions">
+<h3>Grid Subdivisions<a class="headerlink" href="#grid-subdivisions" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id9">
+<img alt="Subdividing the grid increases the resolution of the deformation." src="_images/grid_subd.gif" />
+<figcaption>
+<p><span class="caption-text">Subdividing the grid increases the resolution of the deformation.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The number of vertices in the grid.  If you are deforming over particularly smoothed or high resolution meshes, increasing this number can be useful.</p>
+</section>
+<section id="grid-x-y">
+<h3>Grid X/Y<a class="headerlink" href="#grid-x-y" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id10">
+<img alt="Grid moved in X direction." src="_images/move_grid_x.jpg" />
+<figcaption>
+<p><span class="caption-text">Grid moved in X direction.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Move the grid’s X/Y position.</p>
+</section>
+<section id="grid-scale-x-y">
+<h3>Grid Scale X/Y<a class="headerlink" href="#grid-scale-x-y" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id11">
+<img alt="Scale the influence of the grid." src="_images/grid_scale.gif" />
+<figcaption>
+<p><span class="caption-text">Scale the influence of the grid.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Scale the grid in the X/Y direction.</p>
+</section>
+<section id="grid-rotation">
+<h3>Grid Rotation<a class="headerlink" href="#grid-rotation" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id12">
+<img alt="Grid rotated on surface." src="_images/grid_rotation.gif" />
+<figcaption>
+<p><span class="caption-text">Grid rotated on surface.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Rotate the grid over the surface.</p>
+</section>
+<section id="interpolation-falloff">
+<h3>Interpolation Falloff<a class="headerlink" href="#interpolation-falloff" title="Permalink to this headline"></a></h3>
+<p>Used on the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> for the grid. From the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">documentation</a>:</p>
+<p><em>“How much a vertex bound to one face of the target will be affected by the surrounding faces (this setting is unavailable after binding). This essentially controls how smooth the deformations are.”</em></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="how_does_it_work.html" class="btn btn-neutral float-left" title="How does it work?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mark Kingsnorth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

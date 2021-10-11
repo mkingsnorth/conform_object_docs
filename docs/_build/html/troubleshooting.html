@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting &mdash; Conform Object  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Surface Snapping" href="toggle_snap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Conform Object
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bad-deformations">Bad Deformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">“The bottom of the source object is not pointing towards the target object”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#when-editing-the-object-the-effect-is-lost">When Editing the Object, the Effect is Lost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#when-copying-the-object-the-effect-is-lost">When Copying the Object, the Effect is Lost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#when-i-click-off-the-panel-i-lose-my-settings">When I click off the panel, I lose my settings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Conform Object</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h1>
+<section id="bad-deformations">
+<h2>Bad Deformations<a class="headerlink" href="#bad-deformations" title="Permalink to this headline"></a></h2>
+<figure class="align-default">
+<img alt="Bad Deformations when mesh topology does not match up." src="_images/bad_deforms.jpg" />
+</figure>
+<p>This can occur for several reasons:</p>
+<ul class="simple">
+<li><p>Not enough topology (vertices, faces) on the source of the target object.</p></li>
+<li><p>The tops of the object look best when the effect is not as strong.</p></li>
+<li><p>The meshes need more subdivision.</p></li>
+</ul>
+<p>There are several things to try:</p>
+<ul class="simple">
+<li><p>Enable the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> to smooth the deformation at the top of the object.</p></li>
+<li><p>Increase the resolution of the target object by using a subdivision surface modifier.</p></li>
+<li><p>Increase the resolution of the deformation grid in the <a class="reference internal" href="options.html#options"><span class="std std-ref">Options</span></a>.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="Bad Deformations fixed." src="_images/bad_deforms_fixed.jpg" />
+<figcaption>
+<p><span class="caption-text">Here, the target sphere object’s resolution was increased using a subdivision surface modifier, and the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> was enabled for the screw part to lessen the effect at the top.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">
+<h2>“The bottom of the source object is not pointing towards the target object”<a class="headerlink" href="#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id2">
+<img alt="Misalign error" src="_images/misalign_error.jpg" />
+<figcaption>
+<p><span class="caption-text">This error occurs when the bottom of the source object is not pointing towards the target object.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The bottom of the source object must be pointing towards the target object when running the operation.  The bottom of the object is the lowest part of the object when the object is not rotated.</p>
+<p>You will need to orientate the object correctly by rotating it in Object mode:</p>
+<figure class="align-default" id="id3">
+<img alt="Misalign correction" src="_images/misalign_error_correct.jpg" />
+<figcaption>
+<p><span class="caption-text">The object is rotated correctly as it is pointing towards the target object.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<img alt="Misalign correction" src="_images/misalign_error_correct2.jpg" />
+<figcaption>
+<p><span class="caption-text">The object conformed to the surface.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="when-editing-the-object-the-effect-is-lost">
+<h2>When Editing the Object, the Effect is Lost<a class="headerlink" href="#when-editing-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id5">
+<img alt="The effect gets lost when editing the object." src="_images/edit_error.gif" />
+<figcaption>
+<p><span class="caption-text">The effect gets lost when editing the object.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<div class="legend">
+<ul>
+<li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> loses its binding to the surface whenever the underlying mesh is changed.</p>
+<blockquote>
+<div><p>To fix this, select the <strong>Source Object</strong> and the <strong>Target Object</strong> and <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">run the conform operation again</span></a>.  This will re-apply the modifiers and update the binding.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</figcaption>
+</figure>
+</section>
+<section id="when-copying-the-object-the-effect-is-lost">
+<h2>When Copying the Object, the Effect is Lost<a class="headerlink" href="#when-copying-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id6">
+<img alt="The effect gets lost when duplicating the object." src="_images/dupe_error.gif" />
+<figcaption>
+<p><span class="caption-text">The effect gets lost when duplicating the object.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<div class="legend">
+<ul>
+<li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, because the new object would reference the same deformation grid, the effect is automaticaly removed by the add-on to prevent this.</p>
+<blockquote>
+<div><p>To fix this, select the <strong>Source Object</strong> and the <strong>Target Object</strong> and <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">run the conform operation again</span></a>.  This will re-apply the modifiers and update the binding.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</figcaption>
+</figure>
+</section>
+<section id="when-i-click-off-the-panel-i-lose-my-settings">
+<h2>When I click off the panel, I lose my settings<a class="headerlink" href="#when-i-click-off-the-panel-i-lose-my-settings" title="Permalink to this headline"></a></h2>
+<p>This is an unfortunate effect of Blender’s one-time operation that the settings are applied just once, and the panel is easily lost.  You can <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">re-run the operation</span></a> and the modifiers will be replaced, not re-added.  Pressing F9 may bring back the panel, but the settings will not be applied again.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="toggle_snap.html" class="btn btn-neutral float-left" title="Surface Snapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mark Kingsnorth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

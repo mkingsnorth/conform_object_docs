@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How does it work? &mdash; Conform Object  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Options" href="options.html" />
+    <link rel="prev" title="How To Use" href="use.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Conform Object
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How does it work?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#grid-mode">Grid Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shrinkwrap-mode">Shrinkwrap Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Conform Object</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>How does it work?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/how_does_it_work.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-does-it-work">
+<h1>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline"></a></h1>
+<p>The add-on has two modes; <a class="reference internal" href="#grid-mode"><span class="std std-ref">Grid Mode</span></a> (default) and <a class="reference internal" href="#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>.</p>
+<p>The manual processed for both has been best described in <a href="https://youtu.be/luFz5gzvM9s" target="_blank"><b>this video</b></a> but is also described below.</p>
+<section id="grid-mode">
+<h2>Grid Mode<a class="headerlink" href="#grid-mode" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p><strong>Advantages</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>More accurate, positions the source object vertices in the same direction as the faces of the target object.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Disadvantages</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>More complex, adds an extra helper grid object to the scene.</p></li>
+<li><p>If the source object is edited or copied, you will need to re-apply the operation.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="Grid Mode" src="_images/how_does_it_work_1.jpg" />
+<figcaption>
+<p><span class="caption-text">The add-on in Grid Mode, with the grid visible.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The add-on automatically creates a deformation grid object which is used to wrap the object to the surface of another using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a>.  This grid object is <strong>hidden</strong> by default and can have its subdivisions configured.</p>
+<p>It automates the manual process of:</p>
+<ol class="arabic simple">
+<li><p>Creating a deformation grid and aligning it to the base of the object.</p></li>
+<li><p>Adding a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> and associating it with the Grid.</p></li>
+<li><p>Adding a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/shrinkwrap.html" target="_blank">Shrink Wrap Modifier</a> to the grid and associating it with that object.</p></li>
+<li><p>Adding a <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/introduction.html" target="_blank">Vertex Group</a> weighting to the object from the bottom to the top to control <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">the influence of the deformation</span></a>.</p></li>
+</ol>
+<p>The deformation grid is automatically deleted if the source object is deleted.</p>
+<figure class="align-default" id="id2">
+<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting.jpg" />
+<figcaption>
+<p><span class="caption-text">The default vertex group weighting.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="shrinkwrap-mode">
+<h2>Shrinkwrap Mode<a class="headerlink" href="#shrinkwrap-mode" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p><strong>Advantages</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Simpler, only a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/shrinkwrap.html" target="_blank">Shrink Wrap Modifier</a> is added to the target object.</p></li>
+<li><p>You do not need to re-run the operation when the object is edited.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Disadvantages</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Not as accurate; does not align vertices</p></li>
+<li><p>It will flatten the lower parts of the object in many cases.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<figure class="align-default" id="id3">
+<img alt="Shrinkwrap Mode" src="_images/how_does_it_work_2.jpg" />
+<figcaption>
+<p><span class="caption-text">The add-on in Shrinkwrap Mode.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For the shrinkwrap modifier mode, it automatically:</p>
+<ol class="arabic simple">
+<li><p>Adds a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/shrinkwrap.html" target="_blank">Shrink Wrap Modifier</a> to the mesh.</p></li>
+<li><p>Adding a <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/introduction.html" target="_blank">Vertex Group</a> weighting to the object from the bottom to the top to control <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">the influence of the deformation</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="id4">
+<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting.jpg" />
+<figcaption>
+<p><span class="caption-text">The default vertex group weighting.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="use.html" class="btn btn-neutral float-left" title="How To Use" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="options.html" class="btn btn-neutral float-right" title="Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mark Kingsnorth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
