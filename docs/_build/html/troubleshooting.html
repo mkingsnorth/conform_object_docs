@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Troubleshooting &mdash; Conform Object  documentation</title>
+  <title>Tips and Troubleshooting &mdash; Conform Object  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,6 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contact" href="contact.html" />
     <link rel="prev" title="Surface Snapping" href="toggle_snap.html" /> 
 </head>
 
@@ -45,14 +46,16 @@
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tips and Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#bad-deformations">Bad Deformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">“The bottom of the source object is not pointing towards the target object”</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-editing-the-object-the-effect-is-lost">When Editing the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-copying-the-object-the-effect-is-lost">When Copying the Object, the Effect is Lost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-boolean-cutters">Creating Boolean Cutters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-i-click-off-the-panel-i-lose-my-settings">When I click off the panel, I lose my settings</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
 </ul>
 
         </div>
@@ -69,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Troubleshooting</li>
+      <li>Tips and Troubleshooting</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/troubleshooting.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -79,8 +82,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="troubleshooting">
-<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h1>
+  <section id="tips-and-troubleshooting">
+<h1>Tips and Troubleshooting<a class="headerlink" href="#tips-and-troubleshooting" title="Permalink to this headline"></a></h1>
 <section id="bad-deformations">
 <h2>Bad Deformations<a class="headerlink" href="#bad-deformations" title="Permalink to this headline"></a></h2>
 <figure class="align-default">
@@ -164,6 +167,22 @@
 </figcaption>
 </figure>
 </section>
+<section id="creating-boolean-cutters">
+<h2>Creating Boolean Cutters<a class="headerlink" href="#creating-boolean-cutters" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id7">
+<img alt="Example of a bad boolean cutter because Conform operation is not :ref:`applied&lt;Apply&gt;`." src="_images/boolean_cutter_bad.jpg" />
+<figcaption>
+<p><span class="caption-text">Example of a bad boolean cutter because Conform operation is not <a class="reference internal" href="apply.html#apply"><span class="std std-ref">applied</span></a>.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>If trying to use the conformed object as a boolean cutter on the target object,  use the <a class="reference internal" href="apply.html#apply"><span class="std std-ref">Apply Conform  Object</span></a> operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the source object itself is trying to deform to the cut shape.</p>
+<figure class="align-default" id="id8">
+<img alt="Remember to Apply the Conform Object operation to the source object before using as a boolean cutter." src="_images/boolean_cutter.jpg" />
+<figcaption>
+<p><span class="caption-text">Remember to <a class="reference internal" href="apply.html#apply"><span class="std std-ref">apply</span></a> the Conform Object operation to the source object before using as a boolean cutter.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
 <section id="when-i-click-off-the-panel-i-lose-my-settings">
 <h2>When I click off the panel, I lose my settings<a class="headerlink" href="#when-i-click-off-the-panel-i-lose-my-settings" title="Permalink to this headline"></a></h2>
 <p>This is an unfortunate effect of Blender’s one-time operation that the settings are applied just once, and the panel is easily lost.  You can <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">re-run the operation</span></a> and the modifiers will be replaced, not re-added.  Pressing F9 may bring back the panel, but the settings will not be applied again.</p>
@@ -175,6 +194,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="toggle_snap.html" class="btn btn-neutral float-left" title="Surface Snapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contact.html" class="btn btn-neutral float-right" title="Contact" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

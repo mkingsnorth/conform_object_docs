@@ -1,5 +1,5 @@
 #####################################
-Troubleshooting
+Tips and Troubleshooting
 #####################################
 
 ====================================================================
@@ -84,6 +84,23 @@ When Copying the Object, the Effect is Lost
 
             To fix this, select the **Source Object** and the **Target Object** and :ref:`run the conform operation again<How To Use>`.  This will re-apply the modifiers and update the binding.
 
+====================================================================
+Creating Boolean Cutters
+====================================================================
+
+
+.. figure:: images/boolean_cutter_bad.jpg
+    :alt: Example of a bad boolean cutter because Conform operation is not :ref:`applied<Apply>`.
+
+    Example of a bad boolean cutter because Conform operation is not :ref:`applied<Apply>`.
+
+
+If trying to use the conformed object as a boolean cutter on the target object,  use the :ref:`Apply Conform  Object<Apply>` operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the source object itself is trying to deform to the cut shape.
+
+.. figure:: images/boolean_cutter.jpg
+    :alt: Remember to Apply the Conform Object operation to the source object before using as a boolean cutter.
+
+    Remember to :ref:`apply<Apply>` the Conform Object operation to the source object before using as a boolean cutter.
 
 
 ====================================================================
