@@ -32,7 +32,7 @@ This creates a vertex group which automatically weights the vertices at the bott
 .. figure:: images/conform_obj_2.gif
     :alt: Conform Object at work
 
-    The add-on allows you to control the influence of the deformation.  In this case, we do not want the threads of the screws to be affected, so we reduce the "End Point" parameter so that the effect finishes towards the bottom of the object.
+    The add-on allows you to control the influence of the deformation.  In this case, we do not want the threads of the screws to be affected, so we reduce the *End* parameter so that the effect finishes towards the bottom of the object.
 
 Start/End
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
