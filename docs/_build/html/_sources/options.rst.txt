@@ -37,6 +37,11 @@ This creates a vertex group which automatically weights the vertices at the bott
 Start/End
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: images/start_end_grad.jpg
+    :alt: Start/End controls
+
+    Start/End controls
+
 This controls when the gradient effect of the vertices starts and ends.  
 
 A value of 0.0 is at the bottom of the object, and a value of 1.0 is at the top.  
@@ -99,6 +104,11 @@ This effect is achieved by using a |Data Transfer Modifier| on the Source Object
 
 Start/End (Blend Normals)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: images/start_end_blend.jpg
+    :alt: Start/End controls
+
+    Start/End controls for normal blending
 
 As with the :ref:`Start/End` controls for the :ref:`Gradient Effect`, this controls which face normals are affected.
 

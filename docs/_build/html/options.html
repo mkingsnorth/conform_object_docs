@@ -132,31 +132,37 @@
 </figure>
 <section id="start-end">
 <h4>Start/End<a class="headerlink" href="#start-end" title="Permalink to this headline"></a></h4>
+<figure class="align-default" id="id3">
+<img alt="Start/End controls" src="_images/start_end_grad.jpg" />
+<figcaption>
+<p><span class="caption-text">Start/End controls</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>This controls when the gradient effect of the vertices starts and ends.</p>
 <p>A value of 0.0 is at the bottom of the object, and a value of 1.0 is at the top.</p>
 <p>Lowering the value of the <em>end</em> below 1.0 will stop the deformation towards the bottom of the object, and higher values will extend the weight beyond the top of the object.  Increasing the <em>start</em> value will start the weighting higher up the object.</p>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id4">
 <img alt="Veterx Group Weighting" src="_images/vertex_group_weighting.jpg" />
 <figcaption>
-<p><span class="caption-text">The default vertex group weighting, where the effect is gradually reduced towards the top (Start=0.0, End=1.0)</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id4">
-<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_start_pt.jpg" />
-<figcaption>
-<p><span class="caption-text">Vertex group weighting where the start point has been increased so the effect covers the lower part of the object entirely (Start=0.45, End=0.55)</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The default vertex group weighting, where the effect is gradually reduced towards the top (Start=0.0, End=1.0)</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id5">
-<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_0.1.jpg" />
+<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_start_pt.jpg" />
 <figcaption>
-<p><span class="caption-text">A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (Start=0.0, End=0.1)</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Vertex group weighting where the start point has been increased so the effect covers the lower part of the object entirely (Start=0.45, End=0.55)</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id6">
+<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_0.1.jpg" />
+<figcaption>
+<p><span class="caption-text">A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (Start=0.0, End=0.1)</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
 <img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_2.0.jpg" />
 <figcaption>
-<p><span class="caption-text">A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (Start=0.0, End=2.0)</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-text">A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (Start=0.0, End=2.0)</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -169,21 +175,27 @@
 <section id="blend-normals">
 <h3>Blend Normals<a class="headerlink" href="#blend-normals" title="Permalink to this headline"></a></h3>
 <p>This will blend the normals of the source object with the target object, creating a smoother transition between the two object surfaces:</p>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id8">
 <img alt="Some simple 'horns' applied using the add-on.  They are all separate objects." src="_images/gradient_effect_2.jpg" />
 <figcaption>
-<p><span class="caption-text">Some simple ‘horns’ applied using the add-on.  They are all separate objects.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Some simple ‘horns’ applied using the add-on.  They are all separate objects.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id9">
 <img alt="Here the normals of the 'horns' are blended with the normals of the head." src="_images/gradient_effect_1.jpg" />
 <figcaption>
-<p><span class="caption-text">Here the normals of the same ‘horn’ objects are blended with the normals of the head.  They remain separate objects.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Here the normals of the same ‘horn’ objects are blended with the normals of the head.  They remain separate objects.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>This effect is achieved by using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html" target="_blank">Data Transfer Modifier</a> on the Source Object.</p>
 <section id="start-end-blend-normals">
 <h4>Start/End (Blend Normals)<a class="headerlink" href="#start-end-blend-normals" title="Permalink to this headline"></a></h4>
+<figure class="align-default" id="id10">
+<img alt="Start/End controls" src="_images/start_end_blend.jpg" />
+<figcaption>
+<p><span class="caption-text">Start/End controls for normal blending</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>As with the <a class="reference internal" href="#start-end"><span class="std std-ref">Start/End</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
 </section>
 <section id="blend-whole-object">
@@ -213,49 +225,49 @@
 <section id="hide-grid">
 <h3>Hide Grid<a class="headerlink" href="#hide-grid" title="Permalink to this headline"></a></h3>
 <p>By default, the deformation grid is hidden but it can be displayed if you wish to configure it:</p>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id11">
 <img alt="The deformation grid is revealed!" src="_images/hide_grid.gif" />
 <figcaption>
-<p><span class="caption-text">The deformation grid is revealed!</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The deformation grid is revealed!</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="grid-subdivisions">
 <h3>Grid Subdivisions<a class="headerlink" href="#grid-subdivisions" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id12">
 <img alt="Subdividing the grid increases the resolution of the deformation." src="_images/grid_subd.gif" />
 <figcaption>
-<p><span class="caption-text">Subdividing the grid increases the resolution of the deformation.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Subdividing the grid increases the resolution of the deformation.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The number of vertices in the grid.  If you are deforming over particularly smoothed or high resolution meshes, increasing this number can be useful.</p>
 </section>
 <section id="grid-x-y">
 <h3>Grid X/Y<a class="headerlink" href="#grid-x-y" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id13">
 <img alt="Grid moved in X direction." src="_images/move_grid_x.jpg" />
 <figcaption>
-<p><span class="caption-text">Grid moved in X direction.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Grid moved in X direction.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Move the grid’s X/Y position.</p>
 </section>
 <section id="grid-scale-x-y">
 <h3>Grid Scale X/Y<a class="headerlink" href="#grid-scale-x-y" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id14">
 <img alt="Scale the influence of the grid." src="_images/grid_scale.gif" />
 <figcaption>
-<p><span class="caption-text">Scale the influence of the grid.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Scale the influence of the grid.</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Scale the grid in the X/Y direction.</p>
 </section>
 <section id="grid-rotation">
 <h3>Grid Rotation<a class="headerlink" href="#grid-rotation" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id13">
+<figure class="align-default" id="id15">
 <img alt="Grid rotated on surface." src="_images/grid_rotation.gif" />
 <figcaption>
-<p><span class="caption-text">Grid rotated on surface.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Grid rotated on surface.</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Rotate the grid over the surface.</p>
