@@ -34,6 +34,19 @@ This creates a vertex group which automatically weights the vertices at the bott
 
     The add-on allows you to control the influence of the deformation.  In this case, we do not want the threads of the screws to be affected, so we reduce the *End* parameter so that the effect finishes towards the bottom of the object.
 
+Gradient Type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: images/gradient_type.jpg
+    :alt: Gradient types
+
+    The type of gradient to apply: *Linear* (Left), or *Constant* (Right)
+
+This is the type of gradient effect to apply:
+
+* **Linear**: this will create a gradually decreasing effect between two values.
+* **Constant**: this will create a hard falloff from 1 to 0.
+
 Start/End
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
