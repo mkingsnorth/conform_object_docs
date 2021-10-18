@@ -140,7 +140,18 @@ Collapse Modifiers
 
 This will collapse the existing modifiers on the source object if they are interfering with the conform effect.
 
+Deform Modifier Position
+------------------------------
 
+This will change the position of the deformation modifier (Either :ref:`Surface Deformation<Grid Mode>` of :ref:`ShrinkWrap<ShrinkWrap Mode>`) on the source object:
+
+* **Start**: At the start of the modifier stack.
+* **Before**: This will place the modifier just before a specified modifier.  Selecting the option will allow you to specify which modifier.
+
+    .. image:: images/mod_before.jpg
+        :alt: Placing a modifier before another.
+
+* **End**: At the start of the modifier stack.
 
 =======================
 Grid Object
