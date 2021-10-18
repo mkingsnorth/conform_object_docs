@@ -56,8 +56,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#blend-whole-object">Blend Whole Object</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#add-simple-subdivisions">Add Simple Subdivisions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#align-object-to-face">Align Object to Face</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#positioning">Positioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-simple-subdivisions">Add Simple Subdivisions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#collapse-modifiers">Collapse Modifiers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#deform-modifier-position">Deform Modifier Position</a></li>
 </ul>
@@ -219,16 +220,24 @@
 <p>This will blend all of the object’s normals regardless of the gradient effect.</p>
 </section>
 </section>
+<section id="align-object-to-face">
+<h3>Align Object to Face<a class="headerlink" href="#align-object-to-face" title="Permalink to this headline"></a></h3>
+<p>This will automatically align the source object to the face of the target object it is being applied to if it is not already.</p>
+</section>
+<section id="positioning">
+<h3>Positioning<a class="headerlink" href="#positioning" title="Permalink to this headline"></a></h3>
+<p>This controls how the source object is positioned on the surface:</p>
+<ul class="simple">
+<li><p><strong>Lowest Point</strong>: This will take the lowest point of the source object and use that to place it on the surface.</p></li>
+<li><p><strong>Center</strong>: This will take the center of the source object and use that to place it on the surface.</p></li>
+</ul>
+</section>
 <section id="add-simple-subdivisions">
 <h3>Add Simple Subdivisions<a class="headerlink" href="#add-simple-subdivisions" title="Permalink to this headline"></a></h3>
 <p>This adds a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html" target="_blank">Subdivision Surface modifier</a> to the source object, set to ‘simple’, in case you wish to quickly subdivide the mesh when conforming the object.</p>
 <ul class="simple">
 <li><p><strong>Subdivisions</strong>: The number of subdivisions to use in the modifier.</p></li>
 </ul>
-</section>
-<section id="align-object-to-face">
-<h3>Align Object to Face<a class="headerlink" href="#align-object-to-face" title="Permalink to this headline"></a></h3>
-<p>This will automatically align the source object to the face of the target object it is being applied to if it is not already.</p>
 </section>
 <section id="collapse-modifiers">
 <h3>Collapse Modifiers<a class="headerlink" href="#collapse-modifiers" title="Permalink to this headline"></a></h3>

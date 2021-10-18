@@ -131,6 +131,20 @@ Blend Whole Object
 This will blend all of the object's normals regardless of the gradient effect.
 
 
+Align Object to Face
+------------------------------
+
+This will automatically align the source object to the face of the target object it is being applied to if it is not already.
+
+Positioning
+------------------------------
+
+This controls how the source object is positioned on the surface:
+
+* **Lowest Point**: This will take the lowest point of the source object and use that to place it on the surface.
+* **Center**: This will take the center of the source object and use that to place it on the surface.
+
+
 Add Simple Subdivisions
 ------------------------------
 
@@ -142,10 +156,7 @@ This adds a |Subdivision Surface modifier| to the source object, set to 'simple'
 
    <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html" target="_blank">Subdivision Surface modifier</a>
 
-Align Object to Face
-------------------------------
 
-This will automatically align the source object to the face of the target object it is being applied to if it is not already.
 
 
 Collapse Modifiers
