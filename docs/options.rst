@@ -34,25 +34,45 @@ This creates a vertex group which automatically weights the vertices at the bott
 
     The add-on allows you to control the influence of the deformation.  In this case, we do not want the threads of the screws to be affected, so we reduce the "End Point" parameter so that the effect finishes towards the bottom of the object.
 
-End Point
+Start/End
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This controls when the gradient effect of the vertices ends, 1.0 being at the top of the object.  Lower values will stop the deformation towards the bottom of the object, and higher values will extend the weight beyond the top of the object.
+This controls when the gradient effect of the vertices starts and ends.  
+
+A value of 0.0 is at the bottom of the object, and a value of 1.0 is at the top.  
+
+Lowering the value of the *end* below 1.0 will stop the deformation towards the bottom of the object, and higher values will extend the weight beyond the top of the object.  Increasing the *start* value will start the weighting higher up the object.
 
 .. figure:: images/vertex_group_weighting.jpg
-    :alt: Vetex Group Weighting
+    :alt: Veterx Group Weighting
 
-    The default vertex group weighting, where the effect is gradually reduced towards the top (End Point=1.0)
+    The default vertex group weighting, where the effect is gradually reduced towards the top (Start=0.0, End=1.0)
+
+.. figure:: images/vertex_group_weighting_start_pt.jpg
+    :alt: Veterx Group Weighting
+
+    Vertex group weighting where the start point has been increased so the effect covers the lower part of the object entirely (Start=0.45, End=0.55)
 
 .. figure:: images/vertex_group_weighting_0.1.jpg
-    :alt: Vetex Group Weighting
+    :alt: Veterx Group Weighting
 
-    A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (End Point=0.1)
+    A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (Start=0.0, End=0.1)
 
 .. figure:: images/vertex_group_weighting_2.0.jpg
-    :alt: Vetex Group Weighting
+    :alt: Veterx Group Weighting
 
-    A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (End Point=2.0)
+    A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (Start=0.0, End=2.0)
+
+
+.. tip:: Visualise a vertex group in Edit Mode by selecting "Vertex Group Weights" in the |overlays panel|:
+
+    .. image:: images/vertex_group_visualise.jpg
+        :alt: Visualising Vertex Groups
+
+
+.. |overlays panel| raw:: html
+
+   <a href="https://docs.blender.org/manual/en/latest/editors/3dview/display/overlays.html" target="_blank">overlays panel</a>
 
 
 Blend Normals
@@ -77,10 +97,10 @@ This effect is achieved by using a |Data Transfer Modifier| on the Source Object
 
    <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html" target="_blank">Data Transfer Modifier</a>
 
-End Point (Blend Normals)
+Start/End (Blend Normals)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As with the :ref:`End Point` controls for the :ref:`Gradient Effect`, this controls which face normals are affected.
+As with the :ref:`Start/End` controls for the :ref:`Gradient Effect`, this controls which face normals are affected.
 
 Blend Whole Object
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

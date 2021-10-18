@@ -18,6 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Undo" href="undo.html" />
     <link rel="prev" title="How does it work?" href="how_does_it_work.html" /> 
 </head>
 
@@ -46,11 +47,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#source-object">Source Object</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#method">Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gradient-effect">Gradient Effect</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#end-point">End Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-end">Start/End</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#blend-normals">Blend Normals</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#end-point-blend-normals">End Point (Blend Normals)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-end-blend-normals">Start/End (Blend Normals)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#blend-whole-object">Blend Whole Object</a></li>
 </ul>
 </li>
@@ -70,6 +71,11 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
 </ul>
 
         </div>
@@ -124,48 +130,61 @@
 <p><span class="caption-text">The add-on allows you to control the influence of the deformation.  In this case, we do not want the threads of the screws to be affected, so we reduce the “End Point” parameter so that the effect finishes towards the bottom of the object.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<section id="end-point">
-<h4>End Point<a class="headerlink" href="#end-point" title="Permalink to this headline"></a></h4>
-<p>This controls when the gradient effect of the vertices ends, 1.0 being at the top of the object.  Lower values will stop the deformation towards the bottom of the object, and higher values will extend the weight beyond the top of the object.</p>
+<section id="start-end">
+<h4>Start/End<a class="headerlink" href="#start-end" title="Permalink to this headline"></a></h4>
+<p>This controls when the gradient effect of the vertices starts and ends.</p>
+<p>A value of 0.0 is at the bottom of the object, and a value of 1.0 is at the top.</p>
+<p>Lowering the value of the <em>end</em> below 1.0 will stop the deformation towards the bottom of the object, and higher values will extend the weight beyond the top of the object.  Increasing the <em>start</em> value will start the weighting higher up the object.</p>
 <figure class="align-default" id="id3">
-<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting.jpg" />
+<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting.jpg" />
 <figcaption>
-<p><span class="caption-text">The default vertex group weighting, where the effect is gradually reduced towards the top (End Point=1.0)</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The default vertex group weighting, where the effect is gradually reduced towards the top (Start=0.0, End=1.0)</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id4">
-<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting_0.1.jpg" />
+<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_start_pt.jpg" />
 <figcaption>
-<p><span class="caption-text">A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (End Point=0.1)</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Vertex group weighting where the start point has been increased so the effect covers the lower part of the object entirely (Start=0.45, End=0.55)</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id5">
-<img alt="Vetex Group Weighting" src="_images/vertex_group_weighting_2.0.jpg" />
+<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_0.1.jpg" />
 <figcaption>
-<p><span class="caption-text">A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (End Point=2.0)</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (Start=0.0, End=0.1)</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+<figure class="align-default" id="id6">
+<img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_2.0.jpg" />
+<figcaption>
+<p><span class="caption-text">A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (Start=0.0, End=2.0)</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Visualise a vertex group in Edit Mode by selecting “Vertex Group Weights” in the <a href="https://docs.blender.org/manual/en/latest/editors/3dview/display/overlays.html" target="_blank">overlays panel</a>:</p>
+<img alt="Visualising Vertex Groups" src="_images/vertex_group_visualise.jpg" />
+</div>
 </section>
 </section>
 <section id="blend-normals">
 <h3>Blend Normals<a class="headerlink" href="#blend-normals" title="Permalink to this headline"></a></h3>
 <p>This will blend the normals of the source object with the target object, creating a smoother transition between the two object surfaces:</p>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id7">
 <img alt="Some simple 'horns' applied using the add-on.  They are all separate objects." src="_images/gradient_effect_2.jpg" />
 <figcaption>
-<p><span class="caption-text">Some simple ‘horns’ applied using the add-on.  They are all separate objects.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Some simple ‘horns’ applied using the add-on.  They are all separate objects.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id8">
 <img alt="Here the normals of the 'horns' are blended with the normals of the head." src="_images/gradient_effect_1.jpg" />
 <figcaption>
-<p><span class="caption-text">Here the normals of the same ‘horn’ objects are blended with the normals of the head.  They remain separate objects.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Here the normals of the same ‘horn’ objects are blended with the normals of the head.  They remain separate objects.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>This effect is achieved by using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html" target="_blank">Data Transfer Modifier</a> on the Source Object.</p>
-<section id="end-point-blend-normals">
-<h4>End Point (Blend Normals)<a class="headerlink" href="#end-point-blend-normals" title="Permalink to this headline"></a></h4>
-<p>As with the <a class="reference internal" href="#end-point"><span class="std std-ref">End Point</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
+<section id="start-end-blend-normals">
+<h4>Start/End (Blend Normals)<a class="headerlink" href="#start-end-blend-normals" title="Permalink to this headline"></a></h4>
+<p>As with the <a class="reference internal" href="#start-end"><span class="std std-ref">Start/End</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
 </section>
 <section id="blend-whole-object">
 <h4>Blend Whole Object<a class="headerlink" href="#blend-whole-object" title="Permalink to this headline"></a></h4>
@@ -194,49 +213,49 @@
 <section id="hide-grid">
 <h3>Hide Grid<a class="headerlink" href="#hide-grid" title="Permalink to this headline"></a></h3>
 <p>By default, the deformation grid is hidden but it can be displayed if you wish to configure it:</p>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id9">
 <img alt="The deformation grid is revealed!" src="_images/hide_grid.gif" />
 <figcaption>
-<p><span class="caption-text">The deformation grid is revealed!</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The deformation grid is revealed!</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="grid-subdivisions">
 <h3>Grid Subdivisions<a class="headerlink" href="#grid-subdivisions" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id10">
 <img alt="Subdividing the grid increases the resolution of the deformation." src="_images/grid_subd.gif" />
 <figcaption>
-<p><span class="caption-text">Subdividing the grid increases the resolution of the deformation.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Subdividing the grid increases the resolution of the deformation.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The number of vertices in the grid.  If you are deforming over particularly smoothed or high resolution meshes, increasing this number can be useful.</p>
 </section>
 <section id="grid-x-y">
 <h3>Grid X/Y<a class="headerlink" href="#grid-x-y" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id11">
 <img alt="Grid moved in X direction." src="_images/move_grid_x.jpg" />
 <figcaption>
-<p><span class="caption-text">Grid moved in X direction.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Grid moved in X direction.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Move the grid’s X/Y position.</p>
 </section>
 <section id="grid-scale-x-y">
 <h3>Grid Scale X/Y<a class="headerlink" href="#grid-scale-x-y" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id12">
 <img alt="Scale the influence of the grid." src="_images/grid_scale.gif" />
 <figcaption>
-<p><span class="caption-text">Scale the influence of the grid.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Scale the influence of the grid.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Scale the grid in the X/Y direction.</p>
 </section>
 <section id="grid-rotation">
 <h3>Grid Rotation<a class="headerlink" href="#grid-rotation" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id13">
 <img alt="Grid rotated on surface." src="_images/grid_rotation.gif" />
 <figcaption>
-<p><span class="caption-text">Grid rotated on surface.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Grid rotated on surface.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Rotate the grid over the surface.</p>
@@ -254,6 +273,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="how_does_it_work.html" class="btn btn-neutral float-left" title="How does it work?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="undo.html" class="btn btn-neutral float-right" title="Undo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
