@@ -29,7 +29,7 @@ The add-on handles the complexity of doing this for you in a non-destructive way
 Features:
 -----------------
 
-* Simple to use right-click menu option performs the :ref:`operation in one go<How to Use>`.
+* Simple right-click menu option performs the :ref:`operation in one go<How to Use>`.
 * :ref:`Graduate the effect<Gradient Effect>` from the bottom to the top of the object.
 * Choose from :ref:`Grid Mode` or :ref:`Shrinkwrap Mode`.
 * Transfer surface normals to :ref:`blend object shading<Blend Normals>`.
