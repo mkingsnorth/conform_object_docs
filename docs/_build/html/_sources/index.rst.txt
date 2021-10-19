@@ -16,9 +16,14 @@ Conform Object
 What is Conform Object?
 ---------------------------------
 
-Conform Object is a Blender add-on for any 3D modeller that needs to wrap objects onto another object's surface in one action.
+|Conform Object| is a Blender add-on for any 3D modeller that needs to wrap objects onto another object's surface in one action.
 
 The add-on handles the complexity of doing this for you in a non-destructive way.  
+
+.. |Conform Object| raw:: html
+
+   <a href="https://blendermarket.com/products/conform-object">Conform Object</a>
+
 
 -----------------
 Features:
