@@ -48,7 +48,10 @@
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tips and Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#bad-deformations">Bad Deformations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">“The bottom of the source object is not pointing towards the target object”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">“The bottom of the source object is not pointing towards the target object”</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-happens-if-the-bottom-of-the-source-object-is-in-the-wrong-orientation">What happens if the bottom of the source object is in the wrong orientation?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#when-editing-the-object-the-effect-is-lost">When Editing the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-copying-the-object-the-effect-is-lost">When Copying the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-boolean-cutters">Creating Boolean Cutters</a></li>
@@ -116,27 +119,72 @@
 <p><span class="caption-text">This error occurs when the bottom of the source object is not pointing towards the target object.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The bottom of the source object must be pointing towards the target object when running the operation.  The bottom of the object is the lowest part of the object when the object is not rotated.</p>
-<p>You will need to orientate the object correctly by rotating it in Object mode:</p>
-<figure class="align-default" id="id3">
-<img alt="Misalign correction" src="_images/misalign_error_correct.jpg" />
-<figcaption>
-<p><span class="caption-text">The object is rotated correctly as it is pointing towards the target object.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id4">
-<img alt="Misalign correction" src="_images/misalign_error_correct2.jpg" />
-<figcaption>
-<p><span class="caption-text">The object conformed to the surface.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p>The bottom of the source object’s center must be pointing towards the surface of the target object when running the operation.  The bottom of the object is the lowest part of the object when the object is not rotated.</p>
+<p>You will need to orientate the object correctly by rotating it in Object mode.</p>
+<p>The best way to check this is to first visualize it in blender:</p>
+<ol class="arabic">
+<li><p>With the source object selected, in the top-right of the 3D view, click the ‘Viewport Gizmos’ menu.</p>
+<blockquote>
+<div><img alt="Viewport Gizmos Menu" src="_images/viewport_gizmos_menu.jpg" />
+</div></blockquote>
+</li>
+<li><p>Under ‘Object Gizmos’, select ‘Local’ from the drop-down box, and tick the ‘Move’ checkbox.  This will display the local X/Y/Z axes for the selected object.</p>
+<blockquote>
+<div><img alt="Local XYZ Gizmo Display" src="_images/local_xyz_gizmo.jpg" />
+</div></blockquote>
+</li>
+<li><p>Now, with the object selected, press the <strong>R</strong> key to rotate it (you can then press X, Y, or Z to restrict the rotation if you wish, and type a number for the number of degrees), and click the left mouse button to complete the rotation.  You’ll see that the object’s gizmo axis display has also rotated, as it displays the rotation of the object.</p>
+<blockquote>
+<div><img alt="Local object Rotation" src="_images/local_obj_rotate.jpg" />
+</div></blockquote>
+</li>
+<li><p>The ‘Bottom’ of an object is the opposite direction of the blue Z-Axis arrow (The -Z axis).  It is this opposing direction that needs to be pointing towards the source object.</p>
+<blockquote>
+<div><img alt="Minus Z Axis Direction" src="_images/minus_z_axis.jpg" />
+</div></blockquote>
+</li>
+<li><p>When the axis is aligned like this, you should now be able to perform the Conform Object operation:</p>
+<blockquote>
+<div><img alt="Minus Z Axis Direction" src="_images/conform_object_axis_success.jpg" />
+</div></blockquote>
+</li>
+</ol>
+<section id="what-happens-if-the-bottom-of-the-source-object-is-in-the-wrong-orientation">
+<h3>What happens if the bottom of the source object is in the wrong orientation?<a class="headerlink" href="#what-happens-if-the-bottom-of-the-source-object-is-in-the-wrong-orientation" title="Permalink to this headline"></a></h3>
+<img alt="Bad Direction" src="_images/bad_direction.jpg" />
+<p>You can change the orientation of the axis so that the bottom of your source object is pointing in the right direction:</p>
+<ol class="arabic">
+<li><p>With the object selected, press the ‘N’ key to access the viewport’s right-hand Properties tabs if they aren’t there already.</p></li>
+<li><p>Select the ‘Tool’ tab.</p></li>
+<li><p>Open the ‘Options’ section, and expand the ‘Transform’ tab.  Tick the ‘Affect Only: Origins’ checkbox.  Now, you can rotate the Origin of the object, and not the object itself.</p>
+<blockquote>
+<div><img alt="Affect Origins Only Transform Option" src="_images/affect_origin_only.jpg" />
+</div></blockquote>
+</li>
+<li><p>Make sure the opposite direction of the blue arrow, or in other words the object’s bottom, is in the direction you need by rotating the axes using the <strong>R</strong> key, optionally followed by the X, Y or Z key to contrain the rotation axis followed by a number for the degrees of the rotation.</p>
+<blockquote>
+<div><img alt="Affect Origins Only Transform Option - rotated" src="_images/affect_origin_only_rotate.jpg" />
+</div></blockquote>
+</li>
+<li><p>When finished, remember to untick the <em>Affect Only: Origins</em> checkbox to go back to normal:</p>
+<blockquote>
+<div><img alt="Untick Affect Origins Only Transform Option" src="_images/affect_origin_only_untick.jpg" />
+</div></blockquote>
+</li>
+<li><p>You should now be able to preform the Conform Object operation:</p>
+<blockquote>
+<div><img alt="Correctly Applying the Conform." src="_images/affect_origin_only_correct.jpg" />
+</div></blockquote>
+</li>
+</ol>
+</section>
 </section>
 <section id="when-editing-the-object-the-effect-is-lost">
 <h2>When Editing the Object, the Effect is Lost<a class="headerlink" href="#when-editing-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id3">
 <img alt="The effect gets lost when editing the object." src="_images/edit_error.gif" />
 <figcaption>
-<p><span class="caption-text">The effect gets lost when editing the object.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The effect gets lost when editing the object.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 <div class="legend">
 <ul>
 <li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> loses its binding to the surface whenever the underlying mesh is changed.</p>
@@ -151,10 +199,10 @@
 </section>
 <section id="when-copying-the-object-the-effect-is-lost">
 <h2>When Copying the Object, the Effect is Lost<a class="headerlink" href="#when-copying-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id4">
 <img alt="The effect gets lost when duplicating the object." src="_images/dupe_error.gif" />
 <figcaption>
-<p><span class="caption-text">The effect gets lost when duplicating the object.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The effect gets lost when duplicating the object.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 <div class="legend">
 <ul>
 <li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, because the new object would reference the same deformation grid, the effect is automaticaly removed by the add-on to prevent this.</p>
@@ -169,17 +217,17 @@
 </section>
 <section id="creating-boolean-cutters">
 <h2>Creating Boolean Cutters<a class="headerlink" href="#creating-boolean-cutters" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id5">
 <img alt="Example of a bad boolean cutter because Conform operation is not :ref:`applied&lt;Apply&gt;`." src="_images/boolean_cutter_bad.jpg" />
 <figcaption>
-<p><span class="caption-text">Example of a bad boolean cutter because Conform operation is not <a class="reference internal" href="apply.html#apply"><span class="std std-ref">applied</span></a>.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Example of a bad boolean cutter because Conform operation is not <a class="reference internal" href="apply.html#apply"><span class="std std-ref">applied</span></a>.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If trying to use the conformed object as a boolean cutter on the target object,  use the <a class="reference internal" href="apply.html#apply"><span class="std std-ref">Apply Conform  Object</span></a> operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the source object itself is trying to deform to the cut shape.</p>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id6">
 <img alt="Remember to Apply the Conform Object operation to the source object before using as a boolean cutter." src="_images/boolean_cutter.jpg" />
 <figcaption>
-<p><span class="caption-text">Remember to <a class="reference internal" href="apply.html#apply"><span class="std std-ref">apply</span></a> the Conform Object operation to the source object before using as a boolean cutter.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Remember to <a class="reference internal" href="apply.html#apply"><span class="std std-ref">apply</span></a> the Conform Object operation to the source object before using as a boolean cutter.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>

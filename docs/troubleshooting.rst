@@ -38,19 +38,68 @@ There are several things to try:
 
     This error occurs when the bottom of the source object is not pointing towards the target object.
 
-The bottom of the source object must be pointing towards the target object when running the operation.  The bottom of the object is the lowest part of the object when the object is not rotated.
+The bottom of the source object's center must be pointing towards the surface of the target object when running the operation.  The bottom of the object is the lowest part of the object when the object is not rotated.
 
-You will need to orientate the object correctly by rotating it in Object mode:
+You will need to orientate the object correctly by rotating it in Object mode.
 
-.. figure:: images/misalign_error_correct.jpg
-    :alt: Misalign correction
+The best way to check this is to first visualize it in blender:
 
-    The object is rotated correctly as it is pointing towards the target object.
+#. With the source object selected, in the top-right of the 3D view, click the ‘Viewport Gizmos’ menu.  
 
-.. figure:: images/misalign_error_correct2.jpg
-    :alt: Misalign correction
+    .. image:: images/viewport_gizmos_menu.jpg
+        :alt: Viewport Gizmos Menu
 
-    The object conformed to the surface.
+#. Under ‘Object Gizmos’, select ‘Local’ from the drop-down box, and tick the ‘Move’ checkbox.  This will display the local X/Y/Z axes for the selected object.
+
+    .. image:: images/local_xyz_gizmo.jpg
+        :alt: Local XYZ Gizmo Display
+
+#. Now, with the object selected, press the **R** key to rotate it (you can then press X, Y, or Z to restrict the rotation if you wish, and type a number for the number of degrees), and click the left mouse button to complete the rotation.  You’ll see that the object’s gizmo axis display has also rotated, as it displays the rotation of the object.  
+
+    .. image:: images/local_obj_rotate.jpg
+        :alt: Local object Rotation
+
+#. The ‘Bottom’ of an object is the opposite direction of the blue Z-Axis arrow (The -Z axis).  It is this opposing direction that needs to be pointing towards the source object.
+
+    .. image:: images/minus_z_axis.jpg
+        :alt: Minus Z Axis Direction
+
+#. When the axis is aligned like this, you should now be able to perform the Conform Object operation:
+
+
+    .. image:: images/conform_object_axis_success.jpg
+        :alt: Minus Z Axis Direction
+
+
+What happens if the bottom of the source object is in the wrong orientation?  
+----------------------------------------------------------------------------------
+
+.. image:: images/bad_direction.jpg
+    :alt: Bad Direction
+
+You can change the orientation of the axis so that the bottom of your source object is pointing in the right direction:
+
+#. With the object selected, press the ‘N’ key to access the viewport’s right-hand Properties tabs if they aren’t there already.  
+#. Select the ‘Tool’ tab.
+#. Open the ‘Options’ section, and expand the ‘Transform’ tab.  Tick the ‘Affect Only: Origins’ checkbox.  Now, you can rotate the Origin of the object, and not the object itself.  
+
+    .. image:: images/affect_origin_only.jpg
+        :alt: Affect Origins Only Transform Option
+
+#. Make sure the opposite direction of the blue arrow, or in other words the object’s bottom, is in the direction you need by rotating the axes using the **R** key, optionally followed by the X, Y or Z key to contrain the rotation axis followed by a number for the degrees of the rotation. Press Enter.
+
+    .. image:: images/affect_origin_only_rotate.jpg
+        :alt: Affect Origins Only Transform Option - rotated
+
+#. When finished, remember to untick the *Affect Only: Origins* checkbox to go back to normal:
+
+    .. image:: images/affect_origin_only_untick.jpg
+        :alt: Untick Affect Origins Only Transform Option
+
+#. You should now be able to preform the Conform Object operation:
+
+    .. image:: images/affect_origin_only_correct.jpg
+        :alt: Correctly Applying the Conform.
 
 ====================================================================
 When Editing the Object, the Effect is Lost
