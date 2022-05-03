@@ -16,7 +16,7 @@ Conform Object
 What is Conform Object?
 ---------------------------------
 
-|Conform Object| is a Blender add-on for any 3D modeller that needs to project objects onto another object's surface in one action.
+|Conform Object| is a Blender add-on for any 3D modeler that needs to project objects onto another object's surface in one action.
 
 The add-on handles the complexity of doing this for you in a non-destructive way.  
 
