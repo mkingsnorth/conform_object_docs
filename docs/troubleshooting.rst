@@ -101,6 +101,8 @@ You can change the orientation of the axis so that the bottom of your source obj
     .. image:: images/affect_origin_only_correct.jpg
         :alt: Correctly Applying the Conform.
 
+Remember to :ref:`get in touch<Contact>` if you are having any issues with this.
+
 ====================================================================
 When Editing the Object, the Effect is Lost
 ====================================================================

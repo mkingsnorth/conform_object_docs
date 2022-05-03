@@ -86,7 +86,7 @@ You can change the orientation of the axis so that the bottom of your source obj
     .. image:: images/affect_origin_only.jpg
         :alt: Affect Origins Only Transform Option
 
-#. Make sure the opposite direction of the blue arrow, or in other words the object’s bottom, is in the direction you need by rotating the axes using the **R** key, optionally followed by the X, Y or Z key to contrain the rotation axis followed by a number for the degrees of the rotation. 
+#. Make sure the opposite direction of the blue arrow, or in other words the object’s bottom, is in the direction you need by rotating the axes using the **R** key, optionally followed by the X, Y or Z key to contrain the rotation axis followed by a number for the degrees of the rotation. Press Enter.
 
     .. image:: images/affect_origin_only_rotate.jpg
         :alt: Affect Origins Only Transform Option - rotated
@@ -100,6 +100,8 @@ You can change the orientation of the axis so that the bottom of your source obj
 
     .. image:: images/affect_origin_only_correct.jpg
         :alt: Correctly Applying the Conform.
+
+Remember to :ref:`get in touch<Contact>` if you are having any issues with this.
 
 ====================================================================
 When Editing the Object, the Effect is Lost
