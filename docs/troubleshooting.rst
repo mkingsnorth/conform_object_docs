@@ -32,6 +32,17 @@ There are several things to try:
 "The bottom of the source object is not pointing towards the target object"
 ==================================================================================================================================================
 
+See this video here:
+
+|source_obj_error_vid|
+
+.. |source_obj_error_vid| raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/N3TG_TnStZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Or follow the explanation below:
+
 
 .. figure:: images/misalign_error.jpg
     :alt: Misalign error
