@@ -2,7 +2,7 @@
 Options
 #####################################
 
-.. figure:: images/options_panel.jpg
+.. figure:: images/object_conformed_panel.gif
   :alt: Options Panel in the bottom left of the viewport
 
   Options Panel in the bottom left of the viewport
@@ -15,10 +15,22 @@ Presets
 You can add or remove preset configurations from the tool here by pressing the **+** or **-** keys, or reset the tool to its default parameters.
 
 =======================
-Source Object
+Projection
 =======================
 
-The following controls the parameters of how the source object is applied:
+The following controls the parameters of how the source object is projected onto the Target Object:
+
+.. image:: images/panel_projection.jpg
+    :alt: Conform Object at work
+
+
+Direction
+--------------------
+
+This controls how the direction is chosen when Conforming the **Source Object**:
+
+  * **Auto**: This mode will first try to project the Source Object onto the Target Object using the -Z direction as usual, and if that fails, it will instead project onto the closest point on the Target Object.
+
 
 Method
 --------------------

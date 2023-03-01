@@ -44,7 +44,8 @@
 <li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Options</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#presets">Presets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#source-object">Source Object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#projection">Projection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#direction">Direction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#method">Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gradient-effect">Gradient Effect</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#gradient-type">Gradient Type</a></li>
@@ -108,7 +109,7 @@
   <section id="options">
 <h1>Options<a class="headerlink" href="#options" title="Permalink to this headline"></a></h1>
 <figure class="align-default" id="id1">
-<img alt="Options Panel in the bottom left of the viewport" src="_images/options_panel.jpg" />
+<img alt="Options Panel in the bottom left of the viewport" src="_images/object_conformed_panel.gif" />
 <figcaption>
 <p><span class="caption-text">Options Panel in the bottom left of the viewport</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
@@ -117,9 +118,19 @@
 <h2>Presets<a class="headerlink" href="#presets" title="Permalink to this headline"></a></h2>
 <p>You can add or remove preset configurations from the tool here by pressing the <strong>+</strong> or <strong>-</strong> keys, or reset the tool to its default parameters.</p>
 </section>
-<section id="source-object">
-<h2>Source Object<a class="headerlink" href="#source-object" title="Permalink to this headline"></a></h2>
-<p>The following controls the parameters of how the source object is applied:</p>
+<section id="projection">
+<h2>Projection<a class="headerlink" href="#projection" title="Permalink to this headline"></a></h2>
+<p>The following controls the parameters of how the source object is projected onto the Target Object:</p>
+<img alt="Conform Object at work" src="_images/panel_projection.jpg" />
+<section id="direction">
+<h3>Direction<a class="headerlink" href="#direction" title="Permalink to this headline"></a></h3>
+<p>This controls how the direction is chosen when Conforming the <strong>Source Object</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Auto</strong>: This mode will first try to project the Source Object onto the Target Object using the -Z direction as usual, and if that fails, it will instead project onto the closest point on the Target Object.</p></li>
+</ul>
+</div></blockquote>
+</section>
 <section id="method">
 <h3>Method<a class="headerlink" href="#method" title="Permalink to this headline"></a></h3>
 <p>Choose between <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a> or <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>.</p>
