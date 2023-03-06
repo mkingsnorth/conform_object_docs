@@ -20,7 +20,7 @@ There are several things to try:
 
 * Enable the :ref:`Gradient Effect` to smooth the deformation at the top of the object.
 * Increase the resolution of the target object by using a subdivision surface modifier.
-* Increase the resolution of the deformation grid in the :ref:`options`.
+* Increase the *Grid Smoothing* of the deformation grid in the :ref:`options<Method>` panel.
 
 .. figure:: images/bad_deforms_fixed.jpg
     :alt: Bad Deformations fixed.
