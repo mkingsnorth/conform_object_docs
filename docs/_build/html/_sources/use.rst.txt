@@ -70,12 +70,12 @@ To conform a  **Source Object** to a **Target Object**:
     .. figure:: images/object_conformed_finetune.gif
         :alt: Conform Object rotation.
  
-#. The object should now be conformed to the Target Object. Expand the :ref:`options` menu to adjust more parameters:
+#. The object should now be conformed to the Target Object. Expand the :ref:`Options` panel to adjust more parameters:
 
     .. figure:: images/object_conformed.gif
         :alt: The object, conformed.
 
-        The object, conformed with the :ref:`options` panel.
+        The object, conformed with the :ref:`Options` panel.
 
 ======================================================
 Multiple Objects
