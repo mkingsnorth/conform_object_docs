@@ -2,8 +2,14 @@
 How To Use
 #####################################
 
+.. figure:: images/object_conformed_howto_2.gif
+    :alt: Conform Object at work.
+
+    Select the **Source Object**, then the **Target Object**.  Right-click and select "Conform Object" from the menu.  Disable the :ref:`Gradient Effect` from the :ref:`Options` panel if needed.  Further step by step guide below.
+
+
 ===========================
-Main Use
+Step by Step
 ===========================
 
 .. figure:: images/source_target_orientation.jpg
@@ -12,7 +18,6 @@ Main Use
     The Source Object is ideally rotated on its local axis so that its base is pointing towards the Target Object.
 
 To conform a  **Source Object** to a **Target Object**:
-    
 
 #. Move and rotate the **Source Object** near, or on top of, the surface of the **Target Object** you wish to wrap it to:
 
@@ -53,7 +58,7 @@ To conform a  **Source Object** to a **Target Object**:
     .. figure:: images/conform_object_menu.jpg
         :alt: Conform Object Menu Option.
 
-#. The object will then conform to the target object.  If the :ref:`Gradient Effect` is turned on, you may wish to untick it in the :ref:`options` menu that appears in the bottom left of the viewport:
+#. The **Source Object** will then conform to the **Target Object**.  If the :ref:`Gradient Effect` is turned on, you may wish to untick it in the :ref:`options` menu that appears in the bottom left of the viewport:
 
     .. figure:: images/conform_obj_gradient_effect_toggle.gif
         :alt: Conform Object Menu Option.
