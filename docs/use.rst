@@ -53,7 +53,7 @@ To conform a  **Source Object** to a **Target Object**:
     .. figure:: images/conform_object_menu.jpg
         :alt: Conform Object Menu Option.
 
-#. The object will then conform to the target object.  If the :ref:`Gradient Effect` is turned on, you may wish to untick it in the :ref:`options` menu that appears in the bottom left of the viewport:
+#. The **Source Object** will then conform to the **Target Object**.  If the :ref:`Gradient Effect` is turned on, you may wish to untick it in the :ref:`options` menu that appears in the bottom left of the viewport:
 
     .. figure:: images/conform_obj_gradient_effect_toggle.gif
         :alt: Conform Object Menu Option.
