@@ -49,11 +49,12 @@ Features:
 
    installation
    use
-   how_does_it_work
    options
    undo
    apply
    toggle_snap
+   vertex_weight_vis
+   how_does_it_work
    troubleshooting
    contact
 

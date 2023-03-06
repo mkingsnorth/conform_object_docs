@@ -60,7 +60,7 @@ To conform a  **Source Object** to a **Target Object**:
 
         Toggling on and off the :ref:`Gradient Effect`
 
-#. Adjust the rotation of the object if needed by expanding the *Object Transform* section and adjusting the rotation:
+#. Adjust the rotation of the object if needed by expanding the :ref:`Object Transform` section and adjusting the rotation:
 
     .. figure:: images/object_conformed_finetune.gif
         :alt: Conform Object rotation.

@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Undo" href="undo.html" />
-    <link rel="prev" title="How does it work?" href="how_does_it_work.html" /> 
+    <link rel="prev" title="How To Use" href="use.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,36 +41,38 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
-<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Options</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#presets">Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operator-presets">Operator Presets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#projection">Projection</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#direction">Direction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#method">Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#gradient-effect">Gradient Effect</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#gradient-type">Gradient Type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#start-end">Start/End</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projection-starting-point">Projection Starting Point</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#blend-normals">Blend Normals</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#start-end-blend-normals">Start/End (Blend Normals)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#blend-whole-object">Blend Whole Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#object-transform">Object Transform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#surface-offset">Surface Offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-position">Local Position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-rotation">Local Rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-projection">Object Projection</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#align-object-to-face">Align Object to Face</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#positioning">Positioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gradient-effect">Gradient Effect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-type">Gradient Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-method">Gradient Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-end">Start/End</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#blend-normals">Blend Normals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-type-blend-normals">Gradient Type (Blend Normals)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-method-blend-normals">Gradient Method (Blend Normals)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-end-blend-normals">Start/End (Blend Normals)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blend-whole-object">Blend Whole Object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-options">Other Options</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#add-simple-subdivisions">Add Simple Subdivisions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#collapse-modifiers">Collapse Modifiers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#deform-modifier-position">Deform Modifier Position</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#grid-object">Grid Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#hide-grid">Hide Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#grid-subdivisions">Grid Subdivisions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#grid-x-y">Grid X/Y</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#grid-scale-x-y">Grid Scale X/Y</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#grid-rotation">Grid Rotation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#interpolation-falloff">Interpolation Falloff</a></li>
 </ul>
 </li>
 </ul>
@@ -78,6 +80,8 @@
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
 </ul>
@@ -114,42 +118,257 @@
 <p><span class="caption-text">Options Panel in the bottom left of the viewport</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<section id="presets">
-<h2>Presets<a class="headerlink" href="#presets" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id2">
+<img alt="Conform Object at work" src="_images/panel_options.jpg" />
+<figcaption>
+<p><span class="caption-text">The options panel with each section collapsed.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="operator-presets">
+<h2>Operator Presets<a class="headerlink" href="#operator-presets" title="Permalink to this headline"></a></h2>
 <p>You can add or remove preset configurations from the tool here by pressing the <strong>+</strong> or <strong>-</strong> keys, or reset the tool to its default parameters.</p>
 </section>
 <section id="projection">
 <h2>Projection<a class="headerlink" href="#projection" title="Permalink to this headline"></a></h2>
-<p>The following controls the parameters of how the source object is projected onto the Target Object:</p>
+<figure class="align-default" id="id3">
 <img alt="Conform Object at work" src="_images/panel_projection.jpg" />
+<figcaption>
+<p><span class="caption-text">The expanded Projection Panel</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The following controls the parameters of how the source object is projected onto the Target Object:</p>
 <section id="direction">
 <h3>Direction<a class="headerlink" href="#direction" title="Permalink to this headline"></a></h3>
-<p>This controls how the direction is chosen when Conforming the <strong>Source Object</strong>:</p>
+<figure class="align-default" id="id4">
+<img alt="Conform Object at work" src="_images/object_conformed_direction.gif" />
+<figcaption>
+<p><span class="caption-text">A source object having its projection direction changed by <em>custom</em> mode (Grid mode visibility is turned on).  When the direction line hits the Target Object, the Source Object begins to conform.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The different <em>Direction</em> modes control how the direction line is chosen when projecting the <strong>Source Object</strong>.  You may wish to enable Grid visibility to see the different modes working:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>Auto</strong>: This mode will first try to project the Source Object onto the Target Object using the -Z direction as usual, and if that fails, it will instead project onto the closest point on the Target Object.</p></li>
+<li><p><strong>Auto</strong>: This mode will first try to project the Source Object onto the Target Object using the <em>negative Z</em> direction as usual, and if that fails, it will instead project onto the closest point on the Target Object.</p></li>
+<li><p><strong>Axis Line</strong>: This will project a line from the middle of the <strong>Source Object</strong> in the <a href="https://youtu.be/ifoUhGTaVyM" target="_blank"><i>local</i></a> X, Y or Z direction with the object’s rotation taken into account.  By default, the projection is in the local -Z direction.  If the line misses, a warning message will be displayed.</p></li>
+<li><p><strong>Nearest</strong>: This will project a line from the middle of the <strong>Source Object</strong> to the <em>closest point</em> on the Target Object.  You may need to use the Transform Orientation section to adjust the position of the object whilst it is being projected.</p></li>
+<li><p><strong>Custom</strong>: Specify a X/Y/Z rotation for the projection line.</p></li>
 </ul>
 </div></blockquote>
 </section>
 <section id="method">
 <h3>Method<a class="headerlink" href="#method" title="Permalink to this headline"></a></h3>
-<p>Choose between <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a> or <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>.</p>
-</section>
-<section id="gradient-effect">
-<h3>Gradient Effect<a class="headerlink" href="#gradient-effect" title="Permalink to this headline"></a></h3>
-<p>This creates a vertex group which automatically weights the vertices at the bottom so the effect is less exagerated at the top:</p>
-<figure class="align-default" id="id2">
-<img alt="Conform Object at work" src="_images/conform_obj_2.gif" />
+<p>This is the method used to deform the Sourc eObject. Choose between <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a> or <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>:</p>
+<ul>
+<li><p><strong>Grid Mode</strong>: This mode is <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">described here</span></a>, and creates a projection grid object which is attached to the source object to create the deformation.   The grid object is a regular blender object, parented to the source object.</p>
+<ul>
+<li><p><strong>Visibility</strong>: The grid object is hidden by default, but can be revealed by clicking the eye icon next to the <em>Deformation Grid</em> section:</p>
+<blockquote>
+<div><figure class="align-default" id="id5">
+<img alt="Conform Object at work" src="_images/object_conformed_grid_on_off.gif" />
 <figcaption>
-<p><span class="caption-text">The add-on allows you to control the influence of the deformation.  In this case, we do not want the threads of the screws to be affected, so we reduce the <em>End</em> parameter so that the effect finishes towards the bottom of the object.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Switching on and off Grid visibility.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you wish to hide the Grid again after the Conform Object operation is performed and the panel is gone, expand the Source Object in the Outline View to find the grid object:</p>
+<figure class="align-default" id="id6">
+<img alt="Selecting the Grid on the Outline View." src="_images/grid_selection.jpg" />
+<figcaption>
+<p><span class="caption-text">Selecting the Grid on the Outline View.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Then make sure you have the <em>Disable In Viewports</em> flag ticked in the filters section of the Outline view:</p>
+<figure class="align-default" id="id7">
+<img alt="Selecting the *Disable in Viewports* flag." src="_images/restriction_toggles.jpg" />
+<figcaption>
+<p><span class="caption-text">Selecting the <em>Disable in Viewports</em> flag.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>You can then hide the grid object completely again by clicking this flag next to the object in the Outliner view:</p>
+<figure class="align-default" id="id8">
+<img alt="The grid is hidden again." src="_images/grid_hidden.jpg" />
+<figcaption>
+<p><span class="caption-text">The grid is hidden again.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Grid options</strong>:  By expanding the <em>Deformation Grid</em> section, you can change the default parameters of the grid:</p>
+<blockquote>
+<div><figure class="align-default" id="id9">
+<img alt="Conform Object at work" src="_images/conform_object_grid_options.jpg" />
+<figcaption>
+<p><span class="caption-text">Expanded Grid Options section.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p><strong>Show/Hide Grid</strong>: By default, the deformation grid is hidden but it can be displayed if you wish to configure it. This is the same setting as the Eye icon in the <em>Deformation Grid</em> section header.</p>
+<blockquote>
+<div><figure class="align-default" id="id10">
+<img alt="The deformation grid is revealed!" src="_images/hide_grid.gif" />
+<figcaption>
+<p><span class="caption-text">The deformation grid is revealed!</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p><strong>Grid Smoothing</strong></p>
+<blockquote>
+<div><figure class="align-default" id="id11">
+<img alt="Subdividing the grid increases the resolution of the deformation." src="_images/object_conformed_grid_smoothing.gif" />
+<figcaption>
+<p><span class="caption-text">Applying a Subdivision Surface modifier to the grid for smoothing: Levels 0, 1 and 2 are applied here.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This adds a <em>Subdivision Surface</em> modifier to the grid.  This helps smooth the deformation grid over jagged surfaces.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Grid Subdivisions</strong></p>
+<blockquote>
+<div><figure class="align-default" id="id12">
+<img alt="Subdividing the grid increases the resolution of the deformation." src="_images/grid_subd.gif" />
+<figcaption>
+<p><span class="caption-text">Subdividing the grid increases the resolution of the deformation.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Not to be confused with grid smoothing, this is the number of vertices in the grid.  If you are deforming over particularly smoothed or high resolution meshes, increasing this number can be useful.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Grid X/Y</strong></p>
+<blockquote>
+<div><figure class="align-default" id="id13">
+<img alt="Grid moved in X direction." src="_images/move_grid_x.jpg" />
+<figcaption>
+<p><span class="caption-text">Grid moved in X direction.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Move the grid’s X/Y position.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Grid Scale X/Y</strong></p>
+<blockquote>
+<div><figure class="align-default" id="id14">
+<img alt="Scale the influence of the grid." src="_images/grid_scale.gif" />
+<figcaption>
+<p><span class="caption-text">Scale the influence of the grid.</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Scale the grid in the X/Y direction.</p>
+</div></blockquote>
+<ul>
+<li><p><strong>Grid Rotation</strong></p>
+<figure class="align-default" id="id15">
+<img alt="Grid rotated on surface." src="_images/grid_rotation.gif" />
+<figcaption>
+<p><span class="caption-text">Grid rotated on surface.</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Rotate the grid over the surface.</p>
+</li>
+<li><p><strong>Interpolation Falloff</strong>: Used on the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> for the grid. From the Blender <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">documentation</a>: <em>“How much a vertex bound to one face of the target will be affected by the surrounding faces (this setting is unavailable after binding).”</em></p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="projection-starting-point">
+<h3>Projection Starting Point<a class="headerlink" href="#projection-starting-point" title="Permalink to this headline"></a></h3>
+<p>This parameter controls where the beginning of the projection line from the Source Object to the Target Object should be:</p>
+<ul class="simple">
+<li><p><strong>Median Point</strong>:  By default, the start of the projection line will be from the middle point of the Source Object’s geometry.</p></li>
+<li><p><strong>Origin</strong>: Alternatively, you can make the projection line start from the Source Object’s origin point in the 3D scene.</p></li>
+</ul>
+</section>
+</section>
+<section id="object-transform">
+<h2>Object Transform<a class="headerlink" href="#object-transform" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id16">
+<img alt="Object Transform Projection Options" src="_images/conform_object_transform_options.jpg" />
+<figcaption>
+<p><span class="caption-text">The expanded Object Transform Panel</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Theser parameters control how the <strong>Source Object</strong> is positioned onto the <strong>Target Object</strong> during the <em>Conform Object</em> operation.</p>
+<section id="surface-offset">
+<h3>Surface Offset<a class="headerlink" href="#surface-offset" title="Permalink to this headline"></a></h3>
+<p>This parameter controls how far away the <strong>Source Object</strong> is offset from the <strong>Target Object</strong>’s surface.</p>
+<figure class="align-default" id="id17">
+<img alt="Object Transform Projection Options" src="_images/offset_eg.jpg" />
+<figcaption>
+<p><span class="caption-text">Source Object being offset.</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="local-position">
+<h3>Local Position<a class="headerlink" href="#local-position" title="Permalink to this headline"></a></h3>
+<p>Once the Source Object has been projected, this controls the relative position of the Source Object.</p>
+<figure class="align-default" id="id18">
+<img alt="Object Transform Projection Options" src="_images/object_conformed_local_position.gif" />
+<figcaption>
+<p><span class="caption-text">Source Object being repositioned.</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="local-rotation">
+<h3>Local Rotation<a class="headerlink" href="#local-rotation" title="Permalink to this headline"></a></h3>
+<p>This controls the rotation of the Source Object once the Source Object has been projected.  This is useful for asjusting the orientation of the object after the intitial projection.</p>
+<figure class="align-default" id="id19">
+<img alt="Object Transform Projection Options" src="_images/object_conformed_local_rotation.gif" />
+<figcaption>
+<p><span class="caption-text">Source Object being rotated on the surface.</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="object-projection">
+<h3>Object Projection<a class="headerlink" href="#object-projection" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id20">
+<img alt="Object Transform Projection Options" src="_images/object_conformed_projection_point_param.gif" />
+<figcaption>
+<p><span class="caption-text">The Source Object can either be projected onto the surface using its closest part or its center.</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here you can choose which point on the <strong>Source Object</strong> is used to position it on top of the <strong>Target Object</strong>’s surface.</p>
+<ul class="simple">
+<li><p><strong>Disable Projection</strong>:  Disable projection entirely.  This will stop the Source Object from being moved, which can be useful when trying to manually place the Source Object using the <em>Local Position</em> and <em>Rotation</em> parameters.</p></li>
+<li><p><strong>Closest Point</strong>: By default the closest point on the <strong>Source Object</strong> to the <strong>Target Object</strong> will be used to position the <strong>Source Object</strong> on top of the <strong>Target Object</strong>’s surface.</p></li>
+<li><p><strong>Center</strong>: The center of the <strong>Source Object</strong>’s geometry will be used to place it on the surface of the Target Object, so the <strong>Source Object</strong> will be ‘inside’ the <strong>Target Object</strong> surface.</p></li>
+</ul>
+</section>
+</section>
+<section id="gradient-effect">
+<h2>Gradient Effect<a class="headerlink" href="#gradient-effect" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id21">
+<img alt="Conform Object at work" src="_images/conform_object_gradient_effect_options.jpg" />
+<figcaption>
+<p><span class="caption-text">The expanded Gradient Effect Panel.</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Gradient Effect creates a vertex group which automatically weights the vertices at the bottom of the <strong>Source Object</strong> so the effect is less exaggerated at the top:</p>
+<figure class="align-default" id="id22">
+<img alt="Conform Object at work" src="_images/object_conformed_projection_gradient_effect_anim.gif" />
+<figcaption>
+<p><span class="caption-text">The Gradient Effect allows you to control where the Source Object is deformed.  In this case, we do not want the threads of the screws to be affected, so we reduce the <em>End</em> parameter so that the effect finishes towards the bottom of the object.</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/vis_group_option.jpg"><img alt="Conform Object at work" src="_images/vis_group_option.jpg" style="width: 50%;" /></a>
+</figure>
+<p><a class="reference internal" href="vertex_weight_vis.html#visualize-vertex-weights"><span class="std std-ref">View the Vertex Groups</span></a> used by the Gradient Effect whilst using the add-on with <a class="reference internal" href="vertex_weight_vis.html#visualize-vertex-weights"><span class="std std-ref">this additional feature</span></a>.</p>
+</div>
 <section id="gradient-type">
-<h4>Gradient Type<a class="headerlink" href="#gradient-type" title="Permalink to this headline"></a></h4>
-<figure class="align-default" id="id3">
+<h3>Gradient Type<a class="headerlink" href="#gradient-type" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id23">
 <img alt="Gradient types" src="_images/gradient_type.jpg" />
 <figcaption>
-<p><span class="caption-text">The type of gradient to apply: <em>Linear</em> (Left), or <em>Constant</em> (Right)</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The type of gradient to apply: <em>Linear</em> (Left), or <em>Constant</em> (Right)</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>This is the type of gradient effect to apply:</p>
@@ -158,91 +377,107 @@
 <li><p><strong>Constant</strong>: this will create a hard falloff from 1 to 0.</p></li>
 </ul>
 </section>
+<section id="gradient-method">
+<h3>Gradient Method<a class="headerlink" href="#gradient-method" title="Permalink to this headline"></a></h3>
+<p>This controls the method used to apply Vertex Group weights in the Gradient Effect:</p>
+<ul>
+<li><p><strong>Standard</strong>: By default the weighting will be strongest at the closest points on the Source Object to the Target Object.:</p>
+<blockquote>
+<div><figure class="align-default">
+<a class="reference internal image-reference" href="_images/standard_weighting.jpg"><img alt="Gradient method" src="_images/standard_weighting.jpg" style="width: 50%;" /></a>
+</figure>
+</div></blockquote>
+</li>
+<li><p><strong>Proximity</strong>: The weighting will be strongest for vertices that are nearest the Target Object surface.  This is useful when attempted to set up objects that ‘wrap’ more to the Target Object when using <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>.</p>
+<blockquote>
+<div><figure class="align-default" id="id24">
+<a class="reference internal image-reference" href="_images/proximity_weighting.jpg"><img alt="Gradient method" src="_images/proximity_weighting.jpg" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">Here the proximity gradient effect is applied, where projection has been disabled and instead the object has been positioned using local controls.  Instead of <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a> is being used instead. This helps wrap objects more, but may need adjusting manually after the Conform Object operation is performed.</span><a class="headerlink" href="#id24" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+</ul>
+</section>
 <section id="start-end">
-<h4>Start/End<a class="headerlink" href="#start-end" title="Permalink to this headline"></a></h4>
-<figure class="align-default" id="id4">
+<h3>Start/End<a class="headerlink" href="#start-end" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id25">
 <img alt="Start/End controls" src="_images/start_end_grad.jpg" />
 <figcaption>
-<p><span class="caption-text">Start/End controls</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Start/End controls</span><a class="headerlink" href="#id25" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>This controls when the gradient effect of the vertices starts and ends.</p>
 <p>A value of 0.0 is at the bottom of the object, and a value of 1.0 is at the top.</p>
 <p>Lowering the value of the <em>end</em> below 1.0 will stop the deformation towards the bottom of the object, and higher values will extend the weight beyond the top of the object.  Increasing the <em>start</em> value will start the weighting higher up the object.</p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id26">
 <img alt="Veterx Group Weighting" src="_images/vertex_group_weighting.jpg" />
 <figcaption>
-<p><span class="caption-text">The default vertex group weighting, where the effect is gradually reduced towards the top (Start=0.0, End=1.0)</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The default vertex group weighting, where the effect is gradually reduced towards the top (Start=0.0, End=1.0)</span><a class="headerlink" href="#id26" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id27">
 <img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_start_pt.jpg" />
 <figcaption>
-<p><span class="caption-text">Vertex group weighting where the start point has been increased so the effect covers the lower part of the object entirely (Start=0.45, End=0.55)</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Vertex group weighting where the start point has been increased so the effect covers the lower part of the object entirely (Start=0.45, End=0.55)</span><a class="headerlink" href="#id27" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id28">
 <img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_0.1.jpg" />
 <figcaption>
-<p><span class="caption-text">A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (Start=0.0, End=0.1)</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-text">A lower vertex group weighting, where the effect is gradually reduced further towards the bottom (Start=0.0, End=0.1)</span><a class="headerlink" href="#id28" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id29">
 <img alt="Veterx Group Weighting" src="_images/vertex_group_weighting_2.0.jpg" />
 <figcaption>
-<p><span class="caption-text">A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (Start=0.0, End=2.0)</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-text">A higher vertex group weighting, where the effect is gradually reduced beyond the top of the object (Start=0.0, End=2.0)</span><a class="headerlink" href="#id29" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Visualise a vertex group in Edit Mode by selecting “Vertex Group Weights” in the <a href="https://docs.blender.org/manual/en/latest/editors/3dview/display/overlays.html" target="_blank">overlays panel</a>:</p>
-<img alt="Visualising Vertex Groups" src="_images/vertex_group_visualise.jpg" />
-</div>
 </section>
 </section>
 <section id="blend-normals">
-<h3>Blend Normals<a class="headerlink" href="#blend-normals" title="Permalink to this headline"></a></h3>
+<h2>Blend Normals<a class="headerlink" href="#blend-normals" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id30">
+<img alt="Conform Object at work" src="_images/conform_object_blend_normals_effect_options.jpg" />
+<figcaption>
+<p><span class="caption-text">The expanded Blend Normals Panel.</span><a class="headerlink" href="#id30" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>This will blend the normals of the source object with the target object, creating a smoother transition between the two object surfaces:</p>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id31">
 <img alt="Some simple 'horns' applied using the add-on.  They are all separate objects." src="_images/gradient_effect_2.jpg" />
 <figcaption>
-<p><span class="caption-text">Some simple ‘horns’ applied using the add-on.  They are all separate objects.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Some simple ‘horns’ applied using the add-on.  They are all separate objects.</span><a class="headerlink" href="#id31" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id32">
 <img alt="Here the normals of the 'horns' are blended with the normals of the head." src="_images/gradient_effect_1.jpg" />
 <figcaption>
-<p><span class="caption-text">Here the normals of the same ‘horn’ objects are blended with the normals of the head.  They remain separate objects.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Here the normals of the same ‘horn’ objects are blended with the normals of the head.  They remain separate objects.</span><a class="headerlink" href="#id32" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>This effect is achieved by using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html" target="_blank">Data Transfer Modifier</a> on the Source Object.</p>
+<p>This effect is achieved by using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html" target="_blank">Data Transfer Modifier</a> on the Source Object, and uses the same Blender Vertex Group weighting to control the effect in the same way as the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> above.</p>
+<section id="gradient-type-blend-normals">
+<h3>Gradient Type (Blend Normals)<a class="headerlink" href="#gradient-type-blend-normals" title="Permalink to this headline"></a></h3>
+<p>As with the <a class="reference internal" href="#gradient-type"><span class="std std-ref">Gradient Type</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
+</section>
+<section id="gradient-method-blend-normals">
+<h3>Gradient Method (Blend Normals)<a class="headerlink" href="#gradient-method-blend-normals" title="Permalink to this headline"></a></h3>
+<p>As with the <a class="reference internal" href="#gradient-method"><span class="std std-ref">Gradient Method</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
+</section>
 <section id="start-end-blend-normals">
-<h4>Start/End (Blend Normals)<a class="headerlink" href="#start-end-blend-normals" title="Permalink to this headline"></a></h4>
-<figure class="align-default" id="id11">
-<img alt="Start/End controls" src="_images/start_end_blend.jpg" />
-<figcaption>
-<p><span class="caption-text">Start/End controls for normal blending</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<h3>Start/End (Blend Normals)<a class="headerlink" href="#start-end-blend-normals" title="Permalink to this headline"></a></h3>
 <p>As with the <a class="reference internal" href="#start-end"><span class="std std-ref">Start/End</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
 </section>
 <section id="blend-whole-object">
-<h4>Blend Whole Object<a class="headerlink" href="#blend-whole-object" title="Permalink to this headline"></a></h4>
+<h3>Blend Whole Object<a class="headerlink" href="#blend-whole-object" title="Permalink to this headline"></a></h3>
 <p>This will blend all of the object’s normals regardless of the gradient effect.</p>
 </section>
 </section>
-<section id="align-object-to-face">
-<h3>Align Object to Face<a class="headerlink" href="#align-object-to-face" title="Permalink to this headline"></a></h3>
-<p>This will automatically align the source object to the face of the target object it is being applied to if it is not already.</p>
-</section>
-<section id="positioning">
-<h3>Positioning<a class="headerlink" href="#positioning" title="Permalink to this headline"></a></h3>
-<p>This controls how the source object is positioned on the surface:</p>
-<ul class="simple">
-<li><p><strong>Lowest Point</strong>: This will take the lowest point of the source object and use that to place it on the surface.</p></li>
-<li><p><strong>Center</strong>: This will take the center of the source object and use that to place it on the surface.</p></li>
-</ul>
-</section>
+<section id="other-options">
+<h2>Other Options<a class="headerlink" href="#other-options" title="Permalink to this headline"></a></h2>
 <section id="add-simple-subdivisions">
 <h3>Add Simple Subdivisions<a class="headerlink" href="#add-simple-subdivisions" title="Permalink to this headline"></a></h3>
 <p>This adds a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html" target="_blank">Subdivision Surface modifier</a> to the source object, set to ‘simple’, in case you wish to quickly subdivide the mesh when conforming the object.</p>
@@ -268,72 +503,13 @@
 </ul>
 </section>
 </section>
-<section id="grid-object">
-<h2>Grid Object<a class="headerlink" href="#grid-object" title="Permalink to this headline"></a></h2>
-<p>This controls the nature of the deformation grid used in <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>.  It is a regular blender object, parented to the source object, but is configurable by the add-on:</p>
-<section id="hide-grid">
-<h3>Hide Grid<a class="headerlink" href="#hide-grid" title="Permalink to this headline"></a></h3>
-<p>By default, the deformation grid is hidden but it can be displayed if you wish to configure it:</p>
-<figure class="align-default" id="id12">
-<img alt="The deformation grid is revealed!" src="_images/hide_grid.gif" />
-<figcaption>
-<p><span class="caption-text">The deformation grid is revealed!</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="grid-subdivisions">
-<h3>Grid Subdivisions<a class="headerlink" href="#grid-subdivisions" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id13">
-<img alt="Subdividing the grid increases the resolution of the deformation." src="_images/grid_subd.gif" />
-<figcaption>
-<p><span class="caption-text">Subdividing the grid increases the resolution of the deformation.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>The number of vertices in the grid.  If you are deforming over particularly smoothed or high resolution meshes, increasing this number can be useful.</p>
-</section>
-<section id="grid-x-y">
-<h3>Grid X/Y<a class="headerlink" href="#grid-x-y" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id14">
-<img alt="Grid moved in X direction." src="_images/move_grid_x.jpg" />
-<figcaption>
-<p><span class="caption-text">Grid moved in X direction.</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>Move the grid’s X/Y position.</p>
-</section>
-<section id="grid-scale-x-y">
-<h3>Grid Scale X/Y<a class="headerlink" href="#grid-scale-x-y" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id15">
-<img alt="Scale the influence of the grid." src="_images/grid_scale.gif" />
-<figcaption>
-<p><span class="caption-text">Scale the influence of the grid.</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>Scale the grid in the X/Y direction.</p>
-</section>
-<section id="grid-rotation">
-<h3>Grid Rotation<a class="headerlink" href="#grid-rotation" title="Permalink to this headline"></a></h3>
-<figure class="align-default" id="id16">
-<img alt="Grid rotated on surface." src="_images/grid_rotation.gif" />
-<figcaption>
-<p><span class="caption-text">Grid rotated on surface.</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>Rotate the grid over the surface.</p>
-</section>
-<section id="interpolation-falloff">
-<h3>Interpolation Falloff<a class="headerlink" href="#interpolation-falloff" title="Permalink to this headline"></a></h3>
-<p>Used on the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> for the grid. From the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">documentation</a>:</p>
-<p><em>“How much a vertex bound to one face of the target will be affected by the surrounding faces (this setting is unavailable after binding). This essentially controls how smooth the deformations are.”</em></p>
-</section>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="how_does_it_work.html" class="btn btn-neutral float-left" title="How does it work?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="use.html" class="btn btn-neutral float-left" title="How To Use" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="undo.html" class="btn btn-neutral float-right" title="Undo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

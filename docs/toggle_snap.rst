@@ -13,7 +13,7 @@ Surface Snapping
 
     Object being snapped to a face while moving.
 
-To snap an object to another object's surface when moving, a common set up in Blender is to enable the relevant snap options:
+To align an object to another object's surface, a common set up in Blender is to enable the relevant snap options:
 
 
 .. figure:: images/toggle_snap.jpg
