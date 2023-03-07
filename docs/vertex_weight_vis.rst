@@ -7,7 +7,7 @@ Visualize Vertex Weights
 
     The add-on adds an option to the *Overlays* menu that allows you to visualize vertex weights in Object Mode.
 
-In Blender you do not currently have the option to see Vertex Weights in Object mode, only in Edit Mode.  When the add-on installed, to help you understand the :ref:`Gradient Effect` we have included an extra tool for you to do this.
+In Blender you do not currently have the option to see Vertex Weights in Object mode, only in Edit Mode.  When the add-on is installed, to help you understand the :ref:`Gradient Effect` we have included an extra tool for you to do this.
 
 Strongly weighted vertices will be shown in red, medium weights are shown in green, and zero weighted vertices are shown in blue.
 

@@ -56,7 +56,7 @@ When Copying the Object, the Effect is Lost
 
     The effect gets lost when duplicating the object.
 
-    * In :ref:`Grid Mode`, because the new object would reference the same deformation grid, the effect is automaticaly removed by the add-on to prevent this.  
+    * In :ref:`Grid Mode`, because the new object would reference the same deformation grid, the effect is automatically removed by the add-on to prevent this.  
 
             To fix this, select the **Source Object** and the **Target Object** and :ref:`run the conform operation again<How To Use>`.  This will re-apply the modifiers and update the binding.
 
