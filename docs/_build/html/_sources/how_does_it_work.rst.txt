@@ -12,12 +12,11 @@ Grid Mode
 
 * **Advantages**: 
   
-    * More accurate, positions the source object vertices in the same direction as the faces of the target object.
+    * More accurate: it positions the source object vertices in the same direction as the faces of the target object.
   
 * **Disadvantages**: 
   
-    * More complex, adds an extra helper grid object to the scene.
-  
+    * More complex: adds an extra helper grid object to the scene.
     * If the source object is edited or copied, you will need to re-apply the operation.
 
 .. figure:: images/how_does_it_work_1.jpg

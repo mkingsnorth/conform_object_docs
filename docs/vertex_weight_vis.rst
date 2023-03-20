@@ -48,3 +48,37 @@ To enable the tool:
 
     .. image:: images/vertex_group_visualise.jpg
         :alt: Visualising Vertex Groups
+
+
+======================================================
+Vertex Visualization Options
+======================================================
+
+
+.. figure:: images/vg_options.jpg
+    :alt: Viewing Vertex Weights parameters
+
+    The options in Blender's Viewport Overlays panel.
+
+
+Vertex Size
+----------------------------------------
+
+The size of each vertex point in the viewport display.
+
+Selection
+---------------------
+
+Which vertex groups to display:
+
+* **Selected**: Only display Vertex Groups on selected objects.
+* **Active**: Only display Vertex Groups from the Active object.
+* **All**: display Vertex Groups on all objects.
+
+Zero Weights
+---------------------
+
+Control how zero weighted vertices are displayed (useful for more complex objects):
+
+* **None**: Do not display vertices with zero weights.
+* **All**: Display all vertices even if they have zero weights (displayed in blue).

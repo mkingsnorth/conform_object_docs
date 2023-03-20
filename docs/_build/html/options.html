@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Options &mdash; Conform Object  documentation</title>
@@ -12,8 +12,9 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -99,8 +100,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Options</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Options</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/options.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -111,7 +112,7 @@
            <div itemprop="articleBody">
              
   <section id="options">
-<h1>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h1>
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline"></a></h1>
 <figure class="align-default" id="id1">
 <img alt="Options Panel in the bottom left of the viewport" src="_images/object_conformed_panel.gif" />
 <figcaption>
@@ -125,11 +126,11 @@
 </figcaption>
 </figure>
 <section id="operator-presets">
-<h2>Operator Presets<a class="headerlink" href="#operator-presets" title="Permalink to this heading"></a></h2>
+<h2>Operator Presets<a class="headerlink" href="#operator-presets" title="Permalink to this headline"></a></h2>
 <p>You can add or remove preset configurations from the tool here by pressing the <strong>+</strong> or <strong>-</strong> keys, or reset the tool to its default parameters.</p>
 </section>
 <section id="projection">
-<h2>Projection<a class="headerlink" href="#projection" title="Permalink to this heading"></a></h2>
+<h2>Projection<a class="headerlink" href="#projection" title="Permalink to this headline"></a></h2>
 <figure class="align-default" id="id3">
 <img alt="Conform Object at work" src="_images/panel_projection.jpg" />
 <figcaption>
@@ -138,7 +139,7 @@
 </figure>
 <p>The following controls the parameters of how the source object is projected onto the Target Object:</p>
 <section id="direction">
-<h3>Direction<a class="headerlink" href="#direction" title="Permalink to this heading"></a></h3>
+<h3>Direction<a class="headerlink" href="#direction" title="Permalink to this headline"></a></h3>
 <figure class="align-default" id="id4">
 <img alt="Conform Object at work" src="_images/object_conformed_direction.gif" />
 <figcaption>
@@ -156,8 +157,8 @@
 </div></blockquote>
 </section>
 <section id="method">
-<h3>Method<a class="headerlink" href="#method" title="Permalink to this heading"></a></h3>
-<p>This is the method used to deform the Sourc eObject. Choose between <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a> or <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>:</p>
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline"></a></h3>
+<p>This is the method used to deform the <strong>Source Object</strong>. Choose between <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a> or <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>:</p>
 <ul>
 <li><p><strong>Grid Mode</strong>: This mode is <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">described here</span></a>, and creates a projection grid object which is attached to the source object to create the deformation.   The grid object is a regular blender object, parented to the source object.</p>
 <ul>
@@ -278,7 +279,7 @@
 </ul>
 </section>
 <section id="projection-starting-point">
-<h3>Projection Starting Point<a class="headerlink" href="#projection-starting-point" title="Permalink to this heading"></a></h3>
+<h3>Projection Starting Point<a class="headerlink" href="#projection-starting-point" title="Permalink to this headline"></a></h3>
 <p>This parameter controls where the beginning of the projection line from the Source Object to the Target Object should be:</p>
 <ul class="simple">
 <li><p><strong>Median Point</strong>:  By default, the start of the projection line will be from the middle point of the Source Object’s geometry.</p></li>
@@ -287,16 +288,16 @@
 </section>
 </section>
 <section id="object-transform">
-<h2>Object Transform<a class="headerlink" href="#object-transform" title="Permalink to this heading"></a></h2>
+<h2>Object Transform<a class="headerlink" href="#object-transform" title="Permalink to this headline"></a></h2>
 <figure class="align-default" id="id16">
 <img alt="Object Transform Projection Options" src="_images/conform_object_transform_options.jpg" />
 <figcaption>
 <p><span class="caption-text">The expanded Object Transform Panel</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>Theser parameters control how the <strong>Source Object</strong> is positioned onto the <strong>Target Object</strong> during the <em>Conform Object</em> operation.</p>
+<p>These parameters control how the <strong>Source Object</strong> is positioned onto the <strong>Target Object</strong> during the <em>Conform Object</em> operation.</p>
 <section id="surface-offset">
-<h3>Surface Offset<a class="headerlink" href="#surface-offset" title="Permalink to this heading"></a></h3>
+<h3>Surface Offset<a class="headerlink" href="#surface-offset" title="Permalink to this headline"></a></h3>
 <p>This parameter controls how far away the <strong>Source Object</strong> is offset from the <strong>Target Object</strong>’s surface.</p>
 <figure class="align-default" id="id17">
 <img alt="Object Transform Projection Options" src="_images/offset_eg.jpg" />
@@ -306,8 +307,8 @@
 </figure>
 </section>
 <section id="local-position">
-<h3>Local Position<a class="headerlink" href="#local-position" title="Permalink to this heading"></a></h3>
-<p>Once the Source Object has been projected, this controls the relative position of the Source Object.</p>
+<h3>Local Position<a class="headerlink" href="#local-position" title="Permalink to this headline"></a></h3>
+<p>Once the <strong>Source Object</strong> has been projected, this controls the relative position of the <strong>Source Object</strong>.</p>
 <figure class="align-default" id="id18">
 <img alt="Object Transform Projection Options" src="_images/object_conformed_local_position.gif" />
 <figcaption>
@@ -316,8 +317,8 @@
 </figure>
 </section>
 <section id="local-rotation">
-<h3>Local Rotation<a class="headerlink" href="#local-rotation" title="Permalink to this heading"></a></h3>
-<p>This controls the rotation of the Source Object once the Source Object has been projected.  This is useful for asjusting the orientation of the object after the intitial projection.</p>
+<h3>Local Rotation<a class="headerlink" href="#local-rotation" title="Permalink to this headline"></a></h3>
+<p>This controls the rotation of the <strong>Source Object</strong> once it has been projected.  This is useful for adjusting the orientation of the object after the initial projection.</p>
 <figure class="align-default" id="id19">
 <img alt="Object Transform Projection Options" src="_images/object_conformed_local_rotation.gif" />
 <figcaption>
@@ -326,7 +327,7 @@
 </figure>
 </section>
 <section id="object-projection">
-<h3>Object Projection<a class="headerlink" href="#object-projection" title="Permalink to this heading"></a></h3>
+<h3>Object Projection<a class="headerlink" href="#object-projection" title="Permalink to this headline"></a></h3>
 <figure class="align-default" id="id20">
 <img alt="Object Transform Projection Options" src="_images/object_conformed_projection_point_param.gif" />
 <figcaption>
@@ -342,14 +343,14 @@
 </section>
 </section>
 <section id="gradient-effect">
-<h2>Gradient Effect<a class="headerlink" href="#gradient-effect" title="Permalink to this heading"></a></h2>
+<h2>Gradient Effect<a class="headerlink" href="#gradient-effect" title="Permalink to this headline"></a></h2>
 <figure class="align-default" id="id21">
 <img alt="Conform Object at work" src="_images/conform_object_gradient_effect_options.jpg" />
 <figcaption>
 <p><span class="caption-text">The expanded Gradient Effect Panel.</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The Gradient Effect creates a vertex group which automatically weights the vertices at the bottom of the <strong>Source Object</strong> so the effect is less exaggerated at the top:</p>
+<p>The Gradient Effect creates a vertex group which automatically adds weighted values to the vertices at the bottom of the <strong>Source Object</strong> so the effect is less exaggerated at the top:</p>
 <figure class="align-default" id="id22">
 <img alt="Conform Object at work" src="_images/object_conformed_projection_gradient_effect_anim.gif" />
 <figcaption>
@@ -364,21 +365,21 @@
 <p><a class="reference internal" href="vertex_weight_vis.html#visualize-vertex-weights"><span class="std std-ref">View the Vertex Groups</span></a> used by the Gradient Effect whilst using the add-on with <a class="reference internal" href="vertex_weight_vis.html#visualize-vertex-weights"><span class="std std-ref">this additional feature</span></a>.</p>
 </div>
 <section id="gradient-type">
-<h3>Gradient Type<a class="headerlink" href="#gradient-type" title="Permalink to this heading"></a></h3>
+<h3>Gradient Type<a class="headerlink" href="#gradient-type" title="Permalink to this headline"></a></h3>
 <figure class="align-default" id="id23">
 <img alt="Gradient types" src="_images/gradient_type.jpg" />
 <figcaption>
 <p><span class="caption-text">The type of gradient to apply: <em>Linear</em> (Left), or <em>Constant</em> (Right)</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>This is the type of gradient effect to apply:</p>
+<p>This setting determines which style of gradient effect to apply:</p>
 <ul class="simple">
 <li><p><strong>Linear</strong>: this will create a gradually decreasing effect between two values.</p></li>
 <li><p><strong>Constant</strong>: this will create a hard falloff from 1 to 0.</p></li>
 </ul>
 </section>
 <section id="gradient-method">
-<h3>Gradient Method<a class="headerlink" href="#gradient-method" title="Permalink to this heading"></a></h3>
+<h3>Gradient Method<a class="headerlink" href="#gradient-method" title="Permalink to this headline"></a></h3>
 <p>This controls the method used to apply Vertex Group weights in the Gradient Effect:</p>
 <ul>
 <li><p><strong>Standard</strong>: By default the weighting will be strongest at the closest points on the Source Object to the Target Object.:</p>
@@ -401,7 +402,7 @@
 </ul>
 </section>
 <section id="start-end">
-<h3>Start/End<a class="headerlink" href="#start-end" title="Permalink to this heading"></a></h3>
+<h3>Start/End<a class="headerlink" href="#start-end" title="Permalink to this headline"></a></h3>
 <figure class="align-default" id="id25">
 <img alt="Start/End controls" src="_images/start_end_grad.jpg" />
 <figcaption>
@@ -438,7 +439,7 @@
 </section>
 </section>
 <section id="blend-normals">
-<h2>Blend Normals<a class="headerlink" href="#blend-normals" title="Permalink to this heading"></a></h2>
+<h2>Blend Normals<a class="headerlink" href="#blend-normals" title="Permalink to this headline"></a></h2>
 <figure class="align-default" id="id30">
 <img alt="Conform Object at work" src="_images/conform_object_blend_normals_effect_options.jpg" />
 <figcaption>
@@ -460,37 +461,37 @@
 </figure>
 <p>This effect is achieved by using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html" target="_blank">Data Transfer Modifier</a> on the Source Object, and uses the same Blender Vertex Group weighting to control the effect in the same way as the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> above.</p>
 <section id="gradient-type-blend-normals">
-<h3>Gradient Type (Blend Normals)<a class="headerlink" href="#gradient-type-blend-normals" title="Permalink to this heading"></a></h3>
+<h3>Gradient Type (Blend Normals)<a class="headerlink" href="#gradient-type-blend-normals" title="Permalink to this headline"></a></h3>
 <p>As with the <a class="reference internal" href="#gradient-type"><span class="std std-ref">Gradient Type</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
 </section>
 <section id="gradient-method-blend-normals">
-<h3>Gradient Method (Blend Normals)<a class="headerlink" href="#gradient-method-blend-normals" title="Permalink to this heading"></a></h3>
+<h3>Gradient Method (Blend Normals)<a class="headerlink" href="#gradient-method-blend-normals" title="Permalink to this headline"></a></h3>
 <p>As with the <a class="reference internal" href="#gradient-method"><span class="std std-ref">Gradient Method</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
 </section>
 <section id="start-end-blend-normals">
-<h3>Start/End (Blend Normals)<a class="headerlink" href="#start-end-blend-normals" title="Permalink to this heading"></a></h3>
+<h3>Start/End (Blend Normals)<a class="headerlink" href="#start-end-blend-normals" title="Permalink to this headline"></a></h3>
 <p>As with the <a class="reference internal" href="#start-end"><span class="std std-ref">Start/End</span></a> controls for the <a class="reference internal" href="#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>, this controls which face normals are affected.</p>
 </section>
 <section id="blend-whole-object">
-<h3>Blend Whole Object<a class="headerlink" href="#blend-whole-object" title="Permalink to this heading"></a></h3>
+<h3>Blend Whole Object<a class="headerlink" href="#blend-whole-object" title="Permalink to this headline"></a></h3>
 <p>This will blend all of the object’s normals regardless of the gradient effect.</p>
 </section>
 </section>
 <section id="other-options">
-<h2>Other Options<a class="headerlink" href="#other-options" title="Permalink to this heading"></a></h2>
+<h2>Other Options<a class="headerlink" href="#other-options" title="Permalink to this headline"></a></h2>
 <section id="add-simple-subdivisions">
-<h3>Add Simple Subdivisions<a class="headerlink" href="#add-simple-subdivisions" title="Permalink to this heading"></a></h3>
+<h3>Add Simple Subdivisions<a class="headerlink" href="#add-simple-subdivisions" title="Permalink to this headline"></a></h3>
 <p>This adds a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html" target="_blank">Subdivision Surface modifier</a> to the source object, set to ‘simple’, in case you wish to quickly subdivide the mesh when conforming the object.</p>
 <ul class="simple">
 <li><p><strong>Subdivisions</strong>: The number of subdivisions to use in the modifier.</p></li>
 </ul>
 </section>
 <section id="collapse-modifiers">
-<h3>Collapse Modifiers<a class="headerlink" href="#collapse-modifiers" title="Permalink to this heading"></a></h3>
+<h3>Collapse Modifiers<a class="headerlink" href="#collapse-modifiers" title="Permalink to this headline"></a></h3>
 <p>This will collapse the existing modifiers on the source object if they are interfering with the conform effect.</p>
 </section>
 <section id="deform-modifier-position">
-<h3>Deform Modifier Position<a class="headerlink" href="#deform-modifier-position" title="Permalink to this heading"></a></h3>
+<h3>Deform Modifier Position<a class="headerlink" href="#deform-modifier-position" title="Permalink to this headline"></a></h3>
 <p>This will change the position of the deformation modifier (Either <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Surface Deformation</span></a> of <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">ShrinkWrap</span></a>) on the source object:</p>
 <ul>
 <li><p><strong>Start</strong>: At the start of the modifier stack.</p></li>

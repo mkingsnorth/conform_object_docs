@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Visualize Vertex Weights &mdash; Conform Object  documentation</title>
@@ -12,8 +12,9 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -44,7 +45,15 @@
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Visualize Vertex Weights</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visualize Vertex Weights</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vertex-visualization-options">Vertex Visualization Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vertex-size">Vertex Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selection">Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zero-weights">Zero Weights</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
@@ -63,8 +72,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Visualize Vertex Weights</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Visualize Vertex Weights</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/vertex_weight_vis.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -75,14 +84,14 @@
            <div itemprop="articleBody">
              
   <section id="visualize-vertex-weights">
-<h1>Visualize Vertex Weights<a class="headerlink" href="#visualize-vertex-weights" title="Permalink to this heading"></a></h1>
+<h1>Visualize Vertex Weights<a class="headerlink" href="#visualize-vertex-weights" title="Permalink to this headline"></a></h1>
 <figure class="align-default" id="id1">
 <img alt="Viewing Vertex Weights" src="_images/vis_vert_weights.jpg" />
 <figcaption>
 <p><span class="caption-text">The add-on adds an option to the <em>Overlays</em> menu that allows you to visualize vertex weights in Object Mode.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>In Blender you do not currently have the option to see Vertex Weights in Object mode, only in Edit Mode.  When the add-on installed, to help you understand the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> we have included an extra tool for you to do this.</p>
+<p>In Blender you do not currently have the option to see Vertex Weights in Object mode, only in Edit Mode.  When the add-on is installed, to help you understand the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> we have included an extra tool for you to do this.</p>
 <p>Strongly weighted vertices will be shown in red, medium weights are shown in green, and zero weighted vertices are shown in blue.</p>
 <p>This tool is not tied to Conform Object and can be used to visualize any active Vertex Group on any object.</p>
 <div class="admonition warning">
@@ -125,6 +134,36 @@
 <p>Visualise a vertex group in Edit Mode by selecting “Vertex Group Weights” in the overlays panel:</p>
 <img alt="Visualising Vertex Groups" src="_images/vertex_group_visualise.jpg" />
 </div>
+<section id="vertex-visualization-options">
+<h2>Vertex Visualization Options<a class="headerlink" href="#vertex-visualization-options" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id2">
+<img alt="Viewing Vertex Weights parameters" src="_images/vg_options.jpg" />
+<figcaption>
+<p><span class="caption-text">The options in Blender’s Viewport Overlays panel.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="vertex-size">
+<h3>Vertex Size<a class="headerlink" href="#vertex-size" title="Permalink to this headline"></a></h3>
+<p>The size of each vertex point in the viewport display.</p>
+</section>
+<section id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this headline"></a></h3>
+<p>Which vertex groups to display:</p>
+<ul class="simple">
+<li><p><strong>Selected</strong>: Only display Vertex Groups on selected objects.</p></li>
+<li><p><strong>Active</strong>: Only display Vertex Groups from the Active object.</p></li>
+<li><p><strong>All</strong>: display Vertex Groups on all objects.</p></li>
+</ul>
+</section>
+<section id="zero-weights">
+<h3>Zero Weights<a class="headerlink" href="#zero-weights" title="Permalink to this headline"></a></h3>
+<p>Control how zero weighted vertices are displayed (useful for more complex objects):</p>
+<ul class="simple">
+<li><p><strong>None</strong>: Do not display vertices with zero weights.</p></li>
+<li><p><strong>All</strong>: Display all vertices even if they have zero weights (displayed in blue).</p></li>
+</ul>
+</section>
+</section>
 </section>
 
 

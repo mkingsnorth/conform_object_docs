@@ -7,7 +7,7 @@ Visualize Vertex Weights
 
     The add-on adds an option to the *Overlays* menu that allows you to visualize vertex weights in Object Mode.
 
-In Blender you do not currently have the option to see Vertex Weights in Object mode, only in Edit Mode.  When the add-on installed, to help you understand the :ref:`Gradient Effect` we have included an extra tool for you to do this.
+In Blender you do not currently have the option to see Vertex Weights in Object mode, only in Edit Mode.  When the add-on is installed, to help you understand the :ref:`Gradient Effect` we have included an extra tool for you to do this.
 
 Strongly weighted vertices will be shown in red, medium weights are shown in green, and zero weighted vertices are shown in blue.
 
@@ -48,3 +48,37 @@ To enable the tool:
 
     .. image:: images/vertex_group_visualise.jpg
         :alt: Visualising Vertex Groups
+
+
+======================================================
+Vertex Visualization Options
+======================================================
+
+
+.. figure:: images/vg_options.jpg
+    :alt: Viewing Vertex Weights parameters
+
+    The options in Blender's Viewport Overlays panel.
+
+
+Vertex Size
+----------------------------------------
+
+The size of each vertex point in the viewport display.
+
+Selection
+---------------------
+
+Which vertex groups to display:
+
+* **Selected**: Only display Vertex Groups on selected objects.
+* **Active**: Only display Vertex Groups from the Active object.
+* **All**: display Vertex Groups on all objects.
+
+Zero Weights
+---------------------
+
+Control how zero weighted vertices are displayed (useful for more complex objects):
+
+* **None**: Do not display vertices with zero weights.
+* **All**: Display all vertices even if they have zero weights (displayed in blue).
