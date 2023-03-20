@@ -53,7 +53,7 @@ The different *Direction* modes control how the direction line is chosen when pr
 Method
 --------------------
 
-This is the method used to deform the Sourc eObject. Choose between :ref:`Grid Mode` or :ref:`ShrinkWrap Mode`:
+This is the method used to deform the **Source Object**. Choose between :ref:`Grid Mode` or :ref:`ShrinkWrap Mode`:
 
 * **Grid Mode**: This mode is :ref:`described here <Grid Mode>`, and creates a projection grid object which is attached to the source object to create the deformation.   The grid object is a regular blender object, parented to the source object.
 
@@ -185,7 +185,7 @@ Object Transform
 
     The expanded Object Transform Panel
 
-Theser parameters control how the **Source Object** is positioned onto the **Target Object** during the *Conform Object* operation.
+These parameters control how the **Source Object** is positioned onto the **Target Object** during the *Conform Object* operation.
 
 
 Surface Offset
@@ -203,7 +203,7 @@ This parameter controls how far away the **Source Object** is offset from the **
 Local Position
 ----------------------------------------
 
-Once the Source Object has been projected, this controls the relative position of the Source Object.
+Once the **Source Object** has been projected, this controls the relative position of the **Source Object**.
 
 
 
@@ -215,7 +215,7 @@ Once the Source Object has been projected, this controls the relative position o
 Local Rotation
 ----------------------------------------
 
-This controls the rotation of the Source Object once the Source Object has been projected.  This is useful for asjusting the orientation of the object after the intitial projection.
+This controls the rotation of the **Source Object** once it has been projected.  This is useful for adjusting the orientation of the object after the initial projection.
 
 .. figure:: images/object_conformed_local_rotation.gif
     :alt: Object Transform Projection Options
@@ -246,7 +246,7 @@ Gradient Effect
 
     The expanded Gradient Effect Panel.
 
-The Gradient Effect creates a vertex group which automatically weights the vertices at the bottom of the **Source Object** so the effect is less exaggerated at the top:
+The Gradient Effect creates a vertex group which automatically adds weighted values to the vertices at the bottom of the **Source Object** so the effect is less exaggerated at the top:
   
 .. figure:: images/object_conformed_projection_gradient_effect_anim.gif
     :alt: Conform Object at work
@@ -269,7 +269,7 @@ Gradient Type
 
     The type of gradient to apply: *Linear* (Left), or *Constant* (Right)
 
-This is the type of gradient effect to apply:
+This setting determines which style of gradient effect to apply:
 
 * **Linear**: this will create a gradually decreasing effect between two values.
 * **Constant**: this will create a hard falloff from 1 to 0.

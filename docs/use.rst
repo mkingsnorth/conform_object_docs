@@ -33,11 +33,11 @@ To conform a  **Source Object** to a **Target Object**:
         * Have a good level of topology so that they can be deformed (good number of vertices and quad faces)
         * Not have modifiers such as booleans which are dependent on other objects.
         * Not have parents/children.
-        * Be rotated so that their local -Z axis is aimed towards the **Target Object** Surface.  Use the :ref:`Toggle Surface Snapping<Surface Snapping>` feature to align your Source Object like this.
+        * Be rotated so that their local -Z axis is aimed towards the **Target Object** surface.  Use the :ref:`Toggle Surface Snapping<Surface Snapping>` feature to align your **Source Object** like this.
 
     .. tip::
 
-        You can orient the **Source Object** so that is pointing towards the **Target Object's** surface using the  :ref:`Toggle Surface Snapping<Surface Snapping>` option.
+        You can automatically rotate the **Source Object** so that is pointing towards the **Target Object**'s' surface using the  :ref:`Toggle Surface Snapping<Surface Snapping>` option.
 
 #. Select both the **Source Object** and then the **Target Object**:
 
