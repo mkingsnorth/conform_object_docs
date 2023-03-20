@@ -23,6 +23,12 @@ This happens when the projection of the **Source Object** is not directly pointe
     The Local Rotation parameters are used to correctly align the Source Object.
 
 
+========================================================================================================================================
+I lose the Options menu when I click off the panel. How do I get it back?
+========================================================================================================================================
+
+In Blender this type of operation is very "one way", however if the Conform Object operation was the last operation you performed, select the **Source Object** and then the **Target Object** again and press **F9**.  The menu should re-appear again.  Please note you will need to select the Source Object and then the Target Object in this way *before* pressing F9, otherwise the add-on will not re-do the operation even though the panel will re-appear.
+
 
 ====================================================================
 Bad Deformations
