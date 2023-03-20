@@ -2,6 +2,28 @@
 Tips and Troubleshooting
 #####################################
 
+If you are having any issues do not hesitate to :ref:`Contact Us <contact>`
+
+====================================================================
+My Source Object has not aligned correctly to the Target Object
+====================================================================
+
+
+.. figure:: images/conform_misaligned.jpg
+    :alt: Here, a gap is showing where the Source Object is not aligned well to the Target Object.
+
+    A gap is showing where the Source Object is not aligned well to the Target Object.
+
+This happens when the projection of the **Source Object** is not directly pointed at the **Target Object**.  To fix this, during the Conform Object operation expand the :ref:`Object Transform` section of the left hand side panel.  Adjust the :ref:`Local Rotation` parameters until the **Source Object** is aligned to the **Target Object**:
+
+
+.. figure:: images/object_conformed_aligning.gif
+    :alt: The Local Rotation paramters are used to correctly align the Source Object.
+
+    The Local Rotation parameters are used to correctly align the Source Object.
+
+
+
 ====================================================================
 Bad Deformations
 ====================================================================
@@ -12,14 +34,14 @@ Bad Deformations
 
 This can occur for several reasons:
 
-* Not enough topology (vertices, faces) on the source of the target object.
+* Not enough topology (vertices, faces) on the source of the Target Object.
 * The tops of the object look best when the effect is not as strong.
 * The meshes need more subdivision.
 
 There are several things to try:
 
 * Enable the :ref:`Gradient Effect` to smooth the deformation at the top of the object.
-* Increase the resolution of the target object by using a subdivision surface modifier.
+* Increase the resolution of the Target Object by using a subdivision surface modifier.
 * Increase the *Grid Smoothing* of the deformation grid in the :ref:`options<Method>` panel.
 
 .. figure:: images/bad_deforms_fixed.jpg
@@ -60,6 +82,20 @@ When Copying the Object, the Effect is Lost
 
             To fix this, select the **Source Object** and the **Target Object** and :ref:`run the conform operation again<How To Use>`.  This will re-apply the modifiers and update the binding.
 
+
+====================================================================
+The Object does not render with the deformation on it.
+====================================================================
+
+This can happen when a modifier like the Subdivision Surface modifier on the Source Object does not have the same *Render* level settings as its *Viewport* render settings:
+
+.. figure:: images/subsurf_unequal_levels.jpg
+    :alt: Here, the two level settings are inconsistent.
+
+Blender uses the *Viewport* setting to calculate the deformation, so it will not bind at render time if the *Render* setting is different.
+
+To fix the issue, set the *Render* level setting to be the same number as the *Viewport* level setting.  This should allow you to render the Source Object with the deformation.
+
 ====================================================================
 Creating Boolean Cutters
 ====================================================================
@@ -71,12 +107,12 @@ Creating Boolean Cutters
     Example of a bad boolean cutter because Conform operation is not :ref:`applied<Apply>`.
 
 
-If trying to use the conformed object as a boolean cutter on the target object,  use the :ref:`Apply Conform  Object<Apply>` operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the source object itself is trying to deform to the cut shape.
+If trying to use the conformed object as a boolean cutter on the Target Object,  use the :ref:`Apply Conform  Object<Apply>` operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the Source Object itself is trying to deform to the cut shape.
 
 .. figure:: images/boolean_cutter.jpg
-    :alt: Remember to Apply the Conform Object operation to the source object before using as a boolean cutter.
+    :alt: Remember to Apply the Conform Object operation to the Source Object before using as a boolean cutter.
 
-    Remember to :ref:`apply<Apply>` the Conform Object operation to the source object before using as a boolean cutter.
+    Remember to :ref:`apply<Apply>` the Conform Object operation to the Source Object before using as a boolean cutter.
 
 
 ====================================================================

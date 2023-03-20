@@ -423,3 +423,13 @@ This will change the position of the deformation modifier (Either :ref:`Surface 
         :alt: Placing a modifier before another.
 
 * **End**: At the start of the modifier stack.
+
+
+Parent Source Object to Target Object
+------------------------------------------------------------
+
+Assign the Target Object as the parent of the Source Object.
+
+.. warning::
+
+    Parenting the Target Object cannot be automatically undone by the add-on
