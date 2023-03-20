@@ -24,7 +24,7 @@ Grid Mode
 
     The add-on in Grid Mode, with the grid visible.
 
-The add-on automatically creates a deformation grid object which is used to wrap the object to the surface of another using a |Surface Deform Modifier|.  This grid object is **hidden** by default and can have its subdivisions configured.
+The add-on automatically creates a deformation grid object which is used to project the object to the surface of another using a |Surface Deform Modifier|.  This grid object is **hidden** by default and can have its subdivisions configured.
 
 It automates the manual process of:
 
