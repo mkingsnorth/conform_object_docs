@@ -19,7 +19,7 @@ Step by Step
 
 To conform a  **Source Object** to a **Target Object**:
 
-#. Move and rotate the **Source Object** near, or on top of, the surface of the **Target Object** you wish to wrap it to:
+#. Move and rotate the **Source Object** near, or on top of, the surface of the **Target Object** you wish to project it onto:
 
     .. figure:: images/source_object_positioning.jpg
         :alt: Source Object
