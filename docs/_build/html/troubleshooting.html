@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Contact" href="contact.html" />
-    <link rel="prev" title="Surface Snapping" href="toggle_snap.html" /> 
+    <link rel="prev" title="How does it work?" href="how_does_it_work.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,19 +41,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
-<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tips and Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#my-source-object-has-not-aligned-correctly-to-the-target-object">My Source Object has not aligned correctly to the Target Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-lose-the-options-menu-when-i-click-off-the-panel-how-do-i-get-it-back">I lose the Options menu when I click off the panel. How do I get it back?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bad-deformations">Bad Deformations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">“The bottom of the source object is not pointing towards the target object”</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#what-happens-if-the-bottom-of-the-source-object-is-in-the-wrong-orientation">What happens if the bottom of the source object is in the wrong orientation?</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#when-editing-the-object-the-effect-is-lost">When Editing the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-copying-the-object-the-effect-is-lost">When Copying the Object, the Effect is Lost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-object-does-not-render-with-the-deformation-on-it">The Object does not render with the deformation on it.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-boolean-cutters">Creating Boolean Cutters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-i-click-off-the-panel-i-lose-my-settings">When I click off the panel, I lose my settings</a></li>
 </ul>
@@ -87,6 +87,27 @@
              
   <section id="tips-and-troubleshooting">
 <h1>Tips and Troubleshooting<a class="headerlink" href="#tips-and-troubleshooting" title="Permalink to this headline"></a></h1>
+<p>If you are having any issues do not hesitate to <a class="reference internal" href="contact.html#contact"><span class="std std-ref">Contact Us</span></a></p>
+<section id="my-source-object-has-not-aligned-correctly-to-the-target-object">
+<h2>My Source Object has not aligned correctly to the Target Object<a class="headerlink" href="#my-source-object-has-not-aligned-correctly-to-the-target-object" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id1">
+<img alt="Here, a gap is showing where the Source Object is not aligned well to the Target Object." src="_images/conform_misaligned.jpg" />
+<figcaption>
+<p><span class="caption-text">A gap is showing where the Source Object is not aligned well to the Target Object.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This happens when the projection of the <strong>Source Object</strong> is not directly pointed at the <strong>Target Object</strong>.  To fix this, during the Conform Object operation expand the <a class="reference internal" href="options.html#object-transform"><span class="std std-ref">Object Transform</span></a> section of the left hand side panel.  Adjust the <a class="reference internal" href="options.html#local-rotation"><span class="std std-ref">Local Rotation</span></a> parameters until the <strong>Source Object</strong> is aligned to the <strong>Target Object</strong>:</p>
+<figure class="align-default" id="id2">
+<img alt="The Local Rotation paramters are used to correctly align the Source Object." src="_images/object_conformed_aligning.gif" />
+<figcaption>
+<p><span class="caption-text">The Local Rotation parameters are used to correctly align the Source Object.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="i-lose-the-options-menu-when-i-click-off-the-panel-how-do-i-get-it-back">
+<h2>I lose the Options menu when I click off the panel. How do I get it back?<a class="headerlink" href="#i-lose-the-options-menu-when-i-click-off-the-panel-how-do-i-get-it-back" title="Permalink to this headline"></a></h2>
+<p>In Blender this type of operation is very “one way”, however if the Conform Object operation was the last operation you performed, select the <strong>Source Object</strong> and then the <strong>Target Object</strong> again and press <strong>F9</strong>.  The menu should re-appear again.  Please note you will need to select the Source Object and then the Target Object in this way <em>before</em> pressing F9, otherwise the add-on will not re-do the operation even though the panel will re-appear.</p>
+</section>
 <section id="bad-deformations">
 <h2>Bad Deformations<a class="headerlink" href="#bad-deformations" title="Permalink to this headline"></a></h2>
 <figure class="align-default">
@@ -94,101 +115,29 @@
 </figure>
 <p>This can occur for several reasons:</p>
 <ul class="simple">
-<li><p>Not enough topology (vertices, faces) on the source of the target object.</p></li>
+<li><p>Not enough topology (vertices, faces) on the source of the Target Object.</p></li>
 <li><p>The tops of the object look best when the effect is not as strong.</p></li>
 <li><p>The meshes need more subdivision.</p></li>
 </ul>
 <p>There are several things to try:</p>
 <ul class="simple">
 <li><p>Enable the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> to smooth the deformation at the top of the object.</p></li>
-<li><p>Increase the resolution of the target object by using a subdivision surface modifier.</p></li>
-<li><p>Increase the resolution of the deformation grid in the <a class="reference internal" href="options.html#options"><span class="std std-ref">Options</span></a>.</p></li>
+<li><p>Increase the resolution of the Target Object by using a subdivision surface modifier.</p></li>
+<li><p>Increase the <em>Grid Smoothing</em> of the deformation grid in the <a class="reference internal" href="options.html#method"><span class="std std-ref">options</span></a> panel.</p></li>
 </ul>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="id3">
 <img alt="Bad Deformations fixed." src="_images/bad_deforms_fixed.jpg" />
 <figcaption>
-<p><span class="caption-text">Here, the target sphere object’s resolution was increased using a subdivision surface modifier, and the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> was enabled for the screw part to lessen the effect at the top.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Here, the target sphere object’s resolution was increased using a subdivision surface modifier, and the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> was enabled for the screw part to lessen the effect at the top.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-</section>
-<section id="the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">
-<h2>“The bottom of the source object is not pointing towards the target object”<a class="headerlink" href="#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object" title="Permalink to this headline"></a></h2>
-<p>See this video here:</p>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/N3TG_TnStZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-<p>Or follow the explanation below:</p>
-<figure class="align-default" id="id2">
-<img alt="Misalign error" src="_images/misalign_error.jpg" />
-<figcaption>
-<p><span class="caption-text">This error occurs when the bottom of the source object is not pointing towards the target object.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>The bottom of the source object’s center must be pointing towards the surface of the target object when running the operation.  The bottom of the object is the lowest part of the object when the object is not rotated.</p>
-<p>You will need to orientate the object correctly by rotating it in Object mode.</p>
-<p>The best way to check this is to first visualize it in blender:</p>
-<ol class="arabic">
-<li><p>With the source object selected, in the top-right of the 3D view, click the ‘Viewport Gizmos’ menu.</p>
-<blockquote>
-<div><img alt="Viewport Gizmos Menu" src="_images/viewport_gizmos_menu.jpg" />
-</div></blockquote>
-</li>
-<li><p>Under ‘Object Gizmos’, select ‘Local’ from the drop-down box, and tick the ‘Move’ checkbox.  This will display the local X/Y/Z axes for the selected object.</p>
-<blockquote>
-<div><img alt="Local XYZ Gizmo Display" src="_images/local_xyz_gizmo.jpg" />
-</div></blockquote>
-</li>
-<li><p>Now, with the object selected, press the <strong>R</strong> key to rotate it (you can then press X, Y, or Z to restrict the rotation if you wish, and type a number for the number of degrees), and click the left mouse button to complete the rotation.  You’ll see that the object’s gizmo axis display has also rotated, as it displays the rotation of the object.</p>
-<blockquote>
-<div><img alt="Local object Rotation" src="_images/local_obj_rotate.jpg" />
-</div></blockquote>
-</li>
-<li><p>The ‘Bottom’ of an object is the opposite direction of the blue Z-Axis arrow (The -Z axis).  It is this opposing direction that needs to be pointing towards the source object.</p>
-<blockquote>
-<div><img alt="Minus Z Axis Direction" src="_images/minus_z_axis.jpg" />
-</div></blockquote>
-</li>
-<li><p>When the axis is aligned like this, you should now be able to perform the Conform Object operation:</p>
-<blockquote>
-<div><img alt="Minus Z Axis Direction" src="_images/conform_object_axis_success.jpg" />
-</div></blockquote>
-</li>
-</ol>
-<section id="what-happens-if-the-bottom-of-the-source-object-is-in-the-wrong-orientation">
-<h3>What happens if the bottom of the source object is in the wrong orientation?<a class="headerlink" href="#what-happens-if-the-bottom-of-the-source-object-is-in-the-wrong-orientation" title="Permalink to this headline"></a></h3>
-<img alt="Bad Direction" src="_images/bad_direction.jpg" />
-<p>You can change the orientation of the axis so that the bottom of your source object is pointing in the right direction:</p>
-<ol class="arabic">
-<li><p>With the object selected, press the ‘N’ key to access the viewport’s right-hand Properties tabs if they aren’t there already.</p></li>
-<li><p>Select the ‘Tool’ tab.</p></li>
-<li><p>Open the ‘Options’ section, and expand the ‘Transform’ tab.  Tick the ‘Affect Only: Origins’ checkbox.  Now, you can rotate the Origin of the object, and not the object itself.</p>
-<blockquote>
-<div><img alt="Affect Origins Only Transform Option" src="_images/affect_origin_only.jpg" />
-</div></blockquote>
-</li>
-<li><p>Make sure the opposite direction of the blue arrow, or in other words the object’s bottom, is in the direction you need by rotating the axes using the <strong>R</strong> key, optionally followed by the X, Y or Z key to contrain the rotation axis followed by a number for the degrees of the rotation. Press Enter.</p>
-<blockquote>
-<div><img alt="Affect Origins Only Transform Option - rotated" src="_images/affect_origin_only_rotate.jpg" />
-</div></blockquote>
-</li>
-<li><p>When finished, remember to untick the <em>Affect Only: Origins</em> checkbox to go back to normal:</p>
-<blockquote>
-<div><img alt="Untick Affect Origins Only Transform Option" src="_images/affect_origin_only_untick.jpg" />
-</div></blockquote>
-</li>
-<li><p>You should now be able to preform the Conform Object operation:</p>
-<blockquote>
-<div><img alt="Correctly Applying the Conform." src="_images/affect_origin_only_correct.jpg" />
-</div></blockquote>
-</li>
-</ol>
-<p>Remember to <a class="reference internal" href="contact.html#contact"><span class="std std-ref">get in touch</span></a> if you are having any issues with this.</p>
-</section>
 </section>
 <section id="when-editing-the-object-the-effect-is-lost">
 <h2>When Editing the Object, the Effect is Lost<a class="headerlink" href="#when-editing-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id4">
 <img alt="The effect gets lost when editing the object." src="_images/edit_error.gif" />
 <figcaption>
-<p><span class="caption-text">The effect gets lost when editing the object.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The effect gets lost when editing the object.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 <div class="legend">
 <ul>
 <li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> loses its binding to the surface whenever the underlying mesh is changed.</p>
@@ -203,13 +152,13 @@
 </section>
 <section id="when-copying-the-object-the-effect-is-lost">
 <h2>When Copying the Object, the Effect is Lost<a class="headerlink" href="#when-copying-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id5">
 <img alt="The effect gets lost when duplicating the object." src="_images/dupe_error.gif" />
 <figcaption>
-<p><span class="caption-text">The effect gets lost when duplicating the object.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The effect gets lost when duplicating the object.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 <div class="legend">
 <ul>
-<li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, because the new object would reference the same deformation grid, the effect is automaticaly removed by the add-on to prevent this.</p>
+<li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, because the new object would reference the same deformation grid, the effect is automatically removed by the add-on to prevent this.</p>
 <blockquote>
 <div><p>To fix this, select the <strong>Source Object</strong> and the <strong>Target Object</strong> and <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">run the conform operation again</span></a>.  This will re-apply the modifiers and update the binding.</p>
 </div></blockquote>
@@ -219,19 +168,28 @@
 </figcaption>
 </figure>
 </section>
+<section id="the-object-does-not-render-with-the-deformation-on-it">
+<h2>The Object does not render with the deformation on it.<a class="headerlink" href="#the-object-does-not-render-with-the-deformation-on-it" title="Permalink to this headline"></a></h2>
+<p>This can happen when a modifier like the Subdivision Surface modifier on the Source Object does not have the same <em>Render</em> level settings as its <em>Viewport</em> render settings:</p>
+<figure class="align-default">
+<img alt="Here, the two level settings are inconsistent." src="_images/subsurf_unequal_levels.jpg" />
+</figure>
+<p>Blender uses the <em>Viewport</em> setting to calculate the deformation, so it will not bind at render time if the <em>Render</em> setting is different.</p>
+<p>To fix the issue, set the <em>Render</em> level setting to be the same number as the <em>Viewport</em> level setting.  This should allow you to render the Source Object with the deformation.</p>
+</section>
 <section id="creating-boolean-cutters">
 <h2>Creating Boolean Cutters<a class="headerlink" href="#creating-boolean-cutters" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id6">
 <img alt="Example of a bad boolean cutter because Conform operation is not :ref:`applied&lt;Apply&gt;`." src="_images/boolean_cutter_bad.jpg" />
 <figcaption>
-<p><span class="caption-text">Example of a bad boolean cutter because Conform operation is not <a class="reference internal" href="apply.html#apply"><span class="std std-ref">applied</span></a>.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Example of a bad boolean cutter because Conform operation is not <a class="reference internal" href="apply.html#apply"><span class="std std-ref">applied</span></a>.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>If trying to use the conformed object as a boolean cutter on the target object,  use the <a class="reference internal" href="apply.html#apply"><span class="std std-ref">Apply Conform  Object</span></a> operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the source object itself is trying to deform to the cut shape.</p>
-<figure class="align-default" id="id6">
-<img alt="Remember to Apply the Conform Object operation to the source object before using as a boolean cutter." src="_images/boolean_cutter.jpg" />
+<p>If trying to use the conformed object as a boolean cutter on the Target Object,  use the <a class="reference internal" href="apply.html#apply"><span class="std std-ref">Apply Conform  Object</span></a> operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the Source Object itself is trying to deform to the cut shape.</p>
+<figure class="align-default" id="id7">
+<img alt="Remember to Apply the Conform Object operation to the Source Object before using as a boolean cutter." src="_images/boolean_cutter.jpg" />
 <figcaption>
-<p><span class="caption-text">Remember to <a class="reference internal" href="apply.html#apply"><span class="std std-ref">apply</span></a> the Conform Object operation to the source object before using as a boolean cutter.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Remember to <a class="reference internal" href="apply.html#apply"><span class="std std-ref">apply</span></a> the Conform Object operation to the Source Object before using as a boolean cutter.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -245,7 +203,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="toggle_snap.html" class="btn btn-neutral float-left" title="Surface Snapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how_does_it_work.html" class="btn btn-neutral float-left" title="How does it work?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="contact.html" class="btn btn-neutral float-right" title="Contact" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

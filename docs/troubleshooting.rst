@@ -2,6 +2,34 @@
 Tips and Troubleshooting
 #####################################
 
+If you are having any issues do not hesitate to :ref:`Contact Us <contact>`
+
+====================================================================
+My Source Object has not aligned correctly to the Target Object
+====================================================================
+
+
+.. figure:: images/conform_misaligned.jpg
+    :alt: Here, a gap is showing where the Source Object is not aligned well to the Target Object.
+
+    A gap is showing where the Source Object is not aligned well to the Target Object.
+
+This happens when the projection of the **Source Object** is not directly pointed at the **Target Object**.  To fix this, during the Conform Object operation expand the :ref:`Object Transform` section of the left hand side panel.  Adjust the :ref:`Local Rotation` parameters until the **Source Object** is aligned to the **Target Object**:
+
+
+.. figure:: images/object_conformed_aligning.gif
+    :alt: The Local Rotation paramters are used to correctly align the Source Object.
+
+    The Local Rotation parameters are used to correctly align the Source Object.
+
+
+========================================================================================================================================
+I lose the Options menu when I click off the panel. How do I get it back?
+========================================================================================================================================
+
+In Blender this type of operation is very "one way", however if the Conform Object operation was the last operation you performed, select the **Source Object** and then the **Target Object** again and press **F9**.  The menu should re-appear again.  Please note you will need to select the Source Object and then the Target Object in this way *before* pressing F9, otherwise the add-on will not re-do the operation even though the panel will re-appear.
+
+
 ====================================================================
 Bad Deformations
 ====================================================================
@@ -12,107 +40,21 @@ Bad Deformations
 
 This can occur for several reasons:
 
-* Not enough topology (vertices, faces) on the source of the target object.
+* Not enough topology (vertices, faces) on the source of the Target Object.
 * The tops of the object look best when the effect is not as strong.
 * The meshes need more subdivision.
 
 There are several things to try:
 
 * Enable the :ref:`Gradient Effect` to smooth the deformation at the top of the object.
-* Increase the resolution of the target object by using a subdivision surface modifier.
-* Increase the resolution of the deformation grid in the :ref:`options`.
+* Increase the resolution of the Target Object by using a subdivision surface modifier.
+* Increase the *Grid Smoothing* of the deformation grid in the :ref:`options<Method>` panel.
 
 .. figure:: images/bad_deforms_fixed.jpg
     :alt: Bad Deformations fixed.
 
     Here, the target sphere object's resolution was increased using a subdivision surface modifier, and the :ref:`Gradient Effect` was enabled for the screw part to lessen the effect at the top.
 
-
-==================================================================================================================================================
-"The bottom of the source object is not pointing towards the target object"
-==================================================================================================================================================
-
-See this video here:
-
-|source_obj_error_vid|
-
-.. |source_obj_error_vid| raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/N3TG_TnStZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Or follow the explanation below:
-
-
-.. figure:: images/misalign_error.jpg
-    :alt: Misalign error
-
-    This error occurs when the bottom of the source object is not pointing towards the target object.
-
-The bottom of the source object's center must be pointing towards the surface of the target object when running the operation.  The bottom of the object is the lowest part of the object when the object is not rotated.
-
-You will need to orientate the object correctly by rotating it in Object mode.
-
-The best way to check this is to first visualize it in blender:
-
-#. With the source object selected, in the top-right of the 3D view, click the ‘Viewport Gizmos’ menu.  
-
-    .. image:: images/viewport_gizmos_menu.jpg
-        :alt: Viewport Gizmos Menu
-
-#. Under ‘Object Gizmos’, select ‘Local’ from the drop-down box, and tick the ‘Move’ checkbox.  This will display the local X/Y/Z axes for the selected object.
-
-    .. image:: images/local_xyz_gizmo.jpg
-        :alt: Local XYZ Gizmo Display
-
-#. Now, with the object selected, press the **R** key to rotate it (you can then press X, Y, or Z to restrict the rotation if you wish, and type a number for the number of degrees), and click the left mouse button to complete the rotation.  You’ll see that the object’s gizmo axis display has also rotated, as it displays the rotation of the object.  
-
-    .. image:: images/local_obj_rotate.jpg
-        :alt: Local object Rotation
-
-#. The ‘Bottom’ of an object is the opposite direction of the blue Z-Axis arrow (The -Z axis).  It is this opposing direction that needs to be pointing towards the source object.
-
-    .. image:: images/minus_z_axis.jpg
-        :alt: Minus Z Axis Direction
-
-#. When the axis is aligned like this, you should now be able to perform the Conform Object operation:
-
-
-    .. image:: images/conform_object_axis_success.jpg
-        :alt: Minus Z Axis Direction
-
-
-What happens if the bottom of the source object is in the wrong orientation?  
-----------------------------------------------------------------------------------
-
-.. image:: images/bad_direction.jpg
-    :alt: Bad Direction
-
-You can change the orientation of the axis so that the bottom of your source object is pointing in the right direction:
-
-#. With the object selected, press the ‘N’ key to access the viewport’s right-hand Properties tabs if they aren’t there already.  
-#. Select the ‘Tool’ tab.
-#. Open the ‘Options’ section, and expand the ‘Transform’ tab.  Tick the ‘Affect Only: Origins’ checkbox.  Now, you can rotate the Origin of the object, and not the object itself.  
-
-    .. image:: images/affect_origin_only.jpg
-        :alt: Affect Origins Only Transform Option
-
-#. Make sure the opposite direction of the blue arrow, or in other words the object’s bottom, is in the direction you need by rotating the axes using the **R** key, optionally followed by the X, Y or Z key to contrain the rotation axis followed by a number for the degrees of the rotation. Press Enter.
-
-    .. image:: images/affect_origin_only_rotate.jpg
-        :alt: Affect Origins Only Transform Option - rotated
-
-#. When finished, remember to untick the *Affect Only: Origins* checkbox to go back to normal:
-
-    .. image:: images/affect_origin_only_untick.jpg
-        :alt: Untick Affect Origins Only Transform Option
-
-#. You should now be able to preform the Conform Object operation:
-
-    .. image:: images/affect_origin_only_correct.jpg
-        :alt: Correctly Applying the Conform.
-
-Remember to :ref:`get in touch<Contact>` if you are having any issues with this.
 
 ====================================================================
 When Editing the Object, the Effect is Lost
@@ -142,9 +84,23 @@ When Copying the Object, the Effect is Lost
 
     The effect gets lost when duplicating the object.
 
-    * In :ref:`Grid Mode`, because the new object would reference the same deformation grid, the effect is automaticaly removed by the add-on to prevent this.  
+    * In :ref:`Grid Mode`, because the new object would reference the same deformation grid, the effect is automatically removed by the add-on to prevent this.  
 
             To fix this, select the **Source Object** and the **Target Object** and :ref:`run the conform operation again<How To Use>`.  This will re-apply the modifiers and update the binding.
+
+
+====================================================================
+The Object does not render with the deformation on it.
+====================================================================
+
+This can happen when a modifier like the Subdivision Surface modifier on the Source Object does not have the same *Render* level settings as its *Viewport* render settings:
+
+.. figure:: images/subsurf_unequal_levels.jpg
+    :alt: Here, the two level settings are inconsistent.
+
+Blender uses the *Viewport* setting to calculate the deformation, so it will not bind at render time if the *Render* setting is different.
+
+To fix the issue, set the *Render* level setting to be the same number as the *Viewport* level setting.  This should allow you to render the Source Object with the deformation.
 
 ====================================================================
 Creating Boolean Cutters
@@ -157,12 +113,12 @@ Creating Boolean Cutters
     Example of a bad boolean cutter because Conform operation is not :ref:`applied<Apply>`.
 
 
-If trying to use the conformed object as a boolean cutter on the target object,  use the :ref:`Apply Conform  Object<Apply>` operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the source object itself is trying to deform to the cut shape.
+If trying to use the conformed object as a boolean cutter on the Target Object,  use the :ref:`Apply Conform  Object<Apply>` operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the Source Object itself is trying to deform to the cut shape.
 
 .. figure:: images/boolean_cutter.jpg
-    :alt: Remember to Apply the Conform Object operation to the source object before using as a boolean cutter.
+    :alt: Remember to Apply the Conform Object operation to the Source Object before using as a boolean cutter.
 
-    Remember to :ref:`apply<Apply>` the Conform Object operation to the source object before using as a boolean cutter.
+    Remember to :ref:`apply<Apply>` the Conform Object operation to the Source Object before using as a boolean cutter.
 
 
 ====================================================================

@@ -36,6 +36,7 @@ Features:
 * Underlying mesh is not affected.
 * Undo and apply options handle the underlying complexity of adding and removing modifers.
 * :ref:`Conform multiple objects at once<Multiple Objects>`.
+* :ref:`Display Vertex Weights in Object Mode<Visualize Vertex Weights>` to help with the :ref:`Gradient Effect`.
 * Presets system to save your preferred settings.
 
 
@@ -49,11 +50,12 @@ Features:
 
    installation
    use
-   how_does_it_work
    options
    undo
    apply
    toggle_snap
+   vertex_weight_vis
+   how_does_it_work
    troubleshooting
    contact
 

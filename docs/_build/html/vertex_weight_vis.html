@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualize Vertex Weights &mdash; Conform Object  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How does it work?" href="how_does_it_work.html" />
+    <link rel="prev" title="Surface Snapping" href="toggle_snap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Conform Object
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visualize Vertex Weights</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vertex-visualization-options">Vertex Visualization Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vertex-size">Vertex Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selection">Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zero-weights">Zero Weights</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Conform Object</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Visualize Vertex Weights</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/vertex_weight_vis.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="visualize-vertex-weights">
+<h1>Visualize Vertex Weights<a class="headerlink" href="#visualize-vertex-weights" title="Permalink to this headline"></a></h1>
+<figure class="align-default" id="id1">
+<img alt="Viewing Vertex Weights" src="_images/vis_vert_weights.jpg" />
+<figcaption>
+<p><span class="caption-text">The add-on adds an option to the <em>Overlays</em> menu that allows you to visualize vertex weights in Object Mode.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>In Blender you do not currently have the option to see Vertex Weights in Object mode, only in Edit Mode.  When the add-on is installed, to help you understand the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> we have included an extra tool for you to do this.</p>
+<p>Strongly weighted vertices will be shown in red, medium weights are shown in green, and zero weighted vertices are shown in blue.</p>
+<p>This tool is not tied to Conform Object and can be used to visualize any active Vertex Group on any object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be careful with more complex objects with lots of vertices, as this will slow the viewport down significantly.</p>
+</div>
+<p>To enable the tool:</p>
+<ol class="arabic">
+<li><p>In Blender’s viewport, go to the <em>Show Overlays</em> menu in the top right:</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="Viewing Vertex Weights" src="_images/overlays_menu.jpg" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>If the add-on is installed you should see a “Vertex Object Mode Visualization” section:</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="Viewing Vertex Weights" src="_images/overlays_menu_vis_option.jpg" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>In this section, tick the box next to “Vertex Group Weights”.  Now, any selected object with active Vertex Groups should have their weights displayed:</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="Viewing Vertex Weights" src="_images/overlays_menu_vis_option_active.jpg" />
+</figure>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to change which Vertex Group is visualized, change the active Vertex Group by selecting another Vertex Group in the <em>Object Data Properties</em> panel:</p>
+<figure class="align-default">
+<img alt="Viewing Vertex Weights" src="_images/object_conformed_projection_vert_weight_select.gif" />
+</figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Visualise a vertex group in Edit Mode by selecting “Vertex Group Weights” in the overlays panel:</p>
+<img alt="Visualising Vertex Groups" src="_images/vertex_group_visualise.jpg" />
+</div>
+<section id="vertex-visualization-options">
+<h2>Vertex Visualization Options<a class="headerlink" href="#vertex-visualization-options" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id2">
+<img alt="Viewing Vertex Weights parameters" src="_images/vg_options.jpg" />
+<figcaption>
+<p><span class="caption-text">The options in Blender’s Viewport Overlays panel.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="vertex-size">
+<h3>Vertex Size<a class="headerlink" href="#vertex-size" title="Permalink to this headline"></a></h3>
+<p>The size of each vertex point in the viewport display.</p>
+</section>
+<section id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this headline"></a></h3>
+<p>Which vertex groups to display:</p>
+<ul class="simple">
+<li><p><strong>Selected</strong>: Only display Vertex Groups on selected objects.</p></li>
+<li><p><strong>Active</strong>: Only display Vertex Groups from the Active object.</p></li>
+<li><p><strong>All</strong>: display Vertex Groups on all objects.</p></li>
+</ul>
+</section>
+<section id="zero-weights">
+<h3>Zero Weights<a class="headerlink" href="#zero-weights" title="Permalink to this headline"></a></h3>
+<p>Control how zero weighted vertices are displayed (useful for more complex objects):</p>
+<ul class="simple">
+<li><p><strong>None</strong>: Do not display vertices with zero weights.</p></li>
+<li><p><strong>All</strong>: Display all vertices even if they have zero weights (displayed in blue).</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="toggle_snap.html" class="btn btn-neutral float-left" title="Surface Snapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how_does_it_work.html" class="btn btn-neutral float-right" title="How does it work?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mark Kingsnorth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

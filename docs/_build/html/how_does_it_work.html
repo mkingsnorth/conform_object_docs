@@ -18,8 +18,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Options" href="options.html" />
-    <link rel="prev" title="How To Use" href="use.html" /> 
+    <link rel="next" title="Tips and Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="Visualize Vertex Weights" href="vertex_weight_vis.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,15 +41,16 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How does it work?</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grid-mode">Grid Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#shrinkwrap-mode">Shrinkwrap Mode</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
-<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
 </ul>
@@ -88,14 +89,14 @@
 <li><p><strong>Advantages</strong>:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>More accurate, positions the source object vertices in the same direction as the faces of the target object.</p></li>
+<li><p>More accurate: it positions the source object vertices in the same direction as the faces of the target object.</p></li>
 </ul>
 </div></blockquote>
 </li>
 <li><p><strong>Disadvantages</strong>:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>More complex, adds an extra helper grid object to the scene.</p></li>
+<li><p>More complex: adds an extra helper grid object to the scene.</p></li>
 <li><p>If the source object is edited or copied, you will need to re-apply the operation.</p></li>
 </ul>
 </div></blockquote>
@@ -107,7 +108,7 @@
 <p><span class="caption-text">The add-on in Grid Mode, with the grid visible.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The add-on automatically creates a deformation grid object which is used to wrap the object to the surface of another using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a>.  This grid object is <strong>hidden</strong> by default and can have its subdivisions configured.</p>
+<p>The add-on automatically creates a deformation grid object which is used to project the object to the surface of another using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a>.  This grid object is <strong>hidden</strong> by default and can have its subdivisions configured.</p>
 <p>It automates the manual process of:</p>
 <ol class="arabic simple">
 <li><p>Creating a deformation grid and aligning it to the base of the object.</p></li>
@@ -167,8 +168,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="use.html" class="btn btn-neutral float-left" title="How To Use" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="options.html" class="btn btn-neutral float-right" title="Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="vertex_weight_vis.html" class="btn btn-neutral float-left" title="Visualize Vertex Weights" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="troubleshooting.html" class="btn btn-neutral float-right" title="Tips and Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

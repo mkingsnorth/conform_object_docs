@@ -12,12 +12,11 @@ Grid Mode
 
 * **Advantages**: 
   
-    * More accurate, positions the source object vertices in the same direction as the faces of the target object.
+    * More accurate: it positions the source object vertices in the same direction as the faces of the target object.
   
 * **Disadvantages**: 
   
-    * More complex, adds an extra helper grid object to the scene.
-  
+    * More complex: adds an extra helper grid object to the scene.
     * If the source object is edited or copied, you will need to re-apply the operation.
 
 .. figure:: images/how_does_it_work_1.jpg
@@ -25,7 +24,7 @@ Grid Mode
 
     The add-on in Grid Mode, with the grid visible.
 
-The add-on automatically creates a deformation grid object which is used to wrap the object to the surface of another using a |Surface Deform Modifier|.  This grid object is **hidden** by default and can have its subdivisions configured.
+The add-on automatically creates a deformation grid object which is used to project the object to the surface of another using a |Surface Deform Modifier|.  This grid object is **hidden** by default and can have its subdivisions configured.
 
 It automates the manual process of:
 

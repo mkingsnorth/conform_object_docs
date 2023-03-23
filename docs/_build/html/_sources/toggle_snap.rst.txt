@@ -13,17 +13,16 @@ Surface Snapping
 
     Object being snapped to a face while moving.
 
-To snap an object to another object's surface when moving, a common set up in Blender is to enable the relevant snap options:
+To align an object to another object's surface, a common set up in Blender is to enable the relevant snap options in the *Snapping* menu in the top middle of the viewport. To quickly switch on these settings, an option is provided in the menu that allows you to toggle these settings on and off.
 
+With the add-on installed, you can either:
 
-.. figure:: images/toggle_snap.jpg
-    :alt: Snap Options for aligning an object to a face.
+#. Expand the *Snapping* menu at the top of the viewport.
+#. Under *Conform Object*, Click the **Toggler Surface Snapping** option to enable or disable it.
 
-    Snap Options for aligning an object to a face.
-
-To quickly switch on these settings, an option is provided in the menu that allows you to toggle these settings on and off:
+Or:
 
 #. In the viewport, right-click and select the **Conform Object** context menu.
 #. Select the **Toggle Surface Snapping** option.
 
-This will automatically enable snapping options so that you can align the object to the surface quickly.
+Both these options will automatically enable snapping so that you can align the object to the surface quickly.

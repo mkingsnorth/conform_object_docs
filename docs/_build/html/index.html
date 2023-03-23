@@ -40,11 +40,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
-<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
 </ul>
@@ -96,6 +97,7 @@
 <li><p>Underlying mesh is not affected.</p></li>
 <li><p>Undo and apply options handle the underlying complexity of adding and removing modifers.</p></li>
 <li><p><a class="reference internal" href="use.html#multiple-objects"><span class="std std-ref">Conform multiple objects at once</span></a>.</p></li>
+<li><p><a class="reference internal" href="vertex_weight_vis.html#visualize-vertex-weights"><span class="std std-ref">Display Vertex Weights in Object Mode</span></a> to help with the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>.</p></li>
 <li><p>Presets system to save your preferred settings.</p></li>
 </ul>
 <figure class="align-default">
@@ -106,8 +108,24 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use.html#main-use">Main Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use.html#step-by-step">Step by Step</a></li>
 <li class="toctree-l2"><a class="reference internal" href="use.html#multiple-objects">Multiple Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="options.html#operator-presets">Operator Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#projection">Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#object-transform">Object Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#gradient-effect">Gradient Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#blend-normals">Blend Normals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#other-options">Other Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vertex_weight_vis.html#vertex-visualization-options">Vertex Visualization Options</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a><ul>
@@ -115,20 +133,13 @@
 <li class="toctree-l2"><a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode">Shrinkwrap Mode</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="options.html#presets">Presets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="options.html#source-object">Source Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="options.html#grid-object">Grid Object</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
-<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#my-source-object-has-not-aligned-correctly-to-the-target-object">My Source Object has not aligned correctly to the Target Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#i-lose-the-options-menu-when-i-click-off-the-panel-how-do-i-get-it-back">I lose the Options menu when I click off the panel. How do I get it back?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#bad-deformations">Bad Deformations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#the-bottom-of-the-source-object-is-not-pointing-towards-the-target-object">“The bottom of the source object is not pointing towards the target object”</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#when-editing-the-object-the-effect-is-lost">When Editing the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#when-copying-the-object-the-effect-is-lost">When Copying the Object, the Effect is Lost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#the-object-does-not-render-with-the-deformation-on-it">The Object does not render with the deformation on it.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#creating-boolean-cutters">Creating Boolean Cutters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#when-i-click-off-the-panel-i-lose-my-settings">When I click off the panel, I lose my settings</a></li>
 </ul>
