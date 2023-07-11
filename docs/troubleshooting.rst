@@ -102,6 +102,12 @@ Blender uses the *Viewport* setting to calculate the deformation, so it will not
 
 To fix the issue, set the *Render* level setting to be the same number as the *Viewport* level setting.  This should allow you to render the Source Object with the deformation.
 
+===================================================================
+When I Click 'Apply Conform Object', the object jumps.
+===================================================================
+
+Try applying any modifiers that are above the Conform Deformation modifier using the drop down box on each modifier for the source object, and then for the Conform Deformation modifier use the 'Apply Conform Object' operation.  If you are still having issues :ref:`send us a message<contact>`.
+
 ====================================================================
 Creating Boolean Cutters
 ====================================================================

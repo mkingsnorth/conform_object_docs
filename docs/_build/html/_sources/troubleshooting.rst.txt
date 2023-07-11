@@ -121,6 +121,12 @@ If trying to use the conformed object as a boolean cutter on the Target Object, 
     Remember to :ref:`apply<Apply>` the Conform Object operation to the Source Object before using as a boolean cutter.
 
 
+========================================================================
+My Source Object distorts badly when I change Object Transform Settings
+========================================================================
+
+This may be because you need to Apply Object Scale to the object by pressing F3 and searching for *Apply Scale*. Blender modifiers sometimes do not work well if the object scale is not applied i.e. reset to (1.0, 1.0, 1.0).
+
 ====================================================================
 When I click off the panel, I lose my settings
 ====================================================================
