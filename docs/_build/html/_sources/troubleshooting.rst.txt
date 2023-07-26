@@ -46,9 +46,15 @@ This can occur for several reasons:
 
 There are several things to try:
 
+.. figure:: images/grid_smoothing.gif
+    :alt: Using Grid Smoothing to fix jagged Deformations
+
+    Here, increasing the *Grid Smoothing* parameter smooths out the underlying deformation grid, which in turn smooths out the Source Object Deformation.
+
+* Increase the *Grid Smoothing* of the deformation grid in the :ref:`options<Method>` panel.
 * Enable the :ref:`Gradient Effect` to smooth the deformation at the top of the object.
 * Increase the resolution of the Target Object by using a subdivision surface modifier.
-* Increase the *Grid Smoothing* of the deformation grid in the :ref:`options<Method>` panel.
+
 
 .. figure:: images/bad_deforms_fixed.jpg
     :alt: Bad Deformations fixed.
@@ -101,6 +107,12 @@ This can happen when a modifier like the Subdivision Surface modifier on the Sou
 Blender uses the *Viewport* setting to calculate the deformation, so it will not bind at render time if the *Render* setting is different.
 
 To fix the issue, set the *Render* level setting to be the same number as the *Viewport* level setting.  This should allow you to render the Source Object with the deformation.
+
+===================================================================
+When I Click 'Apply Conform Object', the object jumps.
+===================================================================
+
+Try applying any modifiers that are above the Conform Deformation modifier using the drop down box on each modifier for the source object, and then for the Conform Deformation modifier use the 'Apply Conform Object' operation.  If you are still having issues :ref:`send us a message<contact>`.
 
 ====================================================================
 Creating Boolean Cutters

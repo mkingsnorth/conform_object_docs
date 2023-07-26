@@ -46,9 +46,15 @@ This can occur for several reasons:
 
 There are several things to try:
 
+.. figure:: images/grid_smoothing.gif
+    :alt: Using Grid Smoothing to fix jagged Deformations
+
+    Here, increasing the *Grid Smoothing* parameter smooths out the underlying deformation grid, which in turn smooths out the Source Object Deformation.
+
+* Increase the *Grid Smoothing* of the deformation grid in the :ref:`options<Method>` panel.
 * Enable the :ref:`Gradient Effect` to smooth the deformation at the top of the object.
 * Increase the resolution of the Target Object by using a subdivision surface modifier.
-* Increase the *Grid Smoothing* of the deformation grid in the :ref:`options<Method>` panel.
+
 
 .. figure:: images/bad_deforms_fixed.jpg
     :alt: Bad Deformations fixed.

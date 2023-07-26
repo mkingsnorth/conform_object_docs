@@ -44,6 +44,7 @@
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lattice.html">Lattice Deformation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
@@ -94,14 +95,24 @@
 <li><p><a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Graduate the effect</span></a> from the bottom to the top of the object.</p></li>
 <li><p>Choose from <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a> or <a class="reference internal" href="how_does_it_work.html#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>.</p></li>
 <li><p>Transfer surface normals to <a class="reference internal" href="options.html#blend-normals"><span class="std std-ref">blend object shading</span></a>.</p></li>
+<li><p>Use a <a class="reference internal" href="lattice.html#lattice-deformation"><span class="std std-ref">deformation lattice</span></a> to stretch an object around the surface of another.</p></li>
 <li><p>Underlying mesh is not affected.</p></li>
 <li><p>Undo and apply options handle the underlying complexity of adding and removing modifers.</p></li>
 <li><p><a class="reference internal" href="use.html#multiple-objects"><span class="std std-ref">Conform multiple objects at once</span></a>.</p></li>
 <li><p><a class="reference internal" href="vertex_weight_vis.html#visualize-vertex-weights"><span class="std std-ref">Display Vertex Weights in Object Mode</span></a> to help with the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a>.</p></li>
 <li><p>Presets system to save your preferred settings.</p></li>
 </ul>
-<figure class="align-default">
+<figure class="align-default" id="id2">
+<img alt="Conform Lattice Deformation" src="_images/lattice_feature_demo.gif" />
+<figcaption>
+<p><span class="caption-text">Using the advanced <a class="reference internal" href="lattice.html#lattice-deformation"><span class="std std-ref">Lattice Deformation</span></a> feature to wrap an object around another.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
 <img alt="Conform Object at work" src="_images/conform_obj_3.gif" />
+<figcaption>
+<p><span class="caption-text">Here the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> is used to affect the lower parts of the object, and leave the upper part unaffected.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
 </figure>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
@@ -124,6 +135,12 @@
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lattice.html">Lattice Deformation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html#use">Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html#re-running-conform-object-with-your-existing-lattice">Re-running Conform Object with your existing Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html#bonus-video-fitting-goggles">Bonus video: Fitting Goggles</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="vertex_weight_vis.html#vertex-visualization-options">Vertex Visualization Options</a></li>
 </ul>
@@ -140,6 +157,7 @@
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#when-editing-the-object-the-effect-is-lost">When Editing the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#when-copying-the-object-the-effect-is-lost">When Copying the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#the-object-does-not-render-with-the-deformation-on-it">The Object does not render with the deformation on it.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#when-i-click-apply-conform-object-the-object-jumps">When I Click ‘Apply Conform Object’, the object jumps.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#creating-boolean-cutters">Creating Boolean Cutters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#my-source-object-distorts-badly-when-i-change-object-transform-settings">My Source Object distorts badly when I change Object Transform Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#when-i-click-off-the-panel-i-lose-my-settings">When I click off the panel, I lose my settings</a></li>
