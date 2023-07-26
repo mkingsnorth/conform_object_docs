@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lattice Deformation &mdash; Conform Object  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Visualize Vertex Weights" href="vertex_weight_vis.html" />
+    <link rel="prev" title="Surface Snapping" href="toggle_snap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Conform Object
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lattice Deformation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#use">Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#re-running-conform-object-with-your-existing-lattice">Re-running Conform Object with your existing Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bonus-video-fitting-goggles">Bonus video: Fitting Goggles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Conform Object</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Lattice Deformation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/lattice.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lattice-deformation">
+<h1>Lattice Deformation<a class="headerlink" href="#lattice-deformation" title="Permalink to this headline"></a></h1>
+<img alt="Conform Lattice Deformation" src="_images/lattice_feature_demo.gif" />
+<p>You can stretch an object around another object’s surface with a <a href="https://docs.blender.org/manual/en/latest/animation/lattice.html">Lattice</a> control object when you have ran Conform Object.  The Lattice deforms the underlying <a class="reference internal" href="how_does_it_work.html#how-does-it-work"><span class="std std-ref">Deformation when in Grid Mode</span></a>, which allows you to push and pull the Source Object along the Target Object’s surface.  Here is the how-to video:</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Gz8qjBgkZp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using the Lattice takes some practice and is not a one-click solution. Do <a class="reference internal" href="contact.html#contact"><span class="std std-ref">Contact Us</span></a> if you are having issues.</p>
+</div>
+<section id="use">
+<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline"></a></h2>
+<ol class="arabic">
+<li><p>Select the Source Object and the Target Object and <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">run Conform Object</span></a> as usual.</p></li>
+<li><p>To activate the Lattice, in the left side <a class="reference internal" href="options.html#options"><span class="std std-ref">options</span></a> menu that appears, expand the Projection Section and click the Lattice icon next next to the Deformation Grid section:</p>
+<blockquote>
+<div><img alt="Lattice button" src="_images/lattice_option.jpg" />
+</div></blockquote>
+</li>
+<li><p>This will create and attach a Lattice object to the hidden deformation grid.  The Lattice can be a little hard to see but appears at the same point as the Source Object:</p>
+<blockquote>
+<div><img alt="Lattice button" src="_images/lattice_on_head.jpg" />
+</div></blockquote>
+</li>
+<li><p>You can optionally choose to change the number of points on the Lattice, although this can be done later under the Lattice Data Properties panel.  It is suggested to keep the lattice points relatively low:</p>
+<blockquote>
+<div><img alt="Lattice options" src="_images/lattice_options.jpg" />
+</div></blockquote>
+</li>
+<li><p>Once the Lattice is created, select it and go to the Lattice Data Properties tab on the right hand side of the application:</p>
+<blockquote>
+<div><img alt="Lattice data properties panel" src="_images/lattice_data_properties.jpg" />
+</div></blockquote>
+</li>
+<li><p>As well at the standard Lattice options for controlling the number of points and interpolation, there should be an additional “Conform Object” section.  These contain options for controlling Blender that may be useful whilst editing the Lattice:</p>
+<blockquote>
+<div><img alt="Lattice data properties panel buttons" src="_images/lattice_buttons.jpg" />
+<ul>
+<li><p><strong>Show Lattice in Front</strong>: By default the Lattice Object is displayed in front of all other objects in the viewport for editing purposes.  You can switch this off when you no longer need to see the lattice at all times.</p></li>
+<li><p><strong>Toggle Lattice Visibility</strong>: You can hide the lattice completely using this option.</p></li>
+<li><p><strong>Toggle All Lattice Edit Mode Settings</strong>:  This switches on or off several options in Blender that may be useful when editing the Lattice control points.  You can use this button to switch on/off all these options at once or control them individually using the buttons below it:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Source Object Selectable/Non-Selectable</strong>:  This stops the Source Object being selectable, so that it does not interfere with the lattice when you are moving lattice points, especially when snapping points to the surface.</p></li>
+<li><p><strong>Surface Snapping</strong>: This button switches on/off surface snapping when moving control points, which is helping when you want to align the deformation with the Target Object surface.</p></li>
+<li><p><strong>Exclude Non-Selectable</strong>: This button will exclude Non-Selectable objects from surface snapping, so the Source Object does not interfere when trying to snap points to the surface of the Target Object.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to disable these options again when you have finished editing the Lattice.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Toggle Grid Visibility</strong>: This unhides the grid which is useful when you want to visualize how the lattice is affecting the deformation grid:</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="Lattice Grid Show" src="_images/lattice_grid_show.gif" />
+<figcaption>
+<p><span class="caption-text">By toggling grid visibility, you can see how the grid is being affected by the lattice.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Please note these are only optional settings and you may wish to experiment with moving the lattice control points without snapping enabled.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>To edit the lattice, select it and press Tab to enter edit mode.  You may wish to switch Blender’s selection mode to <em>Tweak</em> so you can quickly click and drag points:</p>
+<blockquote>
+<div><img alt="Using Lattice Tweak Mode." src="_images/lattice_tweak_mode.gif" />
+</div></blockquote>
+</li>
+<li><p>You can now click and drag the points of the lattice to deform the underlying projection along the surface object.</p></li>
+</ol>
+</section>
+<section id="re-running-conform-object-with-your-existing-lattice">
+<h2>Re-running Conform Object with your existing Lattice<a class="headerlink" href="#re-running-conform-object-with-your-existing-lattice" title="Permalink to this headline"></a></h2>
+<p>Once you have edited the lattice, you may wish to re-run Conform Object to change some settings, such as increasing <a class="reference internal" href="options.html#options"><span class="std std-ref">Grid Smoothing</span></a> if the object appears too distorted.  By default this will delete your lattice.  To keep your Lattice deformation, you can do the following:</p>
+<ol class="arabic">
+<li><p>Select the Source Object.</p></li>
+<li><p>Press <em>shift</em> and select the Lattice Object as well.</p></li>
+<li><p>Finally, press <em>shift</em> again and select the Target Object last.</p></li>
+<li><p>Re-Run the Conform Object operation.</p>
+<img alt="Using Lattice Tweak Mode." src="_images/lattice_redo.gif" />
+</li>
+</ol>
+<p>Because you have also selected the Lattice, the add-on recognises this, runs Conform Object again and uses the Lattice object for deforming the projection grid.</p>
+</section>
+<section id="bonus-video-fitting-goggles">
+<h2>Bonus video: Fitting Goggles<a class="headerlink" href="#bonus-video-fitting-goggles" title="Permalink to this headline"></a></h2>
+<p>In the following video Conform Object uses Lattice Deformation and Grid Smoothing to fit goggles around a head:</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qx8Nz_-Kxxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="toggle_snap.html" class="btn btn-neutral float-left" title="Surface Snapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vertex_weight_vis.html" class="btn btn-neutral float-right" title="Visualize Vertex Weights" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mark Kingsnorth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
