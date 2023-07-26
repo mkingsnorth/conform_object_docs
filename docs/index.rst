@@ -50,6 +50,10 @@ Features:
 
   Here the :ref:`Gradient Effect` is used to affect the lower parts of the object, and leave the upper part unaffected.
 
+.. warning::
+
+    Conform Object assumes some knowledge of Blender and will only be as good as an object's mesh topology.  Some more advanced features may take some time to master.  Do :ref:`Contact Us<contact>` if you are having issues.
+
 
 .. toctree::
    :maxdepth: 2
