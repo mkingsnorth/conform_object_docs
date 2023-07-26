@@ -24,7 +24,6 @@ The add-on handles the complexity of doing this for you in a non-destructive way
 
    <a href="https://blendermarket.com/products/conform-object">Conform Object</a>
 
-
 -----------------
 Features:
 -----------------
@@ -33,15 +32,26 @@ Features:
 * :ref:`Graduate the effect<Gradient Effect>` from the bottom to the top of the object.
 * Choose from :ref:`Grid Mode` or :ref:`Shrinkwrap Mode`.
 * Transfer surface normals to :ref:`blend object shading<Blend Normals>`.
+* Use a :ref:`deformation lattice<Lattice Deformation>` to stretch an object around the surface of another.
 * Underlying mesh is not affected.
 * Undo and apply options handle the underlying complexity of adding and removing modifers.
 * :ref:`Conform multiple objects at once<Multiple Objects>`.
 * :ref:`Display Vertex Weights in Object Mode<Visualize Vertex Weights>` to help with the :ref:`Gradient Effect`.
 * Presets system to save your preferred settings.
 
+.. figure:: images/lattice_feature_demo.gif
+    :alt: Conform Lattice Deformation
+
+    Using the advanced :ref:`Lattice Deformation<Lattice Deformation>` feature to wrap an object around another.
+
 
 .. figure:: images/conform_obj_3.gif
   :alt: Conform Object at work
+
+  Here the :ref:`Gradient Effect` is used to affect the lower parts of the object, and leave the upper part unaffected.
+
+.. warning::
+    Conform Object assumes some knowledge of how an object's location and orientation works in Blender and will only be as good as an object's mesh topology.  Some more advanced features may take some time to master.  Do :ref:`Contact Us<contact>` if you are having issues.
 
 
 .. toctree::
@@ -54,6 +64,7 @@ Features:
    undo
    apply
    toggle_snap
+   lattice
    vertex_weight_vis
    how_does_it_work
    troubleshooting

@@ -45,6 +45,7 @@
 <li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lattice.html">Lattice Deformation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tips and Troubleshooting</a><ul>
@@ -54,6 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#when-editing-the-object-the-effect-is-lost">When Editing the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-copying-the-object-the-effect-is-lost">When Copying the Object, the Effect is Lost</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-object-does-not-render-with-the-deformation-on-it">The Object does not render with the deformation on it.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#when-i-click-apply-conform-object-the-object-jumps">When I Click ‘Apply Conform Object’, the object jumps.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-boolean-cutters">Creating Boolean Cutters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#my-source-object-distorts-badly-when-i-change-object-transform-settings">My Source Object distorts badly when I change Object Transform Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#when-i-click-off-the-panel-i-lose-my-settings">When I click off the panel, I lose my settings</a></li>
@@ -121,24 +123,30 @@
 <li><p>The meshes need more subdivision.</p></li>
 </ul>
 <p>There are several things to try:</p>
+<figure class="align-default" id="id3">
+<img alt="Using Grid Smoothing to fix jagged Deformations" src="_images/grid_smoothing.gif" />
+<figcaption>
+<p><span class="caption-text">Here, increasing the <em>Grid Smoothing</em> parameter smooths out the underlying deformation grid, which in turn smooths out the Source Object Deformation.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <ul class="simple">
+<li><p>Increase the <em>Grid Smoothing</em> of the deformation grid in the <a class="reference internal" href="options.html#method"><span class="std std-ref">options</span></a> panel.</p></li>
 <li><p>Enable the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> to smooth the deformation at the top of the object.</p></li>
 <li><p>Increase the resolution of the Target Object by using a subdivision surface modifier.</p></li>
-<li><p>Increase the <em>Grid Smoothing</em> of the deformation grid in the <a class="reference internal" href="options.html#method"><span class="std std-ref">options</span></a> panel.</p></li>
 </ul>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id4">
 <img alt="Bad Deformations fixed." src="_images/bad_deforms_fixed.jpg" />
 <figcaption>
-<p><span class="caption-text">Here, the target sphere object’s resolution was increased using a subdivision surface modifier, and the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> was enabled for the screw part to lessen the effect at the top.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Here, the target sphere object’s resolution was increased using a subdivision surface modifier, and the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> was enabled for the screw part to lessen the effect at the top.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="when-editing-the-object-the-effect-is-lost">
 <h2>When Editing the Object, the Effect is Lost<a class="headerlink" href="#when-editing-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id5">
 <img alt="The effect gets lost when editing the object." src="_images/edit_error.gif" />
 <figcaption>
-<p><span class="caption-text">The effect gets lost when editing the object.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The effect gets lost when editing the object.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 <div class="legend">
 <ul>
 <li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, the <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a> loses its binding to the surface whenever the underlying mesh is changed.</p>
@@ -153,10 +161,10 @@
 </section>
 <section id="when-copying-the-object-the-effect-is-lost">
 <h2>When Copying the Object, the Effect is Lost<a class="headerlink" href="#when-copying-the-object-the-effect-is-lost" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id6">
 <img alt="The effect gets lost when duplicating the object." src="_images/dupe_error.gif" />
 <figcaption>
-<p><span class="caption-text">The effect gets lost when duplicating the object.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The effect gets lost when duplicating the object.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 <div class="legend">
 <ul>
 <li><p>In <a class="reference internal" href="how_does_it_work.html#grid-mode"><span class="std std-ref">Grid Mode</span></a>, because the new object would reference the same deformation grid, the effect is automatically removed by the add-on to prevent this.</p>
@@ -178,19 +186,23 @@
 <p>Blender uses the <em>Viewport</em> setting to calculate the deformation, so it will not bind at render time if the <em>Render</em> setting is different.</p>
 <p>To fix the issue, set the <em>Render</em> level setting to be the same number as the <em>Viewport</em> level setting.  This should allow you to render the Source Object with the deformation.</p>
 </section>
+<section id="when-i-click-apply-conform-object-the-object-jumps">
+<h2>When I Click ‘Apply Conform Object’, the object jumps.<a class="headerlink" href="#when-i-click-apply-conform-object-the-object-jumps" title="Permalink to this headline"></a></h2>
+<p>Try applying any modifiers that are above the Conform Deformation modifier using the drop down box on each modifier for the source object, and then for the Conform Deformation modifier use the ‘Apply Conform Object’ operation.  If you are still having issues <a class="reference internal" href="contact.html#contact"><span class="std std-ref">send us a message</span></a>.</p>
+</section>
 <section id="creating-boolean-cutters">
 <h2>Creating Boolean Cutters<a class="headerlink" href="#creating-boolean-cutters" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id7">
 <img alt="Example of a bad boolean cutter because Conform operation is not :ref:`applied&lt;Apply&gt;`." src="_images/boolean_cutter_bad.jpg" />
 <figcaption>
-<p><span class="caption-text">Example of a bad boolean cutter because Conform operation is not <a class="reference internal" href="apply.html#apply"><span class="std std-ref">applied</span></a>.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Example of a bad boolean cutter because Conform operation is not <a class="reference internal" href="apply.html#apply"><span class="std std-ref">applied</span></a>.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If trying to use the conformed object as a boolean cutter on the Target Object,  use the <a class="reference internal" href="apply.html#apply"><span class="std std-ref">Apply Conform  Object</span></a> operation first which will apply all the modifiers - otherwise, Blender will go into a loop where it is trying to use the object to cut, but then the Source Object itself is trying to deform to the cut shape.</p>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id8">
 <img alt="Remember to Apply the Conform Object operation to the Source Object before using as a boolean cutter." src="_images/boolean_cutter.jpg" />
 <figcaption>
-<p><span class="caption-text">Remember to <a class="reference internal" href="apply.html#apply"><span class="std std-ref">apply</span></a> the Conform Object operation to the Source Object before using as a boolean cutter.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Remember to <a class="reference internal" href="apply.html#apply"><span class="std std-ref">apply</span></a> the Conform Object operation to the Source Object before using as a boolean cutter.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
