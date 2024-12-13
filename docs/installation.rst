@@ -3,6 +3,22 @@ Installation
 #############
 
 
+---------------------------------
+Blender 4.2 and Above
+---------------------------------
+
+.. image:: images/installation.gif
+   :alt: Installation
+
+Drag and drop the installation zip file into Blender to install the add-on.  
+
+If you have any issues do not hesitate to get in touch via `info@configurate.net <mailto:info@configurate.net>`_.
+
+---------------------------------
+Previous Blender Versions
+---------------------------------
+
+
 #. Go to *Edit* -> *Preferences*.
 #. Select the *Add-ons* tab on the left if it is not already.
 #. Select the *Install...* button along the top.
