@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conform Object Modifier &mdash; Conform Object  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How does it work?" href="how_does_it_work.html" />
+    <link rel="prev" title="Visualize Vertex Weights" href="vertex_weight_vis.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Conform Object
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">How To Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="undo.html">Undo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apply.html">Apply</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lattice.html">Lattice Deformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modifier</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modifier-overview">Modifier Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#advantages">Advantages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disadvantages">Disadvantages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modifier-options">Modifier Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#target-object">Target Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amount">Amount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifier-projection">Modifier Projection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#offset">Offset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#center-point">Center Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifier-method">Modifier Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifier-direction">Modifier Direction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#modifier-gradient-effect">Modifier Gradient Effect</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#start">Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#end">End</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#modifier-blend-normals">Modifier Blend Normals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blend-start">Blend Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blend-end">Blend End</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deformation-grid">Deformation Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#display-grid">Display Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subdivision-x-y">Subdivision X / Y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grid-smoothing">Grid Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-tips">Workflow Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Conform Object</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Conform Object Modifier</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modifier.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conform-object-modifier">
+<span id="id1"></span><h1>Conform Object Modifier<a class="headerlink" href="#conform-object-modifier" title="Permalink to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Blender 4.5 or higher.</p>
+</div>
+<section id="modifier-overview">
+<h2>Modifier Overview<a class="headerlink" href="#modifier-overview" title="Permalink to this heading"></a></h2>
+<p>The Conform Object modifier gives users an alternative more configurable way to project the geometry of one object onto the surface of another.</p>
+<p>As it is a modifier, the mesh can be adjusted, animated, and re-conformed in real-time.</p>
+<p>The resulting deformation can be controlled as before using gradients, offset distance, normal blending, and grid-based smoothing.</p>
+<section id="advantages">
+<h3>Advantages<a class="headerlink" href="#advantages" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Real-time feedback when adjusting the source mesh.</p></li>
+<li><p>Non-destructive workflow with the ability to stack multiple modifiers.</p></li>
+<li><p>Compatibility with other modifiers in the stack.</p></li>
+<li><p>Animation support for parameters.</p></li>
+</ul>
+</section>
+<section id="disadvantages">
+<h3>Disadvantages<a class="headerlink" href="#disadvantages" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="lattice.html#lattice-deformation"><span class="std std-ref">Lattice Deformation</span></a> feature is currently not supported in the modifier.</p></li>
+<li><p>Less tried and tested than the operator version.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have any questions about using the Conform Object Modifier, please <a class="reference internal" href="contact.html#contact"><span class="std std-ref">contact us</span></a>.</p>
+</div>
+</section>
+</section>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h2>
+<img alt="Conform Object Modifier in Action" src="_images/conform_object_modifier_action.gif" />
+<p>Follow the instructions in the <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">operator version</span></a>, but instead of selecting the <strong>Conform Object</strong> menu option, select <strong>Add Conform Object Modifier</strong> from the menu panel instead.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember to <a class="reference internal" href="use.html#stepbystep"><span class="std std-ref">align the object correctly</span></a> before adding the modifier.</p>
+</div>
+</section>
+<section id="modifier-options">
+<h2>Modifier Options<a class="headerlink" href="#modifier-options" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the add-on’s main <a class="reference internal" href="options.html#options"><span class="std std-ref">Options</span></a> section for detailed information on how to use the options below.</p>
+</div>
+<section id="target-object">
+<h3>Target Object<a class="headerlink" href="#target-object" title="Permalink to this heading"></a></h3>
+<p>Specifies the object onto which the source geometry will be conformed.</p>
+</section>
+<section id="amount">
+<h3>Amount<a class="headerlink" href="#amount" title="Permalink to this heading"></a></h3>
+<p>Controls the strength of the conform deformation.</p>
+<ul class="simple">
+<li><p><strong>`0.0`</strong>: No deformation</p></li>
+<li><p><strong>`1.0`</strong>: Full conformity</p></li>
+</ul>
+</section>
+<section id="modifier-projection">
+<h3>Modifier Projection<a class="headerlink" href="#modifier-projection" title="Permalink to this heading"></a></h3>
+<p>Controls how vertices are projected toward the target surface.</p>
+<section id="offset">
+<h4>Offset<a class="headerlink" href="#offset" title="Permalink to this heading"></a></h4>
+<p>Adds an offset distance after projection along the projection direction. Good for Floating geometry above the target and creating spacing for decals.</p>
+</section>
+<section id="center-point">
+<h4>Center Point<a class="headerlink" href="#center-point" title="Permalink to this heading"></a></h4>
+<p>Defines the reference point used when calculating projection directions.</p>
+<ul class="simple">
+<li><p><strong>Middle Point</strong>: Uses the bounding box center of the source object</p></li>
+<li><p><strong>World Center</strong>: Uses the object’s origin point in the scene.</p></li>
+</ul>
+</section>
+<section id="modifier-method">
+<h4>Modifier Method<a class="headerlink" href="#modifier-method" title="Permalink to this heading"></a></h4>
+<p>Defines how vertices are projected out from the target object.</p>
+<ul class="simple">
+<li><p><strong>Surface</strong>: Projects outward the target surface’s face directions.</p></li>
+<li><p><strong>Direct</strong>: Projects vertices in one direction from the target volume.</p></li>
+</ul>
+</section>
+<section id="modifier-direction">
+<h4>Modifier Direction<a class="headerlink" href="#modifier-direction" title="Permalink to this heading"></a></h4>
+<p>Controls how projection directions from source to target are calculated.</p>
+<ul class="simple">
+<li><p><strong>Auto</strong>: Automatically determines a suitable projection direction, either by axis line, or if not the nearest point.</p></li>
+<li><p><strong>Axis Line</strong>: Projects along the object’s -Z axis.</p></li>
+<li><p><strong>Nearest</strong>: Finds the nearest point on the target object from the source object.</p></li>
+<li><p><strong>Custom</strong>: Uses a user-defined projection direction.</p></li>
+</ul>
+</section>
+</section>
+<section id="modifier-gradient-effect">
+<h3>Modifier Gradient Effect<a class="headerlink" href="#modifier-gradient-effect" title="Permalink to this heading"></a></h3>
+<p>See the <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">Gradient Effect</span></a> section in the main documentation for full details.</p>
+<p>Applies a spatial falloff, allowing partial deformation across the mesh.</p>
+<section id="start">
+<h4>Start<a class="headerlink" href="#start" title="Permalink to this heading"></a></h4>
+<p>Defines where the gradient begins.</p>
+</section>
+<section id="end">
+<h4>End<a class="headerlink" href="#end" title="Permalink to this heading"></a></h4>
+<p>Defines where the gradient reaches full effect.</p>
+<p>Vertices between <strong>Start</strong> and <strong>End</strong> are progressively affected.</p>
+</section>
+</section>
+<section id="modifier-blend-normals">
+<h3>Modifier Blend Normals<a class="headerlink" href="#modifier-blend-normals" title="Permalink to this heading"></a></h3>
+<p>See the <a class="reference internal" href="options.html#blend-normals"><span class="std std-ref">Blend Normals</span></a> section in the main documentation for full details.</p>
+<p>Blends the surface normals of the source object with those of the target.</p>
+<p>This improves shading continuity.</p>
+<section id="blend-start">
+<h4>Blend Start<a class="headerlink" href="#blend-start" title="Permalink to this heading"></a></h4>
+<p>Defines where normal blending begins.</p>
+</section>
+<section id="blend-end">
+<h4>Blend End<a class="headerlink" href="#blend-end" title="Permalink to this heading"></a></h4>
+<p>Defines where full normal blending is reached.</p>
+</section>
+</section>
+<section id="deformation-grid">
+<h3>Deformation Grid<a class="headerlink" href="#deformation-grid" title="Permalink to this heading"></a></h3>
+<p>Controls the hidden backing grid that defines the deformation. See <a class="reference internal" href="how_does_it_work.html#how-does-it-work"><span class="std std-ref">How Does it Work?</span></a> for more information.</p>
+<section id="display-grid">
+<h4>Display Grid<a class="headerlink" href="#display-grid" title="Permalink to this heading"></a></h4>
+<p>Displays the deformation grid as a wireframe in the viewport for debugging and tuning.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The viewport must be set to Wireframe or Solid mode to view the grid.</p>
+</div>
+</section>
+<section id="subdivision-x-y">
+<h4>Subdivision X / Y<a class="headerlink" href="#subdivision-x-y" title="Permalink to this heading"></a></h4>
+<p>Controls grid resolution.</p>
+<ul class="simple">
+<li><p>Higher values increase smoothness</p></li>
+<li><p>Lower values improve performance</p></li>
+</ul>
+</section>
+<section id="grid-smoothing">
+<h4>Grid Smoothing<a class="headerlink" href="#grid-smoothing" title="Permalink to this heading"></a></h4>
+<p>Applies subdivision surface smoothing to the deformation grid.</p>
+<p>Useful for removing minor surface artifacts and softening transitions in the deformation.</p>
+</section>
+</section>
+<section id="workflow-tips">
+<h3>Workflow Tips<a class="headerlink" href="#workflow-tips" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>If your object has quad based topology, placing <strong>Subdivision Surface</strong> before Conform Object in the modifier stack can make the object deform more smoothly.</p></li>
+</ul>
+</section>
+<section id="questions">
+<h3>Questions?<a class="headerlink" href="#questions" title="Permalink to this heading"></a></h3>
+<p>If you have any questions about using the Conform Object Modifier, please <a class="reference internal" href="contact.html#contact"><span class="std std-ref">contact us</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vertex_weight_vis.html" class="btn btn-neutral float-left" title="Visualize Vertex Weights" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how_does_it_work.html" class="btn btn-neutral float-right" title="How does it work?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mark Kingsnorth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

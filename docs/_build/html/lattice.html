@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lattice Deformation &mdash; Conform Object  documentation</title>
@@ -12,9 +12,8 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -52,6 +51,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifier.html">Modifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how_does_it_work.html">How does it work?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Tips and Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
@@ -70,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Lattice Deformation</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Lattice Deformation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/lattice.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,7 +82,7 @@
            <div itemprop="articleBody">
              
   <section id="lattice-deformation">
-<h1>Lattice Deformation<a class="headerlink" href="#lattice-deformation" title="Permalink to this headline"></a></h1>
+<h1>Lattice Deformation<a class="headerlink" href="#lattice-deformation" title="Permalink to this heading"></a></h1>
 <img alt="Conform Lattice Deformation" src="_images/lattice_feature_demo.gif" />
 <p>You can stretch an object around another object’s surface with a <a href="https://docs.blender.org/manual/en/latest/animation/lattice.html">Lattice</a> control object when you have ran Conform Object.  The Lattice deforms the underlying <a class="reference internal" href="how_does_it_work.html#how-does-it-work"><span class="std std-ref">Deformation when in Grid Mode</span></a>, which allows you to push and pull the Source Object along the Target Object’s surface.  Here is the how-to video:</p>
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Gz8qjBgkZp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
@@ -91,7 +91,7 @@
 <p>Using the Lattice takes some practice and is not a one-click solution. Do <a class="reference internal" href="contact.html#contact"><span class="std std-ref">Contact Us</span></a> if you are having issues.</p>
 </div>
 <section id="use">
-<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline"></a></h2>
+<h2>Use<a class="headerlink" href="#use" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Select the Source Object and the Target Object and <a class="reference internal" href="use.html#how-to-use"><span class="std std-ref">run Conform Object</span></a> as usual.</p></li>
 <li><p>To activate the Lattice, in the left side <a class="reference internal" href="options.html#options"><span class="std std-ref">options</span></a> menu that appears, expand the Projection Section and click the Lattice icon next next to the Deformation Grid section:</p>
@@ -156,7 +156,7 @@
 </ol>
 </section>
 <section id="re-running-conform-object-with-your-existing-lattice">
-<h2>Re-running Conform Object with your existing Lattice<a class="headerlink" href="#re-running-conform-object-with-your-existing-lattice" title="Permalink to this headline"></a></h2>
+<h2>Re-running Conform Object with your existing Lattice<a class="headerlink" href="#re-running-conform-object-with-your-existing-lattice" title="Permalink to this heading"></a></h2>
 <p>Once you have edited the lattice, you may wish to re-run Conform Object to change some settings, such as increasing <a class="reference internal" href="options.html#options"><span class="std std-ref">Grid Smoothing</span></a> if the object appears too distorted.  By default this will delete your lattice.  To keep your Lattice deformation, you can do the following:</p>
 <ol class="arabic">
 <li><p>Select the Source Object.</p></li>
@@ -169,7 +169,7 @@
 <p>Because you have also selected the Lattice, the add-on recognises this, runs Conform Object again and uses the Lattice object for deforming the projection grid.</p>
 </section>
 <section id="bonus-video-fitting-goggles">
-<h2>Bonus video: Fitting Goggles<a class="headerlink" href="#bonus-video-fitting-goggles" title="Permalink to this headline"></a></h2>
+<h2>Bonus video: Fitting Goggles<a class="headerlink" href="#bonus-video-fitting-goggles" title="Permalink to this heading"></a></h2>
 <p>In the following video Conform Object uses Lattice Deformation and Grid Smoothing to fit goggles around a head:</p>
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/qx8Nz_-Kxxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 </section>

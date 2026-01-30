@@ -7,6 +7,7 @@ How To Use
 
     Select the **Source Object**, then the **Target Object**.  Right-click and select "Conform Object" from the menu.  Disable the :ref:`Gradient Effect` from the :ref:`Options` panel if needed.  Further step by step guide below.
 
+.. _stepbystep:
 
 ===========================
 Step by Step

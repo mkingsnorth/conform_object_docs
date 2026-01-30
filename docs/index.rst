@@ -66,6 +66,7 @@ Features:
    toggle_snap
    lattice
    vertex_weight_vis
+   Modifier <modifier>
    how_does_it_work
    troubleshooting
    contact

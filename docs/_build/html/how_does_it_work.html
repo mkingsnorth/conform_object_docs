@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How does it work? &mdash; Conform Object  documentation</title>
@@ -12,14 +12,13 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Tips and Troubleshooting" href="troubleshooting.html" />
-    <link rel="prev" title="Visualize Vertex Weights" href="vertex_weight_vis.html" /> 
+    <link rel="prev" title="Conform Object Modifier" href="modifier.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,6 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="toggle_snap.html">Surface Snapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lattice.html">Lattice Deformation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vertex_weight_vis.html">Visualize Vertex Weights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifier.html">Modifier</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How does it work?</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grid-mode">Grid Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#shrinkwrap-mode">Shrinkwrap Mode</a></li>
@@ -69,8 +69,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>How does it work?</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">How does it work?</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/how_does_it_work.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,11 +81,11 @@
            <div itemprop="articleBody">
              
   <section id="how-does-it-work">
-<h1>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this heading"></a></h1>
 <p>The add-on has two modes; <a class="reference internal" href="#grid-mode"><span class="std std-ref">Grid Mode</span></a> (default) and <a class="reference internal" href="#shrinkwrap-mode"><span class="std std-ref">Shrinkwrap Mode</span></a>.</p>
 <p>The manual processed for both has been best described in <a href="https://youtu.be/luFz5gzvM9s" target="_blank"><b>this video</b></a> but is also described below.</p>
 <section id="grid-mode">
-<h2>Grid Mode<a class="headerlink" href="#grid-mode" title="Permalink to this headline"></a></h2>
+<h2>Grid Mode<a class="headerlink" href="#grid-mode" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p><strong>Advantages</strong>:</p>
 <blockquote>
@@ -103,10 +103,10 @@
 </div></blockquote>
 </li>
 </ul>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="id2">
 <img alt="Grid Mode" src="_images/how_does_it_work_1.jpg" />
 <figcaption>
-<p><span class="caption-text">The add-on in Grid Mode, with the grid visible.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The add-on in Grid Mode, with the grid visible.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The add-on automatically creates a deformation grid object which is used to project the object to the surface of another using a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html" target="_blank">Surface Deform Modifier</a>.  This grid object is <strong>hidden</strong> by default and can have its subdivisions configured.</p>
@@ -118,15 +118,15 @@
 <li><p>Adding a <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/introduction.html" target="_blank">Vertex Group</a> weighting to the object from the bottom to the top to control <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">the influence of the deformation</span></a>.</p></li>
 </ol>
 <p>The deformation grid is automatically deleted if the source object is deleted.</p>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id3">
 <img alt="Vetex Group Weighting" src="_images/vertex_group_weighting.jpg" />
 <figcaption>
-<p><span class="caption-text">The default vertex group weighting.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The default vertex group weighting.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="shrinkwrap-mode">
-<h2>Shrinkwrap Mode<a class="headerlink" href="#shrinkwrap-mode" title="Permalink to this headline"></a></h2>
+<h2>Shrinkwrap Mode<a class="headerlink" href="#shrinkwrap-mode" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p><strong>Advantages</strong>:</p>
 <blockquote>
@@ -145,10 +145,10 @@
 </div></blockquote>
 </li>
 </ul>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id4">
 <img alt="Shrinkwrap Mode" src="_images/how_does_it_work_2.jpg" />
 <figcaption>
-<p><span class="caption-text">The add-on in Shrinkwrap Mode.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The add-on in Shrinkwrap Mode.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>For the shrinkwrap modifier mode, it automatically:</p>
@@ -156,10 +156,10 @@
 <li><p>Adds a <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/shrinkwrap.html" target="_blank">Shrink Wrap Modifier</a> to the mesh.</p></li>
 <li><p>Adding a <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/introduction.html" target="_blank">Vertex Group</a> weighting to the object from the bottom to the top to control <a class="reference internal" href="options.html#gradient-effect"><span class="std std-ref">the influence of the deformation</span></a>.</p></li>
 </ol>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id5">
 <img alt="Vetex Group Weighting" src="_images/vertex_group_weighting.jpg" />
 <figcaption>
-<p><span class="caption-text">The default vertex group weighting.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">The default vertex group weighting.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -169,7 +169,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="vertex_weight_vis.html" class="btn btn-neutral float-left" title="Visualize Vertex Weights" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modifier.html" class="btn btn-neutral float-left" title="Conform Object Modifier" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="troubleshooting.html" class="btn btn-neutral float-right" title="Tips and Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
