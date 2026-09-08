@@ -51,6 +51,21 @@ Follow the instructions in the :ref:`operator version<How to Use>`, but instead 
     Remember to :ref:`align the object correctly<stepbystep>` before adding the modifier.
 
 ************************
+Applying and Removing
+************************
+
+Alongside **Add Conform Object Modifier**, the same menu also offers:
+
+* **Apply Conform Object Modifier** — bakes the deformation into the mesh and removes the modifier, exactly like using **Apply** from the modifier panel itself. If the Conform Object modifier isn't first in the object's modifier stack, a warning is shown before applying, matching Blender's own built-in behaviour for out-of-order modifier apply.
+* **Delete Conform Object Modifier** — removes the modifier without applying it, discarding the deformation.
+
+Both act on every selected object that has the modifier, so you can apply or delete it across several objects at once.
+
+.. note::
+
+    These menu items are a convenience — you can always Apply or Remove the modifier directly from the Modifier Properties panel instead.
+
+************************
 Modifier Options
 ************************
 
