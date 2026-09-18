@@ -38,6 +38,7 @@ Features:
 * :ref:`Conform multiple objects at once<Multiple Objects>`.
 * :ref:`Display Vertex Weights in Object Mode<Visualize Vertex Weights>` to help with the :ref:`Gradient Effect`.
 * Presets system to save your preferred settings.
+* Shape the result by hand with :ref:`Warp Control Points<Warp Control Points>` in the :ref:`modifier<conform_object_modifier>`.
 
 .. figure:: images/lattice_feature_demo.gif
     :alt: Conform Lattice Deformation

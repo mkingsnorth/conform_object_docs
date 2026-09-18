@@ -30,6 +30,7 @@ Disadvantages
 ================
 
 * The :ref:`Lattice Deformation<Lattice Deformation>` feature is currently not supported in the modifier.
+  :ref:`Warp Control Points<Warp Control Points>` are the modifier's own way of shaping the result by hand.
 * Less tried and tested than the operator version.
 
 .. note::
@@ -64,6 +65,180 @@ Both act on every selected object that has the modifier, so you can apply or del
 .. note::
 
     These menu items are a convenience — you can always Apply or Remove the modifier directly from the Modifier Properties panel instead.
+
+************************
+Warp Control Points
+************************
+
+.. image:: images/warp_feature_demo.gif
+    :alt: Warping a conformed object with control points
+
+..
+    Screenshot placeholder: warp_feature_demo.gif
+    A short loop showing a decal already conformed, the control points
+    appearing, and one or two being dragged so the decal follows.  This is the
+    one to lead with.
+
+**Warp** adds draggable control points to a Conform Object modifier, so you can push the conformed geometry around by hand after it has landed.
+
+Conform Object decides where your geometry goes.  Warp lets you overrule it, without leaving the modifier or touching the underlying mesh.
+
+The control points sit on the target's surface and are dragged along it, so the geometry stays conformed while you reshape it.
+
+.. note::
+
+    Warp is part of the modifier.  It is not available in the operator version, and like the rest of the modifier it needs Blender 4.5 or higher.
+
+Turning the Warp On
+=====================
+
+#. Add a Conform Object modifier as described above, and make sure it is the selected modifier in the stack.
+#. From the **Object** menu (or the right-click menu), choose **Conform Object**, then **Warp**, then **Enable Warp**:
+
+    .. image:: images/warp_menu.jpg
+        :alt: The Warp submenu
+
+    ..
+        Screenshot placeholder: warp_menu.jpg
+        The Object > Conform Object menu open with the Warp submenu showing
+        all of its entries.
+
+#. You are asked how many control points to start with, across and down:
+
+    .. image:: images/warp_enable_dialog.jpg
+        :alt: Choosing the number of control points
+
+    ..
+        Screenshot placeholder: warp_enable_dialog.jpg
+        The small Enable Warp dialog with Across and Down.
+
+#. The control points appear on the target's surface, joined by guide lines showing the grid they drive:
+
+    .. image:: images/warp_control_points.jpg
+        :alt: Control points on the surface
+
+    ..
+        Screenshot placeholder: warp_control_points.jpg
+        A conformed decal with a 3 by 3 set of control points and the guide
+        lines between them.
+
+.. note::
+
+    Start with a small number.  Control points are easier to add where you need them than to take away, and fewer of them gives a smoother result.
+
+Moving Control Points
+=====================
+
+Click and drag a control point.  It travels across the target's surface, and the conformed geometry follows it.
+
+* The lines between control points preview the grid that will be built.
+* Control points nearer the camera are drawn solid and further ones faint, so you can tell which is in front when the surface curves away from you.
+* Each drag is a separate undo step.
+
+.. image:: images/warp_dragging.gif
+    :alt: Dragging a control point
+
+..
+    Screenshot placeholder: warp_dragging.gif
+    A single control point being dragged across the surface with the geometry
+    following it.
+
+Adding and Removing Lines of Control Points
+============================================
+
+Rather than raising the number of control points everywhere, you can put a single line exactly where you need one.
+
+Choose **Add Slices** from the Warp menu, then click on the target where the new line should go:
+
+.. image:: images/warp_add_slices.gif
+    :alt: Adding lines of control points
+
+..
+    Screenshot placeholder: warp_add_slices.gif
+    The Add Slices tool running: the preview line following the mouse, then a
+    couple of clicks putting lines in.
+
+* The direction is chosen for you, from whichever existing line your mouse is nearest.  Move towards a row to add a row, towards a column to add a column.
+* The tool stays running, so you can put several lines in one after another.
+* **Right-click** or press **Escape** to finish.
+* Hold **Ctrl** to take a line out instead of putting one in, without leaving the tool.
+* You can orbit, pan and zoom while it is running.
+* The mouse pointer shows which way round the tool is: a knife while lines are going in, an eraser while they are coming out.
+
+**Remove Slices** is the same tool started the other way round, and Ctrl swaps it back.
+
+.. note::
+
+    Adding a line leaves the control points already there exactly where they are, so you do not lose work you have already done.  The shape does shift very slightly as the new line joins in, because a smooth curve through more points is a slightly different curve.
+
+Changing the Number of Control Points
+======================================
+
+**Set Control Points** changes how many there are, across and down:
+
+.. image:: images/warp_set_control_points.jpg
+    :alt: Setting the number of control points
+
+..
+    Screenshot placeholder: warp_set_control_points.jpg
+    The Set Control Points dialog.
+
+This starts the grid again, evenly spaced and back on the target, so anything you have dragged is lost.  If there is work to lose, you are asked first:
+
+.. image:: images/warp_reset_warning.jpg
+    :alt: Confirming a reset
+
+..
+    Screenshot placeholder: warp_reset_warning.jpg
+    The confirmation dialog that appears when there is work to lose.
+
+.. note::
+
+    To add control points and keep your work, use **Add Slices** instead.
+
+Resetting and Removing
+=======================
+
+* **Reset Warp** moves every control point back to where it started, undoing your dragging.  Lines you have sliced in stay where you put them.
+* **Remove Warp** takes the control points away and gives back the unwarped result.  Anything you dragged is lost.
+
+.. note::
+
+    You do not have to remove the Warp before removing or applying the modifier.  **Remove Warp** is for when you want to keep the conformed result but be rid of the control points.
+
+The Control Point Object
+=========================
+
+The control points live on a hidden object of their own, named after the object it belongs to and parented to it, so it travels with the object.
+
+* One set of control points belongs to one modifier.
+* Duplicating a conformed object gives the copy its own control points the first time you work on them, so the two do not share.
+* You should not need to touch this object.  If it is deleted, the add-on builds a new one the next time you use a Warp tool.
+
+Appearance
+===========
+
+The colour of the grid lines can be changed in the add-on's preferences under **Warp Colour**.  The control points themselves are drawn a lighter shade of it:
+
+.. image:: images/warp_colour_preference.jpg
+    :alt: The Warp Colour preference
+
+..
+    Screenshot placeholder: warp_colour_preference.jpg
+    The add-on preferences showing Warp Colour.
+
+The guide lines follow the viewport's **Overlays** button, so switching overlays off hides them while you judge the result.  The control points themselves are gizmos, and follow Blender's **Gizmos** button.
+
+Notes and Limits
+=================
+
+* A coarse set of control points drapes cleanly over about half of a rounded object.  Pulled much further round than that, the grid can fold back on itself.  Adding control points where it folds is the fix.
+* Very dense source meshes are slower to warp, because the deformation is recalculated as you drag.  Lowering **Subdivision X / Y** while you work and raising it again afterwards keeps things responsive.
+
+Questions about Warp?
+======================
+
+If something does not behave as you expect, please :ref:`contact us<contact>` -- and if you can, send the .blend file.  How the warp behaves depends a great deal on the shape of the target underneath it.
 
 ************************
 Modifier Options
