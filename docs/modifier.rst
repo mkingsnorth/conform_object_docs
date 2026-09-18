@@ -227,7 +227,7 @@ The colour of the grid lines can be changed in the add-on's preferences under **
     Screenshot placeholder: warp_colour_preference.jpg
     The add-on preferences showing Warp Colour.
 
-The guide lines follow the viewport's **Overlays** button, so switching overlays off hides them while you judge the result.  The control points themselves are gizmos, and follow Blender's **Gizmos** button.
+Everything the warp draws follows the viewport's **Overlays** button, so switching overlays off hides the control points and the guide lines together, leaving the conformed result to be judged on its own.
 
 Notes and Limits
 =================
