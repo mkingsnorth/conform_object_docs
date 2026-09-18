@@ -103,7 +103,7 @@ Turning the Warp On
         The Object > Conform Object menu open with the Warp submenu showing
         all of its entries.
 
-#. You are asked how many control points to start with, across and down:
+#. You are asked how many control points to start with, across and down.  It opens at the number you last used:
 
     .. image:: images/warp_enable_dialog.jpg
         :alt: Choosing the number of control points
@@ -126,13 +126,18 @@ Turning the Warp On
 
     Start with a small number.  Control points are easier to add where you need them than to take away, and fewer of them gives a smoother result.
 
+.. tip::
+
+    Hold **Ctrl** while choosing **Add Conform Object Modifier** to conform the object and put the control points on in one go, without being asked how many.  It uses the number you last set, so set it once and Ctrl follows it from then on.
+
 Moving Control Points
 =====================
 
 Click and drag a control point.  It travels across the target's surface, and the conformed geometry follows it.
 
 * The lines between control points preview the grid that will be built.
-* Control points nearer the camera are drawn solid and further ones faint, so you can tell which is in front when the surface curves away from you.
+* Control points are drawn as solid discs.  Nearer ones are larger and in full colour, while further ones shrink and sink towards the viewport's background, so you can tell which is in front when the surface curves away from you.
+* The control point under the mouse turns white.
 * Each drag is a separate undo step.
 
 .. image:: images/warp_dragging.gif
@@ -195,6 +200,12 @@ This starts the grid again, evenly spaced and back on the target, so anything yo
 .. note::
 
     To add control points and keep your work, use **Add Slices** instead.
+
+The number you set here is the number everything else starts from: both dialogs open at it, and holding Ctrl uses it.
+
+.. note::
+
+    It is remembered for as long as the file is open, and is not saved with it.  Opening another file starts again at 2 by 2.  Slicing lines in does not change it -- slicing a 3 by 3 up to 5 by 3 leaves the remembered number at 3 by 3, so Set Control Points still offers what you chose rather than what slicing made of it.
 
 Resetting and Removing
 =======================
