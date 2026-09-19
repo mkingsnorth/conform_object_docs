@@ -89,6 +89,8 @@ The control points sit on the target's surface and are dragged along it, so the 
 
     Warp is part of the modifier.  It is not available in the operator version, and like the rest of the modifier it needs Blender 4.5 or higher.
 
+    It works on whatever the modifier works on: mesh, text and curve objects alike.
+
 Turning the Warp On
 =====================
 
