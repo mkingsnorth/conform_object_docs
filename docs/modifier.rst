@@ -4,6 +4,9 @@
 Conform Object Modifier
 ###########################
 
+.. image:: images/conform_modifier.gif
+    :alt: The Conform Object modifier at work
+
 .. note::
 
      Blender 4.5 or higher.
