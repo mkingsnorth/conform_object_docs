@@ -28,6 +28,7 @@ Advantages
 * Non-destructive workflow with the ability to stack multiple modifiers.
 * Compatibility with other modifiers in the stack.
 * Animation support for parameters.
+* Far quicker on dense geometry.  The work is done by Blender's own geometry nodes rather than in Python, so the time it takes barely changes as the source mesh grows -- a source of ninety thousand vertices conforms about as quickly as one of a thousand, where the operator version slows down in step with it.
 
 Disadvantages
 ================
