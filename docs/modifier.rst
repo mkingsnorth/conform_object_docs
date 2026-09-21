@@ -62,6 +62,24 @@ Alongside **Add Conform Object Modifier**, the same menu also offers:
 
 Both act on every selected object that has the modifier, so you can apply or delete it across several objects at once.
 
+.. image:: images/modifier_apply_delete_menu.jpg
+    :alt: The Apply and Delete Conform Object Modifier menu entries
+
+..
+    Screenshot placeholder: modifier_apply_delete_menu.jpg
+    The Object > Conform Object menu open, showing Add, Apply and Delete
+    Conform Object Modifier together.
+
+That out-of-order warning looks like this:
+
+.. image:: images/modifier_apply_warning.jpg
+    :alt: The out-of-order apply warning
+
+..
+    Screenshot placeholder: modifier_apply_warning.jpg
+    The warning dialog shown when applying the modifier while something
+    else sits above it in the stack.
+
 .. note::
 
     These menu items are a convenience — you can always Apply or Remove the modifier directly from the Modifier Properties panel instead.
@@ -215,6 +233,15 @@ Resetting and Removing
 * **Reset Warp** moves every control point back to where it started, undoing your dragging.  Lines you have sliced in stay where you put them.
 * **Remove Warp** takes the control points away and gives back the unwarped result.  Anything you dragged is lost.
 
+.. image:: images/warp_reset_remove.gif
+    :alt: Reset Warp and Remove Warp compared
+
+..
+    Screenshot placeholder: warp_reset_remove.gif
+    A decal with its control points clearly dragged out of place, then
+    Reset Warp snapping them back to their starting grid, then Remove Warp
+    taking the points away and leaving the plain conformed result.
+
 .. note::
 
     You do not have to remove the Warp before removing or applying the modifier.  **Remove Warp** is for when you want to keep the conformed result but be rid of the control points.
@@ -241,6 +268,14 @@ The colour of the grid lines can be changed in the add-on's preferences under **
     The add-on preferences showing Warp Colour.
 
 Everything the warp draws follows the viewport's **Overlays** button, so switching overlays off hides the control points and the guide lines together, leaving the conformed result to be judged on its own.
+
+.. image:: images/warp_overlays_toggle.gif
+    :alt: Hiding the control points with the Overlays button
+
+..
+    Screenshot placeholder: warp_overlays_toggle.gif
+    The Overlays button being switched off: the control points and the
+    guide lines disappear together, leaving the conformed result on its own.
 
 Notes and Limits
 =================
