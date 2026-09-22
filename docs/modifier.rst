@@ -286,6 +286,7 @@ Notes and Limits
 
 * A coarse set of control points drapes cleanly over about half of a rounded object.  Pulled much further round than that, the grid can fold back on itself.  Adding control points where it folds is the fix.
 * Very dense source meshes are slower to warp, because the deformation is recalculated as you drag.  Lowering **Subdivision X / Y** while you work and raising it again afterwards keeps things responsive.
+* Switching the warp on nudges the result very slightly, before anything has been dragged.  It is a slide along the target's surface rather than a lift away from it, and how far depends on how curved the target is under the decal and how many control points there are: a percent or two of the decal's size at the default two by two, and a fraction of that by three by three.  Starting with more control points is the fix.  **Reset Warp** will not remove it, since it puts the control points back where they started and that is already where this happens.
 
 Questions about Warp?
 ======================
