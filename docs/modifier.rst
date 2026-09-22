@@ -89,6 +89,24 @@ That out-of-order warning looks like this:
     These menu items are a convenience — you can always Apply or Remove the modifier directly from the Modifier Properties panel instead.
 
 ************************
+Clean Up
+************************
+
+Conform Object keeps hidden helper objects alongside the things you conform: a deformation grid for the original workflow, and a control point object for :ref:`Warp<Warp Control Points>`.  They are meant to come and go with the thing that uses them, and usually they do.
+
+Sometimes they are left behind — most often when you delete a conformed object outright, rather than undoing the conform first.  Because they are hidden, a file can carry several without anything looking wrong.
+
+**Clean Up**, at the foot of the **Conform Object** menu, removes them:
+
+* It takes only helper objects that nothing is using any more.  Anything still attached to something is left exactly as it is, so it is safe to run at any time.
+* It tells you how many it removed, and names them in Blender's console if you want to see what went.
+* It undoes, like any other operation.
+
+.. note::
+
+    Clean Up is not only for the modifier.  It clears up after the original Conform Object workflow as well, so it is worth knowing about even if you never use the modifier.
+
+************************
 Warp Control Points
 ************************
 
