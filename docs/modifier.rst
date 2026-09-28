@@ -230,18 +230,22 @@ Changing the Number of Control Points
     Screenshot placeholder: warp_set_control_points.jpg
     The Set Control Points dialog.
 
-This starts the grid again, evenly spaced and back on the target, so anything you have dragged is lost.  If there is work to lose, you are asked first:
+This starts the grid again, evenly spaced and back on the target, so anything you have dragged is lost.  You are always asked first:
 
 .. image:: images/warp_reset_warning.jpg
     :alt: Confirming a reset
 
 ..
     Screenshot placeholder: warp_reset_warning.jpg
-    The confirmation dialog that appears when there is work to lose.
+    The confirmation dialog, which appears every time.
 
 .. note::
 
     To add control points and keep your work, use **Add Slices** instead.
+
+.. note::
+
+    Asking for the number it already has still starts the grid again.  Setting a 3 by 3 grid back to 3 by 3 is the way to put every control point back where it began.
 
 The number you set here is the number everything else starts from: both dialogs open at it, and holding Ctrl uses it.
 
