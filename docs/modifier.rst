@@ -4,6 +4,24 @@
 Conform Object Modifier
 ###########################
 
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0;
+                overflow: hidden; max-width: 100%; margin-bottom: 1.5em;">
+      <iframe src="https://www.youtube-nocookie.com/embed/2FiqlpA_mqE"
+              style="position: absolute; top: 0; left: 0;
+                     width: 100%; height: 100%; border: 0;"
+              title="Conform Object Modifier overview"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                     gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+    </div>
+
+.. only:: not html
+
+    `Watch the overview video <https://youtu.be/2FiqlpA_mqE>`_
+
 .. image:: images/conform_modifier.gif
     :alt: The Conform Object modifier at work
 
