@@ -358,10 +358,14 @@ Defines the reference point used when calculating projection directions.
 Modifier Method
 --------------------
 
-Defines how vertices are projected out from the target object.
+Defines the direction vertices are pushed out along, once they have landed on the target.
 
-*  **Surface**: Projects outward the target surface's face directions.
-*  **Direct**: Projects vertices in one direction from the target volume.
+*  **Surface**: Each vertex is pushed out along the target surface's own normal where it landed, so the direction follows the curve of the surface.  A decal held above a rounded target keeps the same gap all the way round it.
+*  **Direct**: Every vertex is pushed out along the projection direction, the same one for all of them.  The gap is measured straight along that direction, so it opens up where the surface curves away.
+
+.. note::
+
+    This makes no difference at all while **Offset** is zero: with nothing being pushed out, the two settings give an identical result.  Set an Offset first, then switch between them to see it.
 
 Modifier Direction
 --------------------
@@ -372,6 +376,10 @@ Controls how projection directions from source to target are calculated.
 * **Axis Line**: Projects along the object's -Z axis.
 * **Nearest**: Finds the nearest point on the target object from the source object.
 * **Custom**: Uses a user-defined projection direction.
+
+.. note::
+
+    Where part of the **Source Object** has no **Target Object** beneath it -- a decal wider than what it is being applied to, say -- those vertices are left where they are rather than being pulled in to the nearest point on the target.  The overhang keeps its shape and hangs at the height it met the surface, which is how the original Conform Object operation behaves too.
 
 Modifier Gradient Effect
 ==========================================
