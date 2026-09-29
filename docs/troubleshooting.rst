@@ -145,4 +145,12 @@ When I click off the panel, I lose my settings
 
 This is an unfortunate effect of Blender's one-time operation that the settings are applied just once, and the panel is easily lost.  You can :ref:`re-run the operation<How to Use>` and the modifiers will be replaced, not re-added.  Pressing F9 may bring back the panel, but the settings will not be applied again.
 
+====================================================================
+My file has hidden objects in it that I did not make
+====================================================================
 
+Conform Object keeps a hidden helper object beside each thing you conform: a deformation grid, and for the modifier's :ref:`Warp<Warp Control Points>` a control point object as well.  They normally come and go with the thing that uses them.
+
+They can be left behind though, most often when a conformed object is deleted outright rather than having the conform undone first.  Because they are hidden, they build up without anything looking wrong.
+
+Choose **Clean Up** from the bottom of the **Conform Object** menu.  It removes every helper object that nothing is using any more, leaves anything still attached alone, and tells you how many it took.  It is safe to run at any time, and it undoes like any other operation.

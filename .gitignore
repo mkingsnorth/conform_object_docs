@@ -1,0 +1,8 @@
+# Sphinx builds the site from docs/ on Read the Docs, so the built copy does
+# not belong in the repository.  It was tracked: 164 files and 111 MB, of
+# which a local build dirtied 61, which buried real changes in git status.
+docs/_build/
+
+# Python leavings
+__pycache__/
+*.py[cod]

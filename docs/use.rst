@@ -7,6 +7,15 @@ How To Use
 
     Select the **Source Object**, then the **Target Object**.  Right-click and select "Conform Object" from the menu.  Disable the :ref:`Gradient Effect` from the :ref:`Options` panel if needed.  Further step by step guide below.
 
+.. note::
+
+    There are two ways to conform an object, and this page covers the original one: a single right-click operation that sets everything up for you.  It remains the most tried and tested, and it is the one that supports :ref:`Lattice Deformation<Lattice Deformation>`.
+
+    On Blender 4.5 and above there is also the :ref:`Conform Object Modifier<conform_object_modifier>`, which does the same job as a modifier you can go back to.  It can be adjusted and animated after the fact, stacked with other modifiers, and shaped by hand with :ref:`Warp Control Points<Warp Control Points>`.  It is also far quicker on dense meshes.
+
+    Either is a reasonable place to start.  The :ref:`modifier page<conform_object_modifier>` lists what each one is better at.
+
+.. _stepbystep:
 
 ===========================
 Step by Step

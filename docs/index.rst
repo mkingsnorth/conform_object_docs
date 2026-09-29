@@ -29,15 +29,17 @@ Features:
 -----------------
 
 * Simple right-click menu option performs the :ref:`operation in one go<How to Use>`.
+* Or use the :ref:`Conform Object Modifier<conform_object_modifier>` instead, to adjust, animate and stack the result afterwards.  Blender 4.5 and above.
 * :ref:`Graduate the effect<Gradient Effect>` from the bottom to the top of the object.
 * Choose from :ref:`Grid Mode` or :ref:`Shrinkwrap Mode`.
 * Transfer surface normals to :ref:`blend object shading<Blend Normals>`.
 * Use a :ref:`deformation lattice<Lattice Deformation>` to stretch an object around the surface of another.
 * Underlying mesh is not affected.
-* Undo and apply options handle the underlying complexity of adding and removing modifers.
+* Undo and apply options handle the underlying complexity of adding and removing modifiers.
 * :ref:`Conform multiple objects at once<Multiple Objects>`.
 * :ref:`Display Vertex Weights in Object Mode<Visualize Vertex Weights>` to help with the :ref:`Gradient Effect`.
 * Presets system to save your preferred settings.
+* Shape the result by hand with :ref:`Warp Control Points<Warp Control Points>` in the :ref:`modifier<conform_object_modifier>`.
 
 .. figure:: images/lattice_feature_demo.gif
     :alt: Conform Lattice Deformation
@@ -66,6 +68,7 @@ Features:
    toggle_snap
    lattice
    vertex_weight_vis
+   Modifier <modifier>
    how_does_it_work
    troubleshooting
    contact
