@@ -41,6 +41,12 @@ Features:
 * Presets system to save your preferred settings.
 * Shape the result by hand with :ref:`Warp Control Points<Warp Control Points>` in the :ref:`modifier<conform_object_modifier>`.
 
+.. figure:: images/warp_marine_demo4.gif
+    :alt: Shaping a conformed object with Warp Control Points
+
+    Shaping the result by hand with :ref:`Warp Control Points<Warp Control Points>` in the :ref:`Conform Object Modifier<conform_object_modifier>`.
+
+
 .. figure:: images/lattice_feature_demo.gif
     :alt: Conform Lattice Deformation
 
