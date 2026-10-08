@@ -271,6 +271,33 @@ The number you set here is the number everything else starts from: both dialogs 
 
     It is remembered for as long as the file is open, and is not saved with it.  Opening another file starts again at 2 by 2.  Slicing lines in does not change it -- slicing a 3 by 3 up to 5 by 3 leaves the remembered number at 3 by 3, so Set Control Points still offers what you chose rather than what slicing made of it.
 
+Making the Control Points Symmetrical
+======================================
+
+**Mirror Control Points** reflects one half of the control points onto the other, so that artwork with an axis to it -- a winged emblem, a letter, anything with a left and a right -- reads evenly rather than leaning.
+
+It mirrors about the middle of the grid, not about a world axis, so it does not matter which way the object happens to be turned.
+
+* **Axis** -- whether to mirror **Across** or **Down**.
+* **Keep** -- which half is copied onto the other.
+* **Put Back on the Target** -- whether the mirrored points are dropped back onto the surface afterwards.
+
+.. note::
+
+    A grid with an odd number of control points has a middle row or column which is its own mirror.  That line is placed on the centre rather than left wherever it was dragged.
+
+.. note::
+
+    Lines you have sliced in are mirrored along with the points, so the spacing stays symmetrical too.
+
+.. tip::
+
+    **Put Back on the Target** is on by default, and is usually what you want.  Being symmetrical and lying on the surface are the same thing only while the **Target Object** is itself symmetrical; where it is not, the mirrored points would otherwise float clear of it, which will not give a straight result either.  Turn it off if you would rather have exact symmetry than contact with the surface.
+
+.. note::
+
+    A Mirror *modifier* on the cage object will not do this.  The control points are read directly rather than through the modifier stack, and the grid is spanned over exactly the number of points you have asked for, in order -- which a Mirror modifier doubles.
+
 Resetting and Removing
 =======================
 
