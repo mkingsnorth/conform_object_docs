@@ -278,9 +278,13 @@ Making the Control Points Symmetrical
 
 It mirrors about the middle of the grid, not about a world axis, so it does not matter which way the object happens to be turned.
 
-* **Axis** -- whether to mirror **Across** or **Down**.
-* **Keep** -- which half is copied onto the other.
+* **Axis** -- **X**, **Y**, or both.  These are the **Source Object**'s own local axes, the same ones the Mirror modifier uses, so they follow the object however it is turned.
+* **Flip X** / **Flip Y** -- which side of that axis is copied onto the other.  If the half you wanted kept is the half that got replaced, turn the flip on.
 * **Put Back on the Target** -- whether the mirrored points are dropped back onto the surface afterwards.
+
+.. tip::
+
+    Turning on both **X** and **Y** makes the grid symmetrical in all four quarters in one go, which is usually what emblems and badges want.
 
 .. note::
 
