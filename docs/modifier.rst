@@ -274,6 +274,11 @@ The number you set here is the number everything else starts from: both dialogs 
 Making the Control Points Symmetrical
 ======================================
 
+.. figure:: images/warp_mirror_control_points.jpg
+    :alt: Mirroring the control points of a winged emblem
+
+    An emblem made symmetrical about the grid's Y axis.
+
 **Mirror Control Points** reflects one half of the control points onto the other, so that artwork with an axis to it -- a winged emblem, a letter, anything with a left and a right -- reads evenly rather than leaning.
 
 It mirrors about the middle of the grid, not about a world axis, so it does not matter which way the object happens to be turned.
